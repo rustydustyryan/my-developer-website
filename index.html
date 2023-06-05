@@ -88,11 +88,11 @@
 
       <!-- Contact form -->
       <div class="form-container">
-          <form onsubmit="sendEmail(); reset(); return false;">
+          <form name="contact" method="POST" data-netlify="true">
             <h3>Get In Touch</h3>
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <textarea id="message" rows="4" placeholder="Message"></textarea>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="4" placeholder="Message"></textarea>
             <button type="submit">Send</button>
           </form>
         <!-- <div class="profile-pic">
