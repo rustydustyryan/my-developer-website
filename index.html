@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/5a3539eb0b.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Ryan Andersen</title>
+</head>
+<body>
+  <div class="page-container">
+    <div class="content-wrapper">
+      <header class="hero"  id="home">
+        <video autoplay loop muted plays-inline class="back-video">
+          <source src="/media/blue-22908.mp4" type="video/mp4">
+        </video>
+
+        <div class="title">
+          <h1 class="ryan">Ryan Andersen</h1>
+        </div>
+        <div class="arrow hidden">
+          <a href="#about"><i class="fa-solid fa-chevron-down fa-4x"></i></a>
+        </div>
+      </header>
+
+      <div id="about">
+        <div class="about-content">
+          <h1 class="greet">Hello,</h1>
+          <p>I am a Front End Web Developer with a Bachelors degree in Animation and Entertainment Arts and I am passionate about Design and art in all of their various forms.</p>
+          <p class="p-2">I thrive when thinking creatively and I've learned that being creative is a significant advantage when solving problems.</p>
+          <!-- <p class="p-3">Skills — HTML5, CSS, SASS, JavaScript, Git, Bootstrap, SHELL, Adobe Creative Suite, Design Principles and Color Schemes.</p> -->
+        </div>
+      </div>
+
+      <div id="projects">
+        <div class="projects-title">
+          <h1 class="main-title">Projects</h1>
+          <p><small></small></p>
+        </div>
+        <div class="project-container">
+          <div class="website praxis">
+            <h1 class="title">Praxis Counseling</h1>
+            <div>
+            <p><img src="/media/Screen Shot 2023-03-10 at 11.07.09 PM.png"></p>
+            </div>
+          </div>
+          <div class="website music-website">
+            <h1 class="title">MusicKeeps</h1>
+            <div>
+              <p><a href="https://musickeeps.com/" target="_blank"><img src="/media/musickeeps.jpg"></a></p>
+            </div>
+          </div>
+          <div class="website crowd-advice">
+            <h1 class="title">Crowd Advice</h1>
+            <div>
+              <p><img src="/media/cards.jpg"></p>
+            </div>
+          </div>
+          <div class="website edge-ledger">
+            <h1>EdgeLedger</h1>
+            <div>
+              <p><img src="/media/Newsgrid.jpg"></p>
+            </div>
+          </div>
+          <div class="website news-grid">
+            <h1>Newsgrid</h1>
+            <div>
+              <p><img src="/media/newsgrid1.jpg"></p>
+            </div>
+          </div>
+          <div class="website hotel-website">
+            <h1>Hotel BT</h1>
+            <div>
+              <p><img src="/media/hotel.jpg"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <div class="form-container">
+          <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>Get In Touch</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <textarea id="message" rows="4" placeholder="Message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        <!-- <div class="profile-pic">
+          <img src="media/Ryan15.jpg">
+        </div> -->
+      </div>
+
+      <div id="links">
+        <div class="links">
+          <a href="https://github.com/rustydustyryan" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+        </div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/ryan-andersen-45907b180/" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div id="footer">
+        <h1>&copy; Ryan Andersen 2023. All Rights Reserved</h1>
+      </div>
+    </footer>
+  </div>
+  <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+  <script src="script.js"></script>
+</body>
+</html>
