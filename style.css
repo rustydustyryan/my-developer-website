@@ -117,7 +117,7 @@ img {
 .about-content {
   background: var(--var-black-color);
   color: var(--var-white-color);
-  height: 100vh;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -127,7 +127,7 @@ img {
 .about-content h1 {
   font-size: 75px;
   grid-column: 2 / span 1;
-  padding: 6rem 0;
+  padding-top: 2rem;
 }
 
 .about-content > * {
@@ -161,32 +161,6 @@ img {
 }
 
 /* Projects */
-#projects {
-  /* position: relative; */
-}
-
-#projects .projects-title {
-  background-color: var(--var-darker-color);
-  color: var(--var-white-color);
-  text-align: center;
-  padding: 1rem 0 2rem 0;
-  font-size: 35px;
-  letter-spacing: 1rem;
-  position: relative;
-  height: 10rem;
-}
-
-#projects .project-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  background-color: var(--var-darker-color);
-  /* color: var(--var-white-color); */
-  text-align: center;
-  align-items: center;
-  padding: 2rem;
-}
-
 #projects h1 {
   font-weight: 300;
   padding-bottom: 2rem;
@@ -194,6 +168,18 @@ img {
 
 #projects img {
   border-radius: 15px;
+}
+
+#projects .projects-title {
+  background-color: var(--var-darker-color);
+  color: var(--var-white-color);
+  padding: 1rem 0 2rem 0;
+  font-size: 35px;
+  letter-spacing: 1rem;
+  position: relative;
+  height: 10rem;
+  margin: auto;
+  text-align: center;
 }
 
 #projects .main-title {
@@ -207,6 +193,17 @@ img {
   min-width: 5px;
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transform: translateY(140px);
+}
+
+#projects .project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  background-color: var(--var-darker-color);
+  /* color: var(--var-white-color); */
+  text-align: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .project-container div {
@@ -380,13 +377,54 @@ form button:active {
   }
 
   .about-content {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat (1fr);
+    grid-template-rows: repeat (1fr);
+    display: block;
+  }
+
+  #about h1 {
+    padding: 0;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    padding: 1.5rem;
+  }
+
+  #about p {
+    font-size: 22px;
+    padding: 0rem;
+    padding: 1.5rem;
+  }
+  
+  #about .p-2 {
+    grid-column: 1 / span 2;
+    text-align: end;
+    padding-left: 3rem;
+  }
+  
+  #about .p-3 {
+    grid-column: 1 / span 1;
+  }
+
+  #projects {
+    overflow: hidden;
+  }
+
+  #projects .projects-title h1 {
+    font-size: 60px;
+    letter-spacing: .5rem;
+  }
+
+  #projects .main-title {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 
   #projects .project-container {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 1.5rem;
+    padding: 0 1rem 1rem;
   }
 }
