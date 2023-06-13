@@ -7,11 +7,6 @@
   --var-black-color: #0C0A15;
   --var-darkish-color: #272E58;
   --var-darker-color: #000932;
-  /* --var-secondary-color: #5262A4;
-  --var-bright-blue: #153bae;
-  --var-primary-color: #112D80;
-  --var-black-color: #030718;
-  --var-darker-color: #142249; */
   --var-dark-color: #333;
   --delay: 120ms;
 }
@@ -58,7 +53,7 @@ img {
 .hero .ryan {
   font-size: 100px;
   text-align: end;
-  margin-right: 7rem;
+  margin-right: 10rem;
 }
 
 .hero .arrow {
@@ -69,7 +64,7 @@ img {
   opacity: 0;
   text-shadow: 1px 1px 10px #133390;
   animation-name: fade1;
-  animation-delay: 3s;
+  animation-delay: 9s;
   animation-duration: 1700ms;
   animation-fill-mode: forwards;
   /* animation-direction: alternate-reverse; */
@@ -117,9 +112,7 @@ img {
   right: 0;
   bottom: 0;
   z-index: -1;
-  /* transform: rotate(-90deg);
-  width: 100%;
-  height: 100vh; */
+  object-fit: cover;
 }
 
 /* About */
@@ -131,17 +124,19 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   overflow: hidden;
+  line-height: 1.8;
 }
 
-.about-content h1 {
+.about-content .greet {
   font-size: 75px;
   grid-column: 2 / span 1;
   padding-top: 2rem;
+  color: var(--var-bright-blue);
 }
 
 .about-content > * {
   opacity: 0;
-  transition: opacity 2s ease;
+  transition: opacity 2.5s ease;
 }
 
 /* .about-content > :nth-child(even) {
@@ -156,17 +151,26 @@ img {
   font-size: 22px;
   grid-column: 1 / span 3;
   grid-row: 2 / span 2;
-  padding: 6rem;
+  padding: 2rem 6rem 5rem;
 }
 
 #about .p-2 {
   grid-column: 3 / span 2;
   grid-row: 3 / span 2;
+  /* border: solid; */
+  /* background-image: linear-gradient(to bottom right, #0c0a1500, #B43E24); */
+  /* background: linear-gradient(to right, #0c0a1500, #0D83E7); */
 }
 
 #about .p-3 {
   grid-column: 1 / span 2;
   grid-row: 4 / span 1;
+}
+
+.about-content .pop {
+  color: var(--var-bright-blue);
+  letter-spacing: 2px;
+  font-size: larger;
 }
 
 /* Projects */
@@ -213,7 +217,6 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   background-color: var(--var-darker-color);
-  /* color: var(--var-white-color); */
   text-align: center;
   align-items: center;
   padding: 2rem;
@@ -221,14 +224,70 @@ img {
 
 .project-container div {
   color: var(--var-white-color);
-  opacity: 0.9;
+  /* opacity: 9; */
 }
 
-.project-container div:hover {
-  opacity: 1;
+.project-container .website > div {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 315px;
+  border-radius: 15px;
+}
+
+.project-container .praxis > div {
+  background-image: url(./media/Screen\ Shot\ 2023-03-10\ at\ 11.07.09\ PM.png);
+}
+
+.project-container .music-website > div {
+  background-image: url(./media/musickeeps.jpg);
+}
+
+.project-container .photography-website > div {
+  background-image: url(./media/photography\ web.png);
+}
+
+.project-container .edge-ledger > div {
+  background-image: url(./media/Newsgrid.jpg);
+}
+
+.project-container .news-grid > div {
+  background-image: url(./media/newsgrid1.jpg);
+}
+
+.project-container .hotel-website > div {
+  background-image: url(./media/hotel.jpg);
+}
+
+.project-container div > div {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.project-container div > div:hover {
+  box-shadow: 0 0 0 170px #000932cf inset;
+  /* opacity: 1; */
   cursor: pointer;
-  transform: scale(1.03);
-  transition: transform 0.3s ease-out;
+  transform: scale(1.05);
+  transition: 0.3s ease-out;
+}
+
+.project-container p {
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.6s;
+  /* transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+  font-size: 20px;
+  color: var(--var-white-color);
+  padding: 2rem;
+}
+
+.project-container div > div:hover p {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .project-container div:not(:hover) {
@@ -261,7 +320,7 @@ img {
 
 #projects .project-container .praxis,
 #projects .project-container .music-website,
-#projects .project-container .crowd-advice,
+#projects .project-container .photography-website,
 #projects .project-container .edge-ledger,
 #projects .project-container .news-grid,
 #projects .project-container .hotel-website
@@ -269,6 +328,15 @@ img {
   /* background: #858484; */
   background: var(--var-darker-color);
   padding: 1rem;
+}
+
+.project-container .music-link, 
+.project-container .praxis-link {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
 }
 
 /* Contact form */
@@ -383,6 +451,11 @@ form button:active {
   .hero {
     grid-template-columns: 1fr;
   }
+
+  /* .back-video {
+  transform: rotate(-90deg);
+  object-fit: cover;
+  } */
 
   .title .ryan {
     font-size: 70px;
