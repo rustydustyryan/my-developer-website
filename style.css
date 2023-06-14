@@ -22,6 +22,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  background-color: var(--var-black-color);
+}
+
 .page-container {
   position: relative;
 }
@@ -103,10 +107,12 @@ img {
 
 .back-video {
   position: absolute;
+  left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
   object-fit: cover;
+  width: 100vw;
 }
 
 /* About */
@@ -257,9 +263,7 @@ img {
 }
 
 .project-container div > div:hover {
-  /* box-shadow: 0 0 0 170px #000932ce inset; */
-  /* box-shadow: 0 0 0 160px #0c0a15cf inset; */
-  box-shadow: 0 0 0 160px #333333d1 inset;
+  box-shadow: 0 0 0 160px #0c0a15cf inset;
   /* opacity: 1; */
   cursor: pointer;
   transform: scale(1.05);
