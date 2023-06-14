@@ -4,10 +4,12 @@
   --var-secondary-color: #B43E24;
   --var-bright-blue: #0D83E7;
   --var-primary-color: #002ACC;
+  --var-dark-blue: #011254;
   --var-black-color: #0C0A15;
   --var-darkish-color: #272E58;
   --var-darker-color: #000932;
   --var-dark-color: #333;
+  --var-grey-color: #646363;
   --delay: 120ms;
 }
 
@@ -99,14 +101,6 @@ img {
   /* text-shadow: 1px 1px 10px #3c1395; */
 }
 
-/* .hero .hidden {
-  text-shadow: 1px 1px 10px #133390;
-  transition-property: opacity;
-  transition-delay: 2s;
-  transition-duration: 1s;
-  opacity: 1;
-} */
-
 .back-video {
   position: absolute;
   right: 0;
@@ -138,10 +132,6 @@ img {
   opacity: 0;
   transition: opacity 2.5s ease;
 }
-
-/* .about-content > :nth-child(even) {
-  transform: translateX(-400%);
-} */
 
 .about-content > *.show {
   opacity: 1;
@@ -224,7 +214,7 @@ img {
 
 .project-container div {
   color: var(--var-white-color);
-  /* opacity: 9; */
+  /* opacity: 0.9; */
 }
 
 .project-container .website > div {
@@ -264,11 +254,12 @@ img {
 
 .project-container div > div {
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
 }
 
 .project-container div > div:hover {
-  box-shadow: 0 0 0 170px #000932cf inset;
+  /* box-shadow: 0 0 0 170px #000932ce inset; */
+  /* box-shadow: 0 0 0 160px #0c0a15cf inset; */
+  box-shadow: 0 0 0 160px #333333d1 inset;
   /* opacity: 1; */
   cursor: pointer;
   transform: scale(1.05);
@@ -280,7 +271,7 @@ img {
   transform: scale(0);
   transition: 0.6s;
   /* transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
-  font-size: 20px;
+  font-size: 19px;
   color: var(--var-white-color);
   padding: 2rem;
 }
@@ -331,7 +322,8 @@ img {
 }
 
 .project-container .music-link, 
-.project-container .praxis-link {
+.project-container .praxis-link,
+.project-container .photo-link {
   position:absolute; 
   width:100%;
   height:100%;
@@ -345,7 +337,7 @@ img {
   width: 100%;
   height: 80vh;
   /* background-color: #858484; */
-  background-color: var(--var-light-color);
+  background-color: var(--var-black-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,7 +355,7 @@ form {
 }
 
 form h3 {
-  color: var(--var-primary-color);
+  color: var(--var-light-color);
   font-size: 36px;
   font-weight: bolder;
   letter-spacing: 2px;
@@ -375,10 +367,11 @@ form input, form textarea {
   padding: 18px;
   margin: 10px 0;
   border: 0;
-  border-bottom: 1px solid var(--var-darker-color);
+  border-bottom: 1px solid var(--var-white-color);
   outline: none;
-  background-color: var(--var-light-color);
+  background-color: var(--var-black-color);
   font-size: 18px;
+  color: var(--var-light-color);
 }
 
 form button {
@@ -428,7 +421,7 @@ form button:active {
 }
 
 #links a:hover {
-  color: var(--var-white-color);
+  color: var(--var-light-color);
 }
 
 #footer {
@@ -438,7 +431,7 @@ form button:active {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background: var(--var-black-color);
+  background: var(--var-darker-color);
   color: var(--var-light-color);
 }
 
@@ -476,7 +469,7 @@ form button:active {
   }
 
   #about p {
-    font-size: 22px;
+    font-size: 17px;
     padding: 0rem;
     padding: 1.5rem;
   }

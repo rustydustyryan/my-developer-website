@@ -23,7 +23,7 @@ function fadeIn() {
 // 'Project' Title Animation
 const title = document.querySelector('.main-title');
 
-title.innerHTML = title.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 50}ms">${letter}</span>`).join('');
+title.innerHTML = title.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 60}ms">${letter}</span>`).join('');
 
 window.addEventListener('scroll', wave);
 
