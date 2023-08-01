@@ -38,6 +38,9 @@ img {
 .hero {
   /* background-image: linear-gradient(rgba(18, 49, 122, 0.3),rgba(3, 5, 51, 0.3)); */
   position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
   height: 100vh;
   width: 100%;
   padding: 1rem;
@@ -46,6 +49,7 @@ img {
   grid-template-rows: repeat(5, 1fr);
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .hero .title {
@@ -107,12 +111,15 @@ img {
 
 .back-video {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   z-index: -1;
   object-fit: cover;
-  width: 100vw;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 /* About */
@@ -176,7 +183,6 @@ img {
 
 #projects h1 {
   font-weight: 300;
-  padding-bottom: 2rem;
 }
 
 #projects img {
@@ -210,16 +216,19 @@ img {
 
 #projects .project-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1fr);
   grid-gap: 2rem;
   background-color: var(--var-darker-color);
   text-align: center;
   align-items: center;
-  padding: 2rem;
+  justify-content: center;
+  /* padding: 2rem 8rem; */
 }
 
 .project-container div {
   color: var(--var-white-color);
+  width: 1000px;
+  margin: auto;
   /* opacity: 0.9; */
 }
 
@@ -229,9 +238,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 315px;
+  max-width: 1000px;
+  height: 69vh;
   border-radius: 15px;
+  margin: 2rem auto 5rem auto;
+  box-shadow: -40px 40px 80px #000;
 }
 
 .project-container .praxis > div {
@@ -263,26 +274,31 @@ img {
 }
 
 .project-container div > div:hover {
-  box-shadow: 0 0 0 160px #0c0a15cf inset;
   /* opacity: 1; */
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.04);
   transition: 0.3s ease-out;
 }
 
 .project-container p {
-  opacity: 0;
-  transform: scale(0);
-  transition: 0.6s;
+  box-shadow: 0 0 0 800px #0c0a15a0 inset;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1);
+  /* transition: 0.5s; */
   /* transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
-  font-size: 19px;
+  font-size: 28px;
   color: var(--var-white-color);
   padding: 2rem;
 }
 
 .project-container div > div:hover p {
-  opacity: 1;
-  transform: scale(1);
+  opacity: 0;
+  transform: scale(0);
 }
 
 .project-container div:not(:hover) {
@@ -290,7 +306,7 @@ img {
 }
 
 #projects .project-container .website {
-  transition: transform .5s ease-in-out;
+  transition: transform .6s ease-in-out;
   transform: translateX(400%);
 }
 
@@ -327,7 +343,10 @@ img {
 
 .project-container .music-link, 
 .project-container .praxis-link,
-.project-container .photo-link {
+.project-container .photo-link,
+.project-container .edge-link,
+.project-container .news-link,
+.project-container .hotel-link {
   position:absolute; 
   width:100%;
   height:100%;
@@ -445,6 +464,15 @@ form button:active {
 }
 
 @media (max-width: 820px) {
+  video {
+    transform: rotate(90deg);
+    object-fit: cover;
+    width: 100vw;
+    /* height: 100%; */
+    top: 0;
+    left: 0;
+  }
+
   .hero {
     grid-template-columns: 1fr;
   }
@@ -509,5 +537,9 @@ form button:active {
     display: grid;
     grid-template-columns: 1fr;
     padding: 0 1rem 1rem;
+  }
+
+  .project-container .website > div {
+    max-height: 50vh;
   }
 }

@@ -53,12 +53,12 @@ const websites = document.querySelectorAll('.website')
 window.addEventListener('scroll', slide);
 
 function slide() {
-  triggerBottom = window.innerHeight / 5 * 4;
+  triggerBottom = window.innerHeight / 5 * 4.8;
 
   websites.forEach((el, idx) => {
     const elTop = el.getBoundingClientRect().top;
 
-    el.style.transitionDelay = `${idx * 130}ms`;
+    // el.style.transitionDelay = `${idx * 130}ms`;
 
     if (elTop < triggerBottom) {
       el.classList.add('show');
