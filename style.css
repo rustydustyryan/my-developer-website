@@ -548,9 +548,13 @@ form button:active {
     display: grid;
     grid-template-columns: 1fr;
     padding: 0 1rem 1rem;
+    margin: 0;
+
   }
 
   .project-container .website > div {
     max-height: 50vh;
+    max-width: 80vw;
+    box-shadow: 0px 15px 30px var(--var-bright-blue);
   }
 }
