@@ -7,6 +7,7 @@
   --var-dark-blue: #011254;
   --var-black-color: #0C0A15;
   --var-darkish-color: #272E58;
+  /* --var-darkish-color: #4f4f4f; */
   --var-darker-color: #000932;
   --var-dark-color: #333;
   --var-grey-color: #646363;
@@ -240,9 +241,9 @@ img {
   align-items: center;
   max-width: 1000px;
   height: 69vh;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   margin: 2rem auto 5rem auto;
-  box-shadow: -40px 40px 80px #000;
+  box-shadow: 0px 40px 60px var(--var-bright-blue);
 }
 
 .project-container .praxis > div {
@@ -253,21 +254,29 @@ img {
   background-image: url(./media/musickeeps.jpg);
 }
 
-.project-container .photography-website > div {
-  background-image: url(./media/photography\ web.png);
+.project-container .dice-website > div {
+  background-image: url(./media/Screenshot\ 2023-08-07\ at\ 1.17.32\ PM.png);
 }
 
-.project-container .edge-ledger > div {
-  background-image: url(./media/Newsgrid.jpg);
+.project-container .mnd-website > div {
+  background-image: url(./media/Screenshot\ 2023-08-07\ at\ 1.57.19\ PM.png);
+}
+
+.project-container .photography-website > div {
+  background-image: url(./media/photography\ web.png);
 }
 
 .project-container .news-grid > div {
   background-image: url(./media/newsgrid1.jpg);
 }
 
-.project-container .hotel-website > div {
-  background-image: url(./media/hotel.jpg);
+.project-container .edge-ledger > div {
+  background-image: url(./media/Newsgrid.jpg);
 }
+
+/* .project-container .hotel-website > div {
+  background-image: url(./media/hotel.jpg);
+} */
 
 .project-container div > div {
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -281,7 +290,7 @@ img {
 }
 
 .project-container p {
-  box-shadow: 0 0 0 800px #0c0a15a0 inset;
+  box-shadow: 0 0 0 800px #0c0a15e1 inset;
   width: 100%;
   height: 100%;
   display: flex;
@@ -292,7 +301,7 @@ img {
   /* transition: 0.5s; */
   /* transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
   font-size: 28px;
-  color: var(--var-white-color);
+  color: var(--var-bright-blue);
   padding: 2rem;
 }
 
@@ -331,22 +340,24 @@ img {
 
 #projects .project-container .praxis,
 #projects .project-container .music-website,
+#projects .project-container .dice-website,
 #projects .project-container .photography-website,
 #projects .project-container .edge-ledger,
-#projects .project-container .news-grid,
-#projects .project-container .hotel-website
+#projects .project-container .news-grid
+/* #projects .project-container .hotel-website */
 {
   /* background: #858484; */
   background: var(--var-darker-color);
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
-.project-container .music-link, 
 .project-container .praxis-link,
+.project-container .music-link, 
+.project-container .dice-link,
+.project-container .mnd-link,
 .project-container .photo-link,
 .project-container .edge-link,
-.project-container .news-link,
-.project-container .hotel-link {
+.project-container .news-link {
   position:absolute; 
   width:100%;
   height:100%;
