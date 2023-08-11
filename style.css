@@ -426,7 +426,7 @@ form button {
 
 form button:hover {
   background-color: var(--var-secondary-color);
-  box-shadow: none;
+  box-shadow: var(--var-bright-blue) 1px 2px 10px;
 }
 
 form button:active {
@@ -454,9 +454,9 @@ form button:active {
 }
 
 #links a {
-  color: var(--var-darker-color);
-  text-shadow: var(--var-bright-blue) 1px 2px 10px;
-  padding: 0 1rem;
+  color: var(--var-grey-color);
+  /* text-shadow: var(--var-bright-blue) 1px 2px 10px; */
+  padding: 2rem 1rem;
 }
 
 #links a:hover {
