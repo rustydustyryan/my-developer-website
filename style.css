@@ -247,7 +247,7 @@ img {
 }
 
 .project-container .praxis > div {
-  background-image: url(./media/Screen\ Shot\ 2023-03-10\ at\ 11.07.09\ PM.png);
+  background-image: url(./media/praxis.png);
 }
 
 .project-container .amazingly-website > div {
@@ -255,15 +255,15 @@ img {
 }
 
 .project-container .dice-website > div {
-  background-image: url(./media/Screenshot\ 2023-08-07\ at\ 1.17.32\ PM.png);
+  background-image: url(./media/diceapp.png);
 }
 
 .project-container .mnd-website > div {
-  background-image: url(./media/Screenshot\ 2023-08-07\ at\ 1.57.19\ PM.png);
+  background-image: url(./media/mndbdy.png);
 }
 
 .project-container .photography-website > div {
-  background-image: url(./media/photography\ web.png);
+  background-image: url(./media/photoweb.png);
 }
 
 .project-container .music-website > div {
@@ -271,11 +271,11 @@ img {
 }
 
 .project-container .news-grid > div {
-  background-image: url(./media/newsgrid1.jpg);
+  background-image: url(./media/newsgrid.jpg);
 }
 
 .project-container .edge-ledger > div {
-  background-image: url(./media/Newsgrid.jpg);
+  background-image: url(./media/edgeledger.jpg);
 }
 
 /* .project-container .hotel-website > div {
