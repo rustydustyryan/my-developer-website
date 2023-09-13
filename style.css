@@ -298,21 +298,21 @@ img {
 }
 
 .project-container div > div:hover {
-  /* opacity: 1; */
+  box-shadow: 0 0 0 800px #0c0a15e1 inset;
+  opacity: 1;
   cursor: pointer;
   transform: scale(1.04);
   transition: 0.3s ease-out;
 }
 
 .project-container p {
-  box-shadow: 0 0 0 800px #0c0a15e1 inset;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
-  transform: scale(1);
+  opacity: 0;
+  transform: scale(0);
   font-size: 28px;
   color: var(--var-bright-blue);
   padding: 2rem;
@@ -320,8 +320,9 @@ img {
 }
 
 .project-container div > div:hover p {
-  opacity: 0;
-  transform: scale(0);
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.4s ease-out;
 }
 
 .project-container div:not(:hover) {
@@ -346,8 +347,7 @@ img {
 #projects .project-container .number-website,
 #projects .project-container .music-website,
 #projects .project-container .edge-ledger,
-#projects .project-container .news-grid
-{
+#projects .project-container .news-grid {
   background: var(--var-darker-color);
   padding: 1rem 0;
 }
@@ -570,9 +570,13 @@ form button:active {
 
   .project-container .website > div {
     max-height: 26rem;
-    max-width: 80vw;
-    box-shadow: 0px 15px 30px var(--var-bright-blue);
+    max-width: 90vw;
+    box-shadow: 0px 10px 25px var(--var-bright-blue);
     margin-top: 1rem;
     margin-bottom: 2rem;
+  }
+
+  .project-container .datamuseum-website > div {
+    background-position: right;
   }
 }
