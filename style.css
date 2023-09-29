@@ -239,13 +239,11 @@ img {
 #projects .project-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-gap: 2rem; */
   background-color: var(--var-darker-color);
   text-align: center;
   align-items: center;
   justify-content: center;
   padding: 0 2.5rem;
-  /* padding: 2rem 8rem; */
 }
 
 .project-container div {
@@ -266,6 +264,7 @@ img {
   border-radius: 16px;
   margin: 2rem auto 5rem auto;
   box-shadow: 0px 20px 30px var(--var-bright-blue);
+  opacity: 0.9;
 }
 
 .project-container .datamuseum-website > div {
@@ -324,7 +323,8 @@ img {
 }
 
 .project-container div > div:hover {
-  box-shadow: 0 0 0 400px #0c0a15e1 inset;
+  /* box-shadow: 0 0 0 400px #0c0a15e1 inset; */
+  opacity: 1;
   transform: scale(1.04);
   transition: 0.3s ease-out;
 }
@@ -337,10 +337,12 @@ img {
   align-items: center;
   opacity: 0;
   transform: scale(0);
-  font-size: 18px;
+  font-size: 17px;
   /* color: var(--var-bright-blue); */
-  padding: 6rem;
+  padding: .5rem 2rem;
   border-radius: 15px;
+  position: relative;
+  top: 192px;
 }
 
 .project-container div > div:hover p {
@@ -628,11 +630,13 @@ form button:active {
   }
 
   .project-container .website > div {
-    max-height: 36rem;
-    max-width: 90vw;
+    /* max-height: 36rem; */
+    max-width: 88vw;
+    height: 60vh;
     box-shadow: 0px 10px 25px var(--var-bright-blue);
     margin-top: 1rem;
     margin-bottom: 2rem;
+    opacity: 1;
   }
 
   .project-container .datamuseum-website > div, 
