@@ -58,7 +58,7 @@ function slideIn() {
   websites.forEach((el, idx) => {
     const elTop = el.getBoundingClientRect().top;
 
-    el.style.transitionDelay = `${idx * 130}ms`;
+    el.style.transitionDelay = `${idx * 120}ms`;
 
     if (elTop < triggerBottom) {
       el.classList.add('show');
@@ -66,5 +66,24 @@ function slideIn() {
       el.classList.remove('show');
     }
   });
+}
+
+// 'Resume' Grow Animation
+const resume = document.getElementById('resume');
+const circle = document.getElementById('ryan-circle');
+const clickMe = document.getElementById('click-me');
+const description = document.getElementById('description');
+
+circle.addEventListener('click', grow);
+clickMe.addEventListener('click', grow);
+
+// q: is mouse-over the right event to use here?
+function grow() {
+  circle.style.transform = 'scale(0)';
+  circle.style.display = 'none';
+  clickMe.style.display = 'none';
+  resume.style.display = 'inline';
+  description.style.display = 'block';
+  clickMe.style.display = 'none';
 }
 
