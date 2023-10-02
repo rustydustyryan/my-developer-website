@@ -17,9 +17,6 @@ function fadeIn() {
   });
 }
 
-
-
-
 // 'Project' Title Animation
 const title = document.querySelector('.main-title');
 

@@ -78,6 +78,7 @@ img {
   animation-name: pos;
   animation-delay: 2.7s;
   animation-fill-mode: forwards;
+  animation-duration: .7s;
 }
 
 .hero h2 span {
@@ -86,6 +87,7 @@ img {
   animation-name: pos;
   animation-delay: 3.3s;
   animation-fill-mode: forwards;
+  animation-duration: .7s;
 }
 
 @keyframes pos {
