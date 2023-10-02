@@ -71,13 +71,12 @@ img {
 .hero .position {
   grid-column: 1 / span 2;
   letter-spacing: .5rem;
-  font-size: 20px;
+  font-size: 21px;
   color: var(--var-light-color);
   padding-left: 4rem;
   opacity: 0;
   animation-name: pos;
-  animation-delay: 3s;
-  animation-duration: 100ms;
+  animation-delay: 2.7s;
   animation-fill-mode: forwards;
 }
 
@@ -85,8 +84,7 @@ img {
   color: var(--var-bright-blue);
   opacity: 0;
   animation-name: pos;
-  animation-delay: 3.5s;
-  animation-duration: 100ms;
+  animation-delay: 3.2s;
   animation-fill-mode: forwards;
 }
 
@@ -285,7 +283,7 @@ img {
 }
 
 .project-container .photography-website > div {
-  background-image: url(/media/photoweb.png);
+  background-image: url(/media/photoweb.jpg);
 }
 
 .project-container .dice-website > div {
@@ -312,7 +310,7 @@ img {
 }
 
 .project-container .todo-website > div {
-  background-image: url(/media/todo.png);
+  background-image: url(/media/todo.jpg);
 }
 
 .project-container div > div {
