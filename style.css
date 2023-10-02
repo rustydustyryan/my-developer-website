@@ -265,54 +265,54 @@ img {
 }
 
 .project-container .datamuseum-website > div {
-  background-image: url(./media/datamuseum.png);
+  background-image: url(/media/datamuseum.png);
 }
 
 .project-container .praxis-website > div {
-  background-image: url(./media/praxis.png);
+  background-image: url(/media/praxis.png);
 }
 
 .project-container .weather-website > div {
-  background-image: url(./media/weather.png);
+  background-image: url(/media/weather.png);
 }
 
 .project-container .amazingly-website > div {
-  background-image: url(./media/amazingly.png);
+  background-image: url(/media/amazingly.png);
 }
 
 .project-container .mnd-website > div {
-  background-image: url(./media/mndbdy.png);
+  background-image: url(/media/mndbdy.png);
 }
 
 .project-container .photography-website > div {
-  background-image: url(./media/photoweb.png);
+  background-image: url(/media/photoweb.png);
 }
 
 .project-container .dice-website > div {
-  background-image: url(./media/diceapp.png);
+  background-image: url(/media/diceapp.png);
 }
 
 .project-container .number-website > div {
-  background-image: url(./media/numberguess.png);
+  background-image: url(/media/numberguess.png);
 }
 /* .project-container .music-website > div {
   background-image: url(./media/musickeeps.jpg);
 } */
 
 .project-container .news-website > div {
-  background-image: url(./media/newsgrid.jpg);
+  background-image: url(/media/newsgrid.jpg);
 }
 
 .project-container .edge-website > div {
-  background-image: url(./media/edgeledger.jpg);
+  background-image: url(/media/edgeledger.jpg);
 }
 
 .project-container .hotel-website > div {
-  background-image: url(./media/hotel.jpg);
+  background-image: url(/media/hotel.jpg);
 }
 
 .project-container .todo-website > div {
-  background-image: url(./media/todo.png);
+  background-image: url(/media/todo.png);
 }
 
 .project-container div > div {
