@@ -84,7 +84,7 @@ img {
   color: var(--var-bright-blue);
   opacity: 0;
   animation-name: pos;
-  animation-delay: 3.2s;
+  animation-delay: 3.3s;
   animation-fill-mode: forwards;
 }
 
@@ -263,11 +263,11 @@ img {
 }
 
 .project-container .datamuseum-website > div {
-  background-image: url(/media/datamuseum.png);
+  background-image: url(/media/datamuseum.jpg);
 }
 
 .project-container .praxis-website > div {
-  background-image: url(/media/praxis.png);
+  background-image: url(/media/praxis.jpg);
 }
 
 .project-container .weather-website > div {
@@ -275,11 +275,11 @@ img {
 }
 
 .project-container .amazingly-website > div {
-  background-image: url(/media/amazingly.png);
+  background-image: url(/media/amazingly.jpg);
 }
 
 .project-container .mnd-website > div {
-  background-image: url(/media/mndbdy.png);
+  background-image: url(/media/mndbdy.jpg);
 }
 
 .project-container .photography-website > div {
