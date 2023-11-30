@@ -76,18 +76,18 @@ img {
   padding-left: 4rem;
   opacity: 0;
   animation-name: pos;
-  animation-delay: 2.7s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
-  animation-duration: .7s;
+  animation-duration: .5s;
 }
 
 .hero h2 span {
   color: var(--var-bright-blue);
   opacity: 0;
   animation-name: pos;
-  animation-delay: 3.3s;
+  animation-delay: 2.5s;
   animation-fill-mode: forwards;
-  animation-duration: .7s;
+  animation-duration: .5s;
 }
 
 @keyframes pos {
@@ -185,6 +185,7 @@ img {
   border-left: var(--var-bright-blue) solid 2px;
   margin: 0 6rem 2rem 6rem;
   padding: 1rem 2rem;
+  margin-top: 1.5rem;
 }
 
 .about-content .pop {
@@ -209,11 +210,11 @@ img {
 #projects .projects-title {
   background-color: var(--var-darker-color);
   color: var(--var-white-color);
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0 0rem 0;
   font-size: 35px;
   letter-spacing: 1rem;
   position: relative;
-  height: 10rem;
+  height: 8.5rem;
   margin: auto;
   text-align: center;
 }
@@ -223,7 +224,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   top: -110px;
-  left: 0;
+  left: 15px;
   right: 0;
   text-align: center;
 }
@@ -232,6 +233,125 @@ img {
   display: inline-block;
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transform: translateY(140px);
+}
+
+#projects .filter-results {
+  background-color: var(--var-darker-color);
+  color: var(--var-white-color);
+  text-align: center;
+}
+
+#projects .filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 2rem auto; */
+  padding: 1rem;
+  background-color: var(--var-darker-color);
+  color: var(--var-white-color);
+}
+
+#projects .filter > label {
+  padding-right: 1.5rem;
+  margin-left: .3rem;
+}
+
+#projects .results {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--var-darker-color);
+  color: var(--var-white-color);
+}
+
+#projects .highlight-container {
+  background-color: var(--var-darker-color);
+  color: var(--var-white-color);
+  text-align: center;
+  padding: 0 3rem;
+}
+
+#projects .highlight-container h1 {
+  font-size: 2.1rem
+}
+
+#projects .dating-website {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  background-color: var(--var-darker-color);
+  color: var(--var-white-color);
+}
+
+#projects .dating-website .ifame-technologies {
+  border: var(--var-light-color) solid 1px;
+  border-radius: 10px;
+  padding: 2rem;
+  justify-self: center;
+  grid-column: 1 / span 1;
+  width: 70%;
+  margin: auto;
+}
+
+#projects .dating-website .ifame-technologies h2 {
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+#projects .dating-website .ifame-technologies h4 {
+  font-size: 1.3rem;
+  border: var(--var-light-color) solid 1px;
+  border-radius: 6px;
+  padding: .5rem;
+  margin-top: 1rem;
+}
+
+#projects .dating-website .ifame-technologies h4:hover {
+  background-color: var(--var-secondary-color);
+  cursor: pointer;
+}
+
+#projects .dating-website .iframe-container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 1rem;
+  grid-column: 2 / span 1;
+  width: 100%;
+}
+
+#projects .dating-website .iframe-title h1 {
+  font-size: 1.7rem;
+}
+
+#projects .dating-website .iframe-title h1 > strong {
+  font-size: 2.2rem;
+}
+
+#projects .dating-website .iframe-description {
+  grid-column: 3 / span 1;
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  background-color: var(--var-darker-color);
+  color: var(--var-white-color);
+  border: var(--var-light-color) solid 1px;
+  border-radius: 10px;
+  width: 70%;
+  margin: 2rem auto;
+}
+
+#projects .dating-website .iframe-description h2 {
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+.hide {
+  display: none;
 }
 
 #projects .project-container {
@@ -353,7 +473,7 @@ img {
 }
 
 #projects .project-container .website {
-  transition: transform .6s ease-in-out;
+  /* transition: transform .6s ease-in-out; */
   transform: translateX(400%);
 }
 
@@ -399,6 +519,10 @@ img {
 
 /* Resume */
 .resume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--var-black-color);
   color: var(--var-white-color);
   padding: 2rem 0 0 0;
@@ -408,15 +532,16 @@ img {
 }
 
 .resume img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  max-width: 280px;
-  margin: auto;
-  padding: .5rem 0 2rem 0;
+  /* max-width: 280px; */
+  max-width: 16.5vw;
+  aspect-ratio: 1/1;
   cursor: pointer;
+  object-position: 50% 20%;
   border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .resume img:hover {
@@ -455,7 +580,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4rem auto;
+  margin: 3rem auto;
   padding: 3rem 0;
   /* border-left: var(--var-bright-blue) solid 2px; */
   /* border-right: var(--var-bright-blue) solid 2px; */
@@ -636,6 +761,52 @@ form button:active {
     text-align: center;
   }
 
+  #projects .highlight-container {
+    padding: 0;
+  }
+
+  #projects .dating-website {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  #projects .dating-website .ifame-technologies {
+    width: 90%;
+    grid-row: 2;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+
+  #projects .dating-website .iframe-container {
+    padding: 0;
+    grid-column: 1 / span 1;
+    width: 100%;
+  }
+
+  #projects .dating-website .iframe-title h1 {
+    margin-top: 3rem;
+  }
+
+  #projects .dating-website .iframe-description {
+    /* grid-column: 1; */
+    width: 90%;
+    grid-row: 3;
+  }
+
+  #projects .filter {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #projects .filter > label {
+    padding-right: 0;
+    margin-left: -1.8rem;
+  }
+
   #projects .project-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -682,5 +853,9 @@ form button:active {
 
   .resume p {
     font-size: 12px;
+  }
+
+  .form-container {
+    margin: 2rem 0;
   }
 }

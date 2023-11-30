@@ -20,7 +20,7 @@ function fadeIn() {
 // 'Project' Title Animation
 const title = document.querySelector('.main-title');
 
-title.innerHTML = title.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 60}ms">${letter}</span>`).join('');
+title.innerHTML = title.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 60}ms; text-align: center;">${letter}</span>`).join('');
 
 window.addEventListener('scroll', wave);
 
@@ -33,16 +33,12 @@ function wave() {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 
-        console.log(window.innerHeight);
-
   Array.from(title.children).forEach((el) => {
     if (elTop < triggerBottom) {
       el.classList.add('show');
     }
   });
 }
-
-
 
 // 'Projects' Slide In Animation
 const websites = document.querySelectorAll('.website')
@@ -55,7 +51,7 @@ function slideIn() {
   websites.forEach((el, idx) => {
     const elTop = el.getBoundingClientRect().top;
 
-    el.style.transitionDelay = `${idx * 120}ms`;
+    // el.style.transitionDelay = `${idx * 100}ms`;
 
     if (elTop < triggerBottom) {
       el.classList.add('show');
@@ -64,6 +60,76 @@ function slideIn() {
     }
   });
 }
+
+// 'Projects' filter results
+const inputs = document.querySelectorAll('input');
+
+inputs.forEach((input) => {
+  input.addEventListener('change', filterResults);
+});
+
+function filterResults() {
+  const results = document.querySelector('.results');
+  if (inputs[0].checked) {
+    results.innerHTML = '';
+  } else {
+    results.innerHTML = `displaying results for: ${inputs[1].checked ? 'HTML' : ''} ${inputs[2].checked ? 'CSS/SASS' : ''} ${inputs[3].checked ? 'JavaScript' : ''} ${inputs[4].checked ? 'TypeScript' : ''} ${inputs[5].checked ? 'React' : ''} ${inputs[6].checked ? 'WordPress' : ''} ${inputs[7].checked ? 'API' : ''}`;
+  }
+
+  // Add to end of results.innerHTML when I have more projects
+  // ${inputs[8].checked ? 'Node.js' : ''} ${inputs[9].checked ? 'Shell' : ''} ${inputs[10].checked ? 'Bootstrap' : ''}
+
+  if (inputs[0].checked) {
+    websites.forEach((el) => {
+      el.classList.remove('hide');
+    });
+  } else if (inputs[1].checked) {
+    websites.forEach((el) => {
+      el.classList.contains('html') ? el.classList.remove('hide') : el.classList.add('hide');
+    });
+  } else if (inputs[2].checked) {
+    websites.forEach((el) => {
+      el.classList.contains('css') ? el.classList.remove('hide') : el.classList.add('hide');
+    });
+  } else if (inputs[3].checked) {
+    websites.forEach((el) => {
+      el.classList.contains('javascript') ? el.classList.remove('hide') : el.classList.add('hide');
+    });
+  } else if (inputs[4].checked) {
+    websites.forEach((el) => {
+      el.classList.contains('typescript') ? el.classList.remove('hide') : el.classList.add('hide');
+    });
+  } else if (inputs[5].checked) {
+    websites.forEach((el) => {
+      el.classList.contains('react') ? el.classList.remove('hide') : el.classList.add('hide');
+    });
+  } else if (inputs[6].checked) {
+    websites.forEach((el) => {
+      el.classList.contains('wordpress') ? el.classList.remove('hide') : el.classList.add('hide');
+    });
+  } else if (inputs[7].checked) {
+    websites.forEach((el) => {
+      el.classList.contains('api') ? el.classList.remove('hide') : el.classList.add('hide');
+    });
+  // } else if (inputs[8].checked) {
+  //   websites.forEach((el) => {
+  //     el.classList.contains('node') ? el.classList.remove('hide') : el.classList.add('hide');
+  //   });
+  // } else if (inputs[9].checked) {
+  //   websites.forEach((el) => {
+  //     el.classList.contains('shell') ? el.classList.remove('hide') : el.classList.add('hide');
+  //   });
+  // } else if (inputs[10].checked) {
+  //   websites.forEach((el) => {
+  //     el.classList.contains('bootstrap') ? el.classList.remove('hide') : el.classList.add('hide');
+  //   });
+  } else {
+    websites.forEach((el) => {
+      el.classList.add('hide');
+    });
+  }
+}
+
 
 // 'Resume' Grow Animation
 const resume = document.getElementById('resume');
