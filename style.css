@@ -197,6 +197,7 @@ img {
 /* Projects */
 #projects {
   overflow: hidden;
+  background: var(--var-darker-color);
 }
 
 #projects h1 {
@@ -208,7 +209,6 @@ img {
 }
 
 #projects .projects-title {
-  background-color: var(--var-darker-color);
   color: var(--var-white-color);
   padding: 1rem 0 0rem 0;
   font-size: 35px;
@@ -235,8 +235,131 @@ img {
   transform: translateY(140px);
 }
 
+#projects .highlight-container {
+  margin-bottom: -.5rem;
+}
+
+#projects .highlight-container,
+#projects .highlight-container-2 {
+  color: var(--var-white-color);
+  text-align: center;
+  padding: 0 3rem;
+}
+
+#projects .highlight-container h1,
+#projects .highlight-container-2 h1 {
+  font-size: 2.1rem
+}
+
+#projects .dating-website {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  color: var(--var-white-color);
+}
+
+#projects .dating-website .ifame-technologies,
+#projects .dating-website .iframe-description {
+  width: 70%;
+}
+
+#projects .dating-website .ifame-technologies,
+#projects .youtube-website .youtube-technologies {
+  border: var(--var-light-color) solid 1px;
+  border-radius: 10px;
+  padding: 2rem;
+  justify-self: center;
+  grid-column: 1 / span 1;
+  margin: auto;
+  box-shadow: 0px 20px 30px var(--var-bright-blue);
+}
+
+#projects .dating-website .ifame-technologies h2,
+#projects .youtube-website .youtube-technologies h2 {
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+#projects .dating-website .ifame-technologies h4,
+#projects .youtube-website .youtube-technologies h4 {
+  font-size: 1.3rem;
+  border: var(--var-light-color) solid 1px;
+  border-radius: 6px;
+  padding: .5rem;
+  margin-top: 1rem;
+}
+
+#projects .dating-website .ifame-technologies h4:hover,
+#projects .youtube-website .youtube-technologies h4:hover {
+  background-color: var(--var-secondary-color);
+  cursor: pointer;
+}
+
+#projects .dating-website .iframe-container {
+  grid-column: 2 / span 1;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+#projects .dating-website .iframe-title h1 {
+  font-size: 1.7rem;
+}
+
+#projects .dating-website .iframe-title h1 > strong {
+  font-size: 2.2rem;
+}
+
+#projects .dating-website .iframe-description,
+#projects .youtube-website .youtube-description {
+  grid-column: 3 / span 1;
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--var-white-color);
+  border: var(--var-light-color) solid 1px;
+  border-radius: 10px;
+  margin: 2rem auto;
+  box-shadow: 0px 20px 30px var(--var-bright-blue);
+}
+
+#projects .dating-website .iframe-description h2 {
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+#projects .youtube-img-container {
+  display: block;
+  margin: 4rem;
+  border-radius: 5px;
+}
+
+#projects .youtube-img-container img {
+  box-shadow: 0px 20px 30px var(--var-bright-blue);
+  object-fit: cover;
+}
+
+.youtube-desc-tech-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#projects .youtube-website .youtube-technologies,
+#projects .youtube-website .youtube-description {
+  width: 27%;
+  margin-bottom: 6rem;
+}
+
+.hide {
+  display: none;
+}
+
 #projects .filter-results {
-  background-color: var(--var-darker-color);
   color: var(--var-white-color);
   text-align: center;
 }
@@ -247,7 +370,6 @@ img {
   align-items: center;
   /* margin: 2rem auto; */
   padding: 1rem;
-  background-color: var(--var-darker-color);
   color: var(--var-white-color);
 }
 
@@ -260,104 +382,12 @@ img {
   display: block;
   text-align: center;
   padding: 1rem;
-  background-color: var(--var-darker-color);
   color: var(--var-white-color);
-}
-
-#projects .highlight-container {
-  background-color: var(--var-darker-color);
-  color: var(--var-white-color);
-  text-align: center;
-  padding: 0 3rem;
-}
-
-#projects .highlight-container h1 {
-  font-size: 2.1rem
-}
-
-#projects .dating-website {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  padding: 1rem;
-  background-color: var(--var-darker-color);
-  color: var(--var-white-color);
-}
-
-#projects .dating-website .ifame-technologies {
-  border: var(--var-light-color) solid 1px;
-  border-radius: 10px;
-  padding: 2rem;
-  justify-self: center;
-  grid-column: 1 / span 1;
-  width: 70%;
-  margin: auto;
-}
-
-#projects .dating-website .ifame-technologies h2 {
-  font-size: 1.7rem;
-  padding-bottom: 1rem;
-}
-
-#projects .dating-website .ifame-technologies h4 {
-  font-size: 1.3rem;
-  border: var(--var-light-color) solid 1px;
-  border-radius: 6px;
-  padding: .5rem;
-  margin-top: 1rem;
-}
-
-#projects .dating-website .ifame-technologies h4:hover {
-  background-color: var(--var-secondary-color);
-  cursor: pointer;
-}
-
-#projects .dating-website .iframe-container {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  padding: 1rem;
-  grid-column: 2 / span 1;
-  width: 100%;
-}
-
-#projects .dating-website .iframe-title h1 {
-  font-size: 1.7rem;
-}
-
-#projects .dating-website .iframe-title h1 > strong {
-  font-size: 2.2rem;
-}
-
-#projects .dating-website .iframe-description {
-  grid-column: 3 / span 1;
-  padding: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  background-color: var(--var-darker-color);
-  color: var(--var-white-color);
-  border: var(--var-light-color) solid 1px;
-  border-radius: 10px;
-  width: 70%;
-  margin: 2rem auto;
-}
-
-#projects .dating-website .iframe-description h2 {
-  font-size: 1.7rem;
-  padding-bottom: 1rem;
-}
-
-.hide {
-  display: none;
 }
 
 #projects .project-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: var(--var-darker-color);
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -493,7 +523,6 @@ img {
 #projects .project-container .edge-website,
 #projects .project-container .hotel-website,
 #projects .project-container .todo-website {
-  background: var(--var-darker-color);
   padding: 1rem 0;
 }
 
@@ -761,7 +790,8 @@ form button:active {
     text-align: center;
   }
 
-  #projects .highlight-container {
+  #projects .highlight-container,
+  #projects .highlight-container-2 {
     padding: 0;
   }
 
@@ -776,7 +806,7 @@ form button:active {
 
   #projects .dating-website .ifame-technologies {
     width: 90%;
-    grid-row: 2;
+    grid-row: 3;
     padding: 1rem;
     margin-top: 3rem;
   }
@@ -788,14 +818,42 @@ form button:active {
   }
 
   #projects .dating-website .iframe-title h1 {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 
   #projects .dating-website .iframe-description {
-    /* grid-column: 1; */
     width: 90%;
-    grid-row: 3;
+    grid-row: 2;
   }
+
+  #projects .youtube-website {
+    width: 100%;
+    padding: 0;
+  }
+
+  #projects .youtube-website .youtube-title {
+    margin-top: 3rem;
+  }
+
+  #projects .youtube-website .youtube-desc-tech-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  #projects .youtube-img-container {
+    margin: 3rem 0;
+    padding: 0 1.3rem;
+  }
+
+  .youtube-desc-tech-container {
+    flex-direction: column;
+  }
+
+  #projects .youtube-website .youtube-technologies,
+  #projects .youtube-website .youtube-description {
+  width: 100%;
+  margin-bottom: 5rem;
+}
 
   #projects .filter {
     display: grid;
@@ -843,6 +901,10 @@ form button:active {
   .project-container .mnd-website > div {
     object-fit: fill;
     background-position: 79% 70%;
+  }
+
+  .resume img {
+    max-width: 55vw;
   }
 
   .resume embed {

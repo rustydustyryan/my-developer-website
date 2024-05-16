@@ -51,7 +51,7 @@ function slideIn() {
   websites.forEach((el, idx) => {
     const elTop = el.getBoundingClientRect().top;
 
-    // el.style.transitionDelay = `${idx * 100}ms`;
+    el.style.transitionDelay = `${idx * 70}ms`;
 
     if (elTop < triggerBottom) {
       el.classList.add('show');
