@@ -169,8 +169,12 @@ img {
   z-index: 4;
 }
 
+.about-content > p.show {
+  font-size: 1.15rem;
+}
+
 #about p {
-  font-size: 20px;
+  font-size: 1.3rem;
   padding-left: 6rem;
 }
 
@@ -322,7 +326,7 @@ img {
   justify-self: center;
   grid-column: 1 / span 1;
   margin: auto;
-  box-shadow: 0px 20px 30px var(--var-bright-blue);
+  box-shadow: 0px 12px 25px var(--var-bright-blue);
   width: 70%;
   background: var(--var-darker-color);
 }
@@ -374,7 +378,7 @@ img {
     var(--var-secondary-color) 0%,
     var(--var-primary-color) 100%
   ); */
-  background: linear-gradient(162deg, rgba(0,9,50,1) 30%, rgba(13,131,231,1) 39%, rgba(180,62,36,1) 64%, rgba(0,9,50,1) 78%);
+  background: linear-gradient(162deg, rgba(0,9,50,1) 30%, rgba(180,62,36,1)  39%, rgba(13,131,231,1) 64%, rgba(0,9,50,1) 78%);
   padding-top: 4rem;
 }
 
@@ -387,11 +391,12 @@ img {
   color: var(--var-white-color);
   border: var(--var-light-color) solid 1px;
   border-radius: 10px;
-  margin: 2rem auto;
-  box-shadow: 0px 20px 30px var(--var-black-color);
+  box-shadow: 0px 12px 25px var(--var-bright-blue);
   background: var(--var-darker-color);
   width: 27%;
-  margin-bottom: 6rem;
+  margin: 2rem auto;
+  margin-bottom: 4rem;
+  margin-top: 0;
 }
 
 #projects .youtube-website .youtube-technologies h4:hover {
@@ -407,7 +412,7 @@ img {
 
 #projects .youtube-img-container img {
   /* box-shadow: 0px 20px 30px var(--var-bright-blue); */
-  box-shadow: 0px 20px 30px var(--var-black-color);
+  box-shadow: 0px 12px 25px var(--var-black-color);
   object-fit: cover;
   border: 1px var(--var-light-color) solid;
 }
@@ -475,9 +480,10 @@ img {
   height: 320px;
   border-radius: 16px;
   margin: 2rem auto 5rem auto;
-  box-shadow: 0px 20px 30px var(--var-bright-blue);
-  opacity: 0.8;
+  box-shadow: 0px 15px 25px var(--var-bright-blue);
+  opacity: 1;
   border: 1px var(--var-light-color) solid;
+  transition: 0.4s ease-out;
 }
 
 .project-container .datamuseum-website > div {
@@ -536,8 +542,8 @@ img {
 }
 
 .project-container div > div:hover {
-  /* box-shadow: 0 0 0 400px #0c0a15e1 inset; */
-  opacity: 1;
+  box-shadow: 0 0 0 200px #000932c4 inset;
+  /* opacity: 0.4; */
   transform: scale(1.045);
   transition: 0.2s ease-out;
 }
@@ -555,7 +561,8 @@ img {
   border-radius: 15px;
   position: relative;
   /* top: 200px; */
-  top: 22vh;
+  /* NO */
+  /* top: 30vh; */
 }
 
 .project-container div > div:hover p {
@@ -655,7 +662,7 @@ img {
 }
 
 .resume embed:hover {
-  box-shadow: 0px 15px 45px var(--var-bright-blue);
+  box-shadow: 0px 15px 40px var(--var-bright-blue);
 }
 
 #click-me {
@@ -994,7 +1001,7 @@ form button:active {
   .project-container .website > div {
     max-width: 88vw;
     height: 60vh;
-    box-shadow: 0px 10px 25px var(--var-bright-blue);
+    box-shadow: 0px 15px 25px var(--var-bright-blue);
     margin-top: 1rem;
     margin-bottom: 2rem;
     opacity: 1;
