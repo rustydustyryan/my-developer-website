@@ -138,7 +138,6 @@ img {
 
 /* About */
 .about-content {
-  background: var(--var-black-color);
   color: var(--var-white-color);
   min-height: 50vh;
   display: grid;
@@ -146,52 +145,101 @@ img {
   /* grid-template-rows: repeat(4, 1fr); */
   overflow: hidden;
   line-height: 1.6;
+  background: linear-gradient(137deg, rgb(12, 10, 21) 30%, rgb(0, 9, 50) 75%);
+  padding: 4rem 6rem 6rem 8rem;
 }
 
 .about-content .greet {
   font-size: 75px;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 1;
   align-items: center;
   color: var(--var-bright-blue);
-  padding: 1rem 0 0 6rem;
 }
 
-.about-content > * {
+.about-content > h1, 
+.about-content > p {
   opacity: 0;
-  transition: opacity 3s ease;
+  transition: opacity 2.5s ease;
+  z-index: 4;
 }
 
-.about-content > *.show {
+.about-content > h1.show, 
+.about-content > p.show {
   opacity: 1;
+  z-index: 4;
 }
 
 #about p {
-  font-size: 21px;
+  font-size: 20px;
+  padding-left: 6rem;
 }
 
 #about .p-1 {
   grid-column: 1 / span 1;
   padding: 0 1rem 0 6rem;
+  z-index: 4;
 }
 
-#about .p-2 {
+/* #about .p-2 {
   grid-column: 2 / span 1;
   padding: 0 6rem 1rem 1rem;
-}
+} */
 
 #about .p-3 {
-  grid-column: 1 / span 2;
-  border-right: var(--var-bright-blue) solid 2px;
-  border-left: var(--var-bright-blue) solid 2px;
-  margin: 0 6rem 2rem 6rem;
-  padding: 1rem 2rem;
+  grid-column: 1 / span 1;
+  /* border-right: var(--var-bright-blue) solid 2px; */
+  /* border-left: var(--var-bright-blue) solid 2px; */
+  margin: 0 0rem 2rem 6rem;
+  /* padding: 1rem 2rem; */
   margin-top: 1.5rem;
+  z-index: 4;
 }
 
 .about-content .pop {
   color: var(--var-bright-blue);
   letter-spacing: 2px;
   font-size: larger;
+}
+
+.about-content .about-img {
+  width: 100%;
+  height: auto;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content .about-img {
+  width: 100%;
+  height: 100%;
+  margin: 0 1rem;
+}
+
+.about-content .about-img .img-container img {
+  border-radius: 15px;
+  width: 430px;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.img-container::after {
+  content: '';
+  /* background-image: url(/media/gradient-1.png); */
+  background: linear-gradient(162deg, rgba(0,9,50,1) 30%, rgba(13,131,231,1) 39%, rgba(180,62,36,1) 64%, rgba(0,9,50,1) 78%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 430px;
+  height: 556px;
+  border-radius: 15px;
+  z-index: 99;
+  top: 1160px;
+  right: 170px;
+  z-index: 0;
 }
 
 /* Projects */
@@ -227,6 +275,7 @@ img {
   left: 15px;
   right: 0;
   text-align: center;
+  font-size: 3.5rem;
 }
 
 #projects .main-title span.show {
@@ -237,6 +286,7 @@ img {
 
 #projects .highlight-container {
   margin-bottom: -.5rem;
+  background: radial-gradient(circle, rgba(13,131,231,1) 0%, rgba(0,9,50,1) 37%);
 }
 
 #projects .highlight-container,
@@ -246,8 +296,8 @@ img {
   padding: 0 3rem;
 }
 
-#projects .highlight-container h1,
-#projects .highlight-container-2 h1 {
+#projects .highlight-container .highlight-title,
+#projects .highlight-container-2 .highlight-2-title {
   font-size: 2.1rem
 }
 
@@ -262,29 +312,28 @@ img {
   color: var(--var-white-color);
 }
 
-#projects .dating-website .ifame-technologies,
+#projects .dating-website .iframe-technologies,
 #projects .dating-website .iframe-description {
-  width: 70%;
-}
-
-#projects .dating-website .ifame-technologies,
-#projects .youtube-website .youtube-technologies {
   border: var(--var-light-color) solid 1px;
   border-radius: 10px;
+  font-size: 1.2rem;
+  line-height: 1.6;
   padding: 2rem;
   justify-self: center;
   grid-column: 1 / span 1;
   margin: auto;
   box-shadow: 0px 20px 30px var(--var-bright-blue);
+  width: 70%;
+  background: var(--var-darker-color);
 }
 
-#projects .dating-website .ifame-technologies h2,
+#projects .dating-website .iframe-technologies h2,
 #projects .youtube-website .youtube-technologies h2 {
   font-size: 1.7rem;
   padding-bottom: 1rem;
 }
 
-#projects .dating-website .ifame-technologies h4,
+#projects .dating-website .iframe-technologies h4,
 #projects .youtube-website .youtube-technologies h4 {
   font-size: 1.3rem;
   border: var(--var-light-color) solid 1px;
@@ -293,8 +342,7 @@ img {
   margin-top: 1rem;
 }
 
-#projects .dating-website .ifame-technologies h4:hover,
-#projects .youtube-website .youtube-technologies h4:hover {
+#projects .dating-website .iframe-technologies h4:hover {
   background-color: var(--var-secondary-color);
   cursor: pointer;
 }
@@ -308,14 +356,30 @@ img {
 
 #projects .dating-website .iframe-title h1 {
   font-size: 1.7rem;
+  padding-bottom: 1rem;
 }
 
 #projects .dating-website .iframe-title h1 > strong {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
-#projects .dating-website .iframe-description,
-#projects .youtube-website .youtube-description {
+#projects .dating-website .iframe-description h2 {
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+#projects .highlight-container-2 {
+  /* background-image: radial-gradient(
+    farthest-corner at 240px 1400px,
+    var(--var-secondary-color) 0%,
+    var(--var-primary-color) 100%
+  ); */
+  background: linear-gradient(162deg, rgba(0,9,50,1) 30%, rgba(13,131,231,1) 39%, rgba(180,62,36,1) 64%, rgba(0,9,50,1) 78%);
+  padding-top: 4rem;
+}
+
+#projects .youtube-website .youtube-description,
+#projects .youtube-website .youtube-technologies {
   grid-column: 3 / span 1;
   padding: 2rem;
   font-size: 1.2rem;
@@ -324,12 +388,15 @@ img {
   border: var(--var-light-color) solid 1px;
   border-radius: 10px;
   margin: 2rem auto;
-  box-shadow: 0px 20px 30px var(--var-bright-blue);
+  box-shadow: 0px 20px 30px var(--var-black-color);
+  background: var(--var-darker-color);
+  width: 27%;
+  margin-bottom: 6rem;
 }
 
-#projects .dating-website .iframe-description h2 {
-  font-size: 1.7rem;
-  padding-bottom: 1rem;
+#projects .youtube-website .youtube-technologies h4:hover {
+  background-color: var(--var-secondary-color);
+  cursor: pointer;
 }
 
 #projects .youtube-img-container {
@@ -339,7 +406,8 @@ img {
 }
 
 #projects .youtube-img-container img {
-  box-shadow: 0px 20px 30px var(--var-bright-blue);
+  /* box-shadow: 0px 20px 30px var(--var-bright-blue); */
+  box-shadow: 0px 20px 30px var(--var-black-color);
   object-fit: cover;
   border: 1px var(--var-light-color) solid;
 }
@@ -350,12 +418,6 @@ img {
   align-items: center;
 }
 
-#projects .youtube-website .youtube-technologies,
-#projects .youtube-website .youtube-description {
-  width: 27%;
-  margin-bottom: 6rem;
-}
-
 .hide {
   display: none;
 }
@@ -363,6 +425,8 @@ img {
 #projects .filter-results {
   color: var(--var-white-color);
   text-align: center;
+  margin-top: 2rem;
+  font-weight: 400;
 }
 
 #projects .filter {
@@ -556,10 +620,9 @@ img {
   flex-direction: column;
   background-color: var(--var-black-color);
   color: var(--var-white-color);
-  padding: 2rem 0 0 0;
+  padding: 2rem 0;
   text-align: center;
-  /* border-left: var(--var-bright-blue) solid 2px; */
-  /* border-right: var(--var-bright-blue) solid 2px; */
+  background-image: radial-gradient( farthest-corner at 240px 1000px, var(--var-secondary-color) 0%, var(--var-primary-color) 100% );
 }
 
 .resume img {
@@ -614,8 +677,6 @@ img {
   align-items: center;
   margin: 3rem auto;
   padding: 3rem 0;
-  /* border-left: var(--var-bright-blue) solid 2px; */
-  /* border-right: var(--var-bright-blue) solid 2px; */
 }
 
 form {
@@ -629,11 +690,26 @@ form {
 
 form h3 {
   color: var(--var-light-color);
-  font-size: 36px;
+  font-size: 3.5rem;
   font-weight: bolder;
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.cool-gradient {
+  background: url(/media/gradient-1.png);
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  background-clip: border-box;
+  background-size: 79% 80%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cool-gradient:hover {
+  -webkit-text-fill-color: #f4f4f4;
 }
 
 form input, form textarea {
@@ -716,6 +792,13 @@ form button:active {
   }
 }
 
+@media (min-width: 1090px) and (max-width: 1490px) {
+  .img-container::after {
+    top: 1070px;
+    right: 95px;
+  }
+}
+
 @media (max-width: 1090px) {
   video {
     transform: rotate(90deg);
@@ -728,11 +811,6 @@ form button:active {
   .hero {
     grid-template-columns: 1fr;
   }
-
-  /* .back-video {
-  transform: rotate(-90deg);
-  object-fit: cover;
-  } */
 
   .title .ryan {
     font-size: 70px;
@@ -747,6 +825,7 @@ form button:active {
     grid-template-columns: repeat (1fr);
     grid-template-rows: repeat (1fr);
     display: block;
+    padding: 1rem;
   }
 
   #about h1 {
@@ -776,6 +855,22 @@ form button:active {
     width: 100%;
   }
 
+  .about-content .about-img {
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .about-content .about-img img {
+    width: 100% !important;
+    max-width: 750px !important;
+    margin: auto;
+  }
+
+  .img-container::after {
+    content: '';
+    display: none;
+  }
+
   #projects {
     overflow: hidden;
   }
@@ -798,6 +893,20 @@ form button:active {
     padding: 0;
   }
 
+  #projects .highlight-container-2 {
+    background-image: radial-gradient(
+    farthest-corner at 0% 400px,
+    var(--var-secondary-color) 0%,
+    var(--var-primary-color) 100%
+    );
+    margin-top: 3rem;
+    padding-top: .5rem;
+  }
+
+  #projects .highlight-container-2 h1 {
+    padding: 0 1rem;
+  }
+
   #projects .dating-website {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -807,7 +916,7 @@ form button:active {
     padding: 0;
   }
 
-  #projects .dating-website .ifame-technologies {
+  #projects .dating-website .iframe-technologies {
     width: 90%;
     grid-row: 3;
     padding: 1rem;
@@ -918,6 +1027,14 @@ form button:active {
 
   .resume p {
     font-size: 12px;
+  }
+
+  .cool-gradient {
+    background-size: 100% 95%;  
+  }
+
+  .question {
+    font-size: 2.5rem;
   }
 
   .form-container {
