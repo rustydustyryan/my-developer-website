@@ -216,34 +216,41 @@ img {
   align-items: center;
 }
 
-.about-content .about-img {
-  width: 100%;
-  height: 100%;
-  margin: 0 1rem;
-}
-
 .about-content .about-img .img-container img {
   border-radius: 15px;
   width: 430px;
   height: 100%;
   position: relative;
   z-index: 3;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
 }
 
-.img-container::after {
+/* .img-container::after {
   content: '';
-  /* background-image: url(/media/gradient-1.png); */
   background: linear-gradient(162deg, rgba(0,9,50,1) 30%, rgba(13,131,231,1) 39%, rgba(180,62,36,1) 64%, rgba(0,9,50,1) 78%);
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
   width: 430px;
   height: 556px;
+  width: 600px;
+  height: 800px;
   border-radius: 15px;
-  z-index: 99;
   top: 1160px;
   right: 170px;
   z-index: 0;
+} */
+
+.cool-gradient-container {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 3;
+  background: linear-gradient(162deg, transparent 30%, rgba(13,131,231,1) 39%, rgba(180,62,36,1) 55%, transparent 78%);
+  border-radius: 15px;
+  width: 430px;
+  height: 800px;
+  margin-left: 13rem;
+  margin-bottom: -7rem;
 }
 
 /* Projects */
@@ -378,7 +385,7 @@ img {
     var(--var-secondary-color) 0%,
     var(--var-primary-color) 100%
   ); */
-  background: linear-gradient(162deg, rgba(0,9,50,1) 30%, rgba(180,62,36,1)  39%, rgba(13,131,231,1) 64%, rgba(0,9,50,1) 78%);
+  background: linear-gradient(162deg, transparent 30%, rgba(180,62,36,1)  39%, rgba(13,131,231,1) 64%, transparent 78%);
   padding-top: 4rem;
 }
 
@@ -542,7 +549,7 @@ img {
 }
 
 .project-container div > div:hover {
-  box-shadow: 0 0 0 200px #000932c4 inset;
+  box-shadow: 0 0 0 200px #000932cc inset;
   /* opacity: 0.4; */
   transform: scale(1.045);
   transition: 0.2s ease-out;
@@ -674,6 +681,11 @@ img {
   padding-top: 1.5rem;
 }
 
+.resume .fa-x:hover {
+  color: var(--var-secondary-color);
+  cursor: pointer;
+}
+
 /* Contact form */
 .form-container {
   position: relative;
@@ -716,7 +728,7 @@ form h3 {
 }
 
 .cool-gradient:hover {
-  -webkit-text-fill-color: #f4f4f4;
+  -webkit-text-fill-color: var(--var-light-color);
 }
 
 form input, form textarea {
@@ -799,13 +811,6 @@ form button:active {
   }
 }
 
-@media (min-width: 1090px) and (max-width: 1490px) {
-  .img-container::after {
-    top: 1070px;
-    right: 95px;
-  }
-}
-
 @media (max-width: 1090px) {
   video {
     transform: rotate(90deg);
@@ -871,10 +876,10 @@ form button:active {
     width: 100% !important;
     max-width: 750px !important;
     margin: auto;
+    grid-row: 2 / span 3;
   }
 
-  .img-container::after {
-    content: '';
+  .cool-gradient-container {
     display: none;
   }
 

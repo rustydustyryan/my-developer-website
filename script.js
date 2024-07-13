@@ -136,11 +136,12 @@ const resume = document.getElementById('resume');
 const circle = document.getElementById('ryan-circle');
 const clickMe = document.getElementById('click-me');
 const description = document.getElementById('description');
+const x = document.getElementsByClassName('fa-solid fa-x');
 
 circle.addEventListener('click', grow);
 clickMe.addEventListener('click', grow);
+x[0].addEventListener('click', collapse);
 
-// q: is mouse-over the right event to use here?
 function grow() {
   circle.style.transform = 'scale(0)';
   circle.style.display = 'none';
@@ -148,5 +149,18 @@ function grow() {
   resume.style.display = 'inline';
   description.style.display = 'block';
   clickMe.style.display = 'none';
+
+  if (description.style.display === 'block') {
+    x[0].style.display = 'inline';
+  };
+}
+
+function collapse() {
+  resume.style.display = 'none';
+  circle.style.transform = 'scale(1)';
+  circle.style.display = 'inline';
+  clickMe.style.display = 'inline';
+  description.style.display = 'none';
+  x[0].style.display = 'none';
 }
 
