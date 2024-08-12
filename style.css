@@ -460,14 +460,17 @@ img {
   background-image: url(/media/praxis.jpg);
 }
 
+.project-container .singer-website > div {
+  background-image: url(/media/singer.png);
+}
+
+.project-container .tile-website > div {
+  background-image: url(/media/tilepros.png);
+}
+
 .project-container .weather-website > div {
   background-image: url(/media/weather.png);
 }
-
-.project-container .amazingly-website > div {
-  background-image: url(/media/amazingly.jpg);
-}
-
 .project-container .mnd-website > div {
   background-image: url(/media/mndbdy.jpg);
 }
@@ -483,20 +486,17 @@ img {
 .project-container .number-website > div {
   background-image: url(/media/numberguess.png);
 }
+
 /* .project-container .music-website > div {
   background-image: url(./media/musickeeps.jpg);
 } */
 
-.project-container .news-website > div {
-  background-image: url(/media/newsgrid.jpg);
+.project-container .rosatis-website > div {
+  background-image: url(/media/rosatis.png);
 }
 
-.project-container .edge-website > div {
-  background-image: url(/media/edgeledger.jpg);
-}
-
-.project-container .hotel-website > div {
-  background-image: url(/media/hotel.jpg);
+.project-container .presav-website > div {
+  background-image: url(/media/presav.png);
 }
 
 .project-container .todo-website > div {
@@ -552,31 +552,31 @@ img {
 
 #projects .project-container .datamuseum-website,
 #projects .project-container .praxis-website,
+#projects .project-container .singer-website,
+#projects .project-container .tile-website,
 #projects .project-container .weather-website,
-#projects .project-container .amazingly-website,
+#projects .project-container .mnd-website,
 #projects .project-container .photography-website,
 #projects .project-container .dice-website,
 #projects .project-container .number-website,
-#projects .project-container .music-website,
-#projects .project-container .news-website, 
-#projects .project-container .edge-website,
-#projects .project-container .hotel-website,
+#projects .project-container .rosatis-website, 
+#projects .project-container .presav-website,
 #projects .project-container .todo-website {
   padding: 1rem 0;
 }
 
 .project-container .datamuseum-link,
 .project-container .praxis-link,
+.project-container .singer-link,
+.project-container .tile-link,
 .project-container .weather-link,
-.project-container .amazingly-link,
 .project-container .mnd-link,
 .project-container .photo-link,
 .project-container .dice-link,
 .project-container .number-link,
 .project-container .music-link, 
-.project-container .news-link,
-.project-container .edge-link,
-.project-container .hotel-link,
+.project-container .rosatis-link,
+.project-container .presav-link,
 .project-container .todo-link {
   position:absolute; 
   width:100%;
