@@ -298,13 +298,13 @@ img {
 }
 
 #projects .dating-website .iframe-technologies h2,
-#projects .youtube-website .youtube-technologies h2 {
+#projects .highlight-2-website .highlight-2-technologies h2 {
   font-size: 1.7rem;
   padding-bottom: 1rem;
 }
 
 #projects .dating-website .iframe-technologies h4,
-#projects .youtube-website .youtube-technologies h4 {
+#projects .highlight-2-website .highlight-2-technologies h4 {
   font-size: 1.3rem;
   border: var(--var-light-color) solid 1px;
   border-radius: 6px;
@@ -348,8 +348,8 @@ img {
   padding-top: 4rem;
 }
 
-#projects .youtube-website .youtube-description,
-#projects .youtube-website .youtube-technologies {
+#projects .highlight-2-website .highlight-2-description,
+#projects .highlight-2-website .highlight-2-technologies {
   grid-column: 3 / span 1;
   padding: 2rem;
   font-size: 1.2rem;
@@ -360,31 +360,39 @@ img {
   /* box-shadow: 0px 12px 25px var(--var-bright-blue); */
   box-shadow: 0px 12px 25px var(--var-black-color);
   background: var(--var-darker-color);
-  width: 27%;
+  /* width: 27%; */
   margin: 2rem auto;
   margin-bottom: 4rem;
   margin-top: 0;
 }
 
-#projects .youtube-website .youtube-technologies h4:hover {
+#projects .highlight-2-website .highlight-2-description {
+  width: 38%;
+}
+
+#projects .highlight-2-website .highlight-2-technologies {
+  width: 27%;
+}
+
+#projects .highlight-2-website .highlight-2-technologies h4:hover {
   background-color: var(--var-secondary-color);
   cursor: pointer;
 }
 
-#projects .youtube-img-container {
+#projects .highlight-2-img-container {
   display: block;
   margin: 4rem;
   border-radius: 5px;
 }
 
-#projects .youtube-img-container img {
+#projects .highlight-2-img-container img {
   /* box-shadow: 0px 20px 30px var(--var-bright-blue); */
   box-shadow: 0px 12px 25px var(--var-black-color);
   object-fit: cover;
   border: 1px var(--var-light-color) solid;
 }
 
-.youtube-desc-tech-container {
+.highlight-2-desc-tech-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -453,6 +461,10 @@ img {
   transition: 0.4s ease-out;
 }
 
+.project-container .highlight-2-website > div {
+  background-image: url(/media/youtube.png);
+}
+
 .project-container .datamuseum-website > div {
   background-image: url(/media/datamuseum.jpg);
 }
@@ -498,10 +510,6 @@ img {
 
 .project-container .presav-website > div {
   background-image: url(/media/presav.png);
-}
-
-.project-container .todo-website > div {
-  background-image: url(/media/todo.jpg);
 }
 
 .project-container div > div {
@@ -551,6 +559,7 @@ img {
   transform: translateX(0);
 }
 
+#projects .project-container .highlight-2-website,
 #projects .project-container .datamuseum-website,
 #projects .project-container .praxis-website,
 #projects .project-container .singer-website,
@@ -561,11 +570,11 @@ img {
 #projects .project-container .dice-website,
 #projects .project-container .number-website,
 #projects .project-container .rosatis-website, 
-#projects .project-container .presav-website,
-#projects .project-container .todo-website {
+#projects .project-container .presav-website {
   padding: 1rem 0;
 }
 
+.project-container .youtube-link,
 .project-container .datamuseum-link,
 .project-container .praxis-link,
 .project-container .singer-link,
@@ -577,8 +586,7 @@ img {
 .project-container .number-link,
 .project-container .music-link, 
 .project-container .rosatis-link,
-.project-container .presav-link,
-.project-container .todo-link {
+.project-container .presav-link {
   position:absolute; 
   width:100%;
   height:100%;
@@ -883,31 +891,31 @@ form button:active {
     grid-row: 2;
   }
 
-  #projects .youtube-website {
+  #projects .highlight-2-website {
     width: 100%;
     padding: 0;
   }
 
-  #projects .youtube-website .youtube-title {
+  #projects .highlight-2-website .highlight-2-title-container {
     margin-top: 3rem;
   }
 
-  #projects .youtube-website .youtube-desc-tech-container {
+  #projects .highlight-2-website .highlight-2-desc-tech-container {
     width: 90%;
     margin: auto;
   }
 
-  #projects .youtube-img-container {
+  #projects .highlight-2-img-container {
     margin: 3rem 0;
     padding: 0 1.3rem;
   }
 
-  .youtube-desc-tech-container {
+  .highlight-2-desc-tech-container {
     flex-direction: column;
   }
 
-  #projects .youtube-website .youtube-technologies,
-  #projects .youtube-website .youtube-description {
+  #projects .highlight-2-website .highlight-2-technologies,
+  #projects .highlight-2-website .highlight-2-description {
   width: 100%;
   margin-bottom: 5rem;
 }
