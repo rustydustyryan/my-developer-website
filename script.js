@@ -51,7 +51,7 @@ function slideIn() {
   websites.forEach((el, idx) => {
     const elTop = el.getBoundingClientRect().top;
 
-    el.style.transitionDelay = `${idx * 70}ms`;
+    el.style.transitionDelay = `${idx * 60}ms`;
 
     if (elTop < triggerBottom) {
       el.classList.add('show');
@@ -111,18 +111,6 @@ function filterResults() {
     websites.forEach((el) => {
       el.classList.contains('api') ? el.classList.remove('hide') : el.classList.add('hide');
     });
-  // } else if (inputs[8].checked) {
-  //   websites.forEach((el) => {
-  //     el.classList.contains('node') ? el.classList.remove('hide') : el.classList.add('hide');
-  //   });
-  // } else if (inputs[9].checked) {
-  //   websites.forEach((el) => {
-  //     el.classList.contains('shell') ? el.classList.remove('hide') : el.classList.add('hide');
-  //   });
-  // } else if (inputs[10].checked) {
-  //   websites.forEach((el) => {
-  //     el.classList.contains('bootstrap') ? el.classList.remove('hide') : el.classList.add('hide');
-  //   });
   } else {
     websites.forEach((el) => {
       el.classList.add('hide');

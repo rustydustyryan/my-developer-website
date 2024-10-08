@@ -458,7 +458,7 @@ img {
   box-shadow: 0px 15px 25px var(--var-bright-blue);
   opacity: 1;
   border: 1px var(--var-light-color) solid;
-  transition: 0.4s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .project-container .highlight-2-website > div {
@@ -481,9 +481,10 @@ img {
   background-image: url(/media/tilepros.png);
 }
 
-.project-container .weather-website > div {
-  background-image: url(/media/weather.png);
+.project-container .graphic-website > div {
+  background-image: url(/media/graphic-design.png);
 }
+
 .project-container .mnd-website > div {
   background-image: url(/media/mndbdy.jpg);
 }
@@ -496,8 +497,8 @@ img {
   background-image: url(/media/diceapp.png);
 }
 
-.project-container .number-website > div {
-  background-image: url(/media/numberguess.png);
+.project-container .weather-website > div {
+  background-image: url(/media/weather.png);
 }
 
 /* .project-container .music-website > div {
@@ -518,7 +519,6 @@ img {
 
 .project-container div > div:hover {
   box-shadow: 0 0 0 200px #000932cc inset;
-  /* opacity: 0.4; */
   transform: scale(1.045);
   transition: 0.2s ease-out;
 }
@@ -535,9 +535,6 @@ img {
   padding: .5rem 2rem;
   border-radius: 15px;
   position: relative;
-  /* top: 200px; */
-  /* NO */
-  /* top: 30vh; */
 }
 
 .project-container div > div:hover p {
@@ -551,7 +548,6 @@ img {
 }
 
 #projects .project-container .website {
-  /* transition: transform .6s ease-in-out; */
   transform: translateX(400%);
 }
 
@@ -564,11 +560,11 @@ img {
 #projects .project-container .praxis-website,
 #projects .project-container .singer-website,
 #projects .project-container .tile-website,
-#projects .project-container .weather-website,
+#projects .project-container .graphic-website,
 #projects .project-container .mnd-website,
 #projects .project-container .photography-website,
 #projects .project-container .dice-website,
-#projects .project-container .number-website,
+#projects .project-container .weather-website,
 #projects .project-container .rosatis-website, 
 #projects .project-container .presav-website {
   padding: 1rem 0;
@@ -579,12 +575,12 @@ img {
 .project-container .praxis-link,
 .project-container .singer-link,
 .project-container .tile-link,
-.project-container .weather-link,
+.project-container .graphic-link,
 .project-container .mnd-link,
 .project-container .photo-link,
 .project-container .dice-link,
-.project-container .number-link,
 .project-container .music-link, 
+.project-container .weather-link,
 .project-container .rosatis-link,
 .project-container .presav-link {
   position:absolute; 
@@ -631,8 +627,8 @@ img {
 }
 
 .resume embed {
-  width: 1000px;
-  height: 1310px;
+  width: 900px;
+  height: 1160px;
   display: none;
 }
 
