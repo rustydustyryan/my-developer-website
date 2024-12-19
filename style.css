@@ -198,6 +198,8 @@ img {
   z-index: 3;
   grid-column: 2 / span 1;
   grid-row: 1 / span 3;
+  aspect-ratio: 2.15/3;
+  object-fit: cover;
 }
 
 .cool-gradient-container {
@@ -994,5 +996,12 @@ form button:active {
 
   .form-container {
     margin: 2rem 0;
+  }
+}
+
+@media (max-width: 390px) {
+  #projects .dating-website iframe {
+    width: 350px;
+    height: 780px;
   }
 }
