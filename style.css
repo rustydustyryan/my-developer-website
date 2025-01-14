@@ -76,7 +76,7 @@ img {
   padding-left: 4rem;
   opacity: 0;
   animation-name: pos;
-  animation-delay: 2s;
+  animation-delay: .6s;
   animation-fill-mode: forwards;
   animation-duration: .5s;
 }
@@ -85,7 +85,7 @@ img {
   color: var(--var-bright-blue);
   opacity: 0;
   animation-name: pos;
-  animation-delay: 2.5s;
+  animation-delay: 1.2s;
   animation-fill-mode: forwards;
   animation-duration: .5s;
 }
@@ -103,8 +103,8 @@ img {
   opacity: 0;
   text-shadow: 1px 1px 10px #133390;
   animation-name: fade1;
-  animation-delay: 9s;
-  animation-duration: 1700ms;
+  animation-delay: 1.9s;
+  animation-duration: 1000ms;
   animation-fill-mode: forwards;
 }
 
