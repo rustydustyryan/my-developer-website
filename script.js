@@ -145,7 +145,7 @@ function grow() {
 
 function collapse() {
   resume.style.display = 'none';
-  circle.style.transform = 'scale(1)';
+  circle.style.transform = '';
   circle.style.display = 'inline';
   clickMe.style.display = 'inline';
   description.style.display = 'none';
