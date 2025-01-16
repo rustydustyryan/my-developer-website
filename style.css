@@ -832,7 +832,7 @@ form button:active {
 
   .about-content .about-img img {
     width: 100% !important;
-    max-width: 750px !important;
+    max-width: 390px !important;
     margin: auto;
     grid-row: 2 / span 3;
   }
@@ -887,7 +887,7 @@ form button:active {
   }
 
   #projects .dating-website .iframe-technologies {
-    width: 90%;
+    width: calc(100% - 2rem);
     grid-row: 3;
     padding: 1rem;
     margin-top: 3rem;
@@ -904,7 +904,7 @@ form button:active {
   }
 
   #projects .dating-website .iframe-description {
-    width: 90%;
+    width: calc(100% - 2rem);
     grid-row: 2;
   }
 
@@ -918,13 +918,13 @@ form button:active {
   }
 
   #projects .highlight-2-website .highlight-2-desc-tech-container {
-    width: 90%;
+    width: calc(100% - 2rem);
     margin: auto;
   }
 
   #projects .highlight-2-img-container {
     margin: 3rem 0;
-    padding: 0 1.3rem;
+    padding: 0 1rem;
   }
 
   .highlight-2-desc-tech-container {
@@ -942,15 +942,24 @@ form button:active {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  #projects .filter > input {
+    margin-right: -3rem;
+  }
+
   #projects .filter > label {
     padding-right: 0;
-    margin-left: -1.8rem;
+    margin-left: -3rem;
   }
 
   #projects .project-container {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 .5rem .5rem;
+    padding: 0 0 .5rem;
+  }
+
+  #projects .project-container .website {
+    width: calc(100% - 2rem);
+    padding: 0;
   }
 
   .project-container .title {
@@ -962,13 +971,10 @@ form button:active {
   }
 
   .project-container .website > div {
-    max-width: 88vw;
     height: auto;
     width: 100%;
     aspect-ratio: 3 / 2;
     box-shadow: 0px 15px 25px var(--var-bright-blue);
-    margin-top: 1rem;
-    margin-bottom: 2rem;
     opacity: 1;
   }
 
@@ -987,12 +993,8 @@ form button:active {
     background-position: 79% 70%;
   }
 
-  /* .resume img {
-    max-width: 55vw;
-  } */
-
   .resume #ryan-circle {
-    max-width: 400px;
+    max-width: 390px;
   }
 
   .resume #resume {
@@ -1001,7 +1003,6 @@ form button:active {
     object-fit: cover;
     max-width: calc(100% - 2rem);
     cursor: pointer;
-    /* padding: 1rem; */
     margin-bottom: 0;
     display: none;
     /* border: 1px var(--var-light-color) solid; */
@@ -1010,7 +1011,6 @@ form button:active {
   .resume embed {
     width: 100%;
     height: 34rem;
-    /* object-fit: cover; */
   }
 
   .resume p {
@@ -1032,8 +1032,8 @@ form button:active {
 
 @media (max-width: 390px) {
   #projects .dating-website iframe {
-    width: 350px;
-    height: 780px;
+    width: 330px;
+    height: 740px;
   }
 
   .resume #ryan-circle {
