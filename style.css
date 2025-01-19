@@ -628,13 +628,13 @@ img {
 
 .resume #resume {
   width: 100%;
-  height: auto;
+  height: 1240px;
   object-fit: cover;
   max-width: 55vw;
   cursor: pointer;
   margin-bottom: 1rem;
   display: none;
-  /* border: 1px var(--var-light-color) solid; */
+  transition: all 0.3s ease;
 }
 
 .resume #ryan-circle:hover {
