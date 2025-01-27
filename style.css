@@ -346,7 +346,8 @@ img {
     var(--var-secondary-color) 0%,
     var(--var-primary-color) 100%
   ); */
-  background: linear-gradient(162deg, transparent 30%, rgba(180,62,36,1)  39%, rgba(13,131,231,1) 64%, transparent 78%);
+  /* background: linear-gradient(162deg, transparent 30%, rgba(180,62,36,1)  39%, rgba(13,131,231,1) 64%, transparent 78%); */
+  background: linear-gradient(162deg, transparent 30%, rgba(180,62,36,1)  39%, rgba(180,62,36,1) 64%, transparent 78%);
   padding-top: 4rem;
 }
 
@@ -465,7 +466,10 @@ img {
 }
 
 .project-container .highlight-2-website > div {
-  background-image: url(/media/youtube.png);
+  background-image: url(/media/maryna.png);
+}
+.project-container .audio-website > div {
+  background-image: url(/media/music-portfolio.png);
 }
 .project-container .recipe-website > div {
   background-image: url(/media/recipe-generator.png);
@@ -497,8 +501,11 @@ img {
 .project-container .kat-website > div {
   background-image: url(/media/kat.png);
 }
-.project-container .dice-website > div {
+/* .project-container .dice-website > div {
   background-image: url(/media/diceapp.png);
+} */
+.project-container .youtube-website > div {
+  background-image: url(/media/youtube.png);
 }
 .project-container .weather-website > div {
   background-image: url(/media/weather.png);
@@ -521,8 +528,8 @@ img {
 }
 
 .project-container div > div:hover {
-  box-shadow: 0 0 0 200px #000932cc inset;
-  transform: scale(1.045);
+  box-shadow: 0 0 0 400px #000932cc inset;
+  transform: scale(1.032);
   transition: 0.2s ease-out;
 }
 
@@ -543,11 +550,11 @@ img {
 .project-container div > div:hover p {
   opacity: 1;
   transform: scale(1);
-  transition: 0.4s ease-out;
+  transition: 0.2s ease-out;
 }
 
 .project-container div:not(:hover) {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.2s ease-out;
 }
 
 #projects .project-container .website {
@@ -559,6 +566,7 @@ img {
 }
 
 #projects .project-container .highlight-2-website,
+#projects .project-container .audio-website,
 #projects .project-container .recipe-website,
 #projects .project-container .bespoke-website,
 #projects .project-container .singer-website,
@@ -568,7 +576,7 @@ img {
 #projects .project-container .praxis-website,
 #projects .project-container .upbeat-website,
 #projects .project-container .kat-website,
-#projects .project-container .dice-website,
+#projects .project-container .youtube-website,
 #projects .project-container .weather-website,
 #projects .project-container .rosatis-website, 
 #projects .project-container .presav-website,
@@ -576,7 +584,8 @@ img {
   padding: 1rem 0;
 }
 
-.project-container .youtube-link,
+.project-container .maryna-link,
+.project-container .audio-link,
 .project-container .recipe-link,
 .project-container .bespoke-link,
 .project-container .singer-link,
@@ -586,7 +595,7 @@ img {
 .project-container .praxis-link,
 .project-container .tile-link,
 .project-container .kat-link,
-.project-container .dice-link,
+.project-container .youtube-link,
 .project-container .music-link, 
 .project-container .weather-link,
 .project-container .rosatis-link,
@@ -594,7 +603,7 @@ img {
 .project-container .number-link {
   position:absolute; 
   width:100%;
-  height: 285px;
+  height: 100%;
   top:0;
   left: 0;
 }
@@ -796,7 +805,7 @@ form button:active {
   }
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1200px) {
   video {
     transform: rotate(90deg);
     object-fit: cover;
@@ -966,16 +975,16 @@ form button:active {
     font-size: 26px;
   }
 
-  .project-container p {
-    display: none;
-  }
-
   .project-container .website > div {
     height: auto;
     width: 100%;
     aspect-ratio: 3 / 2;
     box-shadow: 0px 15px 25px var(--var-bright-blue);
     opacity: 1;
+  }
+
+  .project-container div > div:hover {
+    transform: scale(1.013);
   }
 
   .project-container .datamuseum-website > div, 
