@@ -837,61 +837,61 @@ h4 {
 }
 
 .project-container .highlight-2-website > div {
-  background-image: url(/media/maryna.png);
+  background-image: url(/media/maryna.jpg);
 }
 .project-container .audio-website > div {
-  background-image: url(/media/music-portfolio.png);
+  background-image: url(/media/music-portfolio.jpg);
 }
 .project-container .recipe-website > div {
-  background-image: url(/media/recipe-generator.png);
+  background-image: url(/media/recipe-generator.jpg);
 }
 .project-container .bespoke-website > div {
-  background-image: url(/media/bespoke.png);
+  background-image: url(/media/bespoke.jpg);
 }
 .project-container .datamuseum-website > div {
   background-image: url(/media/datamuseum.jpg);
 }
 .project-container .singer-website > div {
-  background-image: url(/media/singer.png);
+  background-image: url(/media/singer.jpg);
 }
 .project-container .graphic-website > div {
-  background-image: url(/media/graphic-design.png);
+  background-image: url(/media/graphic-design.jpg);
 }
 .project-container .upbeat-website > div {
-  background-image: url(/media/upbeat.png);
+  background-image: url(/media/upbeat.jpg);
 }
 .project-container .praxis-website > div {
   background-image: url(/media/praxis.jpg);
 }
 .project-container .tile-website > div {
-  background-image: url(/media/tilepros.png);
+  background-image: url(/media/tilepros.jpg);
 }
 /* .project-container .mnd-website > div {
   background-image: url(/media/mndbdy.jpg);
 } */
 .project-container .kat-website > div {
-  background-image: url(/media/kat.png);
+  background-image: url(/media/kat.jpg);
 }
 /* .project-container .dice-website > div {
   background-image: url(/media/diceapp.png);
 } */
 .project-container .youtube-website > div {
-  background-image: url(/media/youtube.png);
+  background-image: url(/media/youtube.jpg);
 }
 .project-container .weather-website > div {
-  background-image: url(/media/weather.png);
+  background-image: url(/media/weather.jpg);
 }
 /* .project-container .music-website > div {
   background-image: url(./media/musickeeps.jpg);
   } */
   .project-container .rosatis-website > div {
-    background-image: url(/media/rosatis.png);
+    background-image: url(/media/rosatis.jpg);
   }
   .project-container .presav-website > div {
-    background-image: url(/media/presav.png);
+    background-image: url(/media/presav.jpg);
   }
   .project-container .number-website > div {
-    background-image: url(/media/numberguess.png);
+    background-image: url(/media/numberguess.jpg);
   }
 
 .project-container div > div {
