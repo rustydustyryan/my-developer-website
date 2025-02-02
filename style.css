@@ -1433,6 +1433,10 @@ form button:active {
     margin-bottom: 2rem;
   }
 
+  .new-about-container img {
+    margin-left: 0;
+  }
+
   .about-info-container h2 {
     font-size: 3rem;
   }
@@ -1470,10 +1474,6 @@ form button:active {
 
   .about-info-container h2 {
     font-size: 2.5rem;
-  }
-
-  .new-about-container img {
-    margin-left: 0;
   }
 
   .skills-section {
