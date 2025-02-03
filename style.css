@@ -452,6 +452,12 @@ h4 {
   padding: 10px 16px;
   padding-top: 12px;
   border-radius: 5px;
+  transition: all 0.15s;
+}
+
+.skills-container .top-skills:hover {
+  background: var(--secondary);
+  scale: 1.035;
 }
 
 .other-skills-container {
