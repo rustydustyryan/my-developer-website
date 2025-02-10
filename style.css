@@ -50,7 +50,7 @@ img {
 }
 
 a {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" stroke="%2346444c" stroke-opacity="0" fill="%2346444c" fill-opacity="0.5" width="23px" height="23px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" stroke="%2346444c" stroke-opacity="0" fill="%23258be4" fill-opacity="0.5" width="40px" height="40px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 19 19, auto;
 }
 
 h2 {
@@ -164,32 +164,37 @@ h4 {
   z-index: -1;
 }
 
+/* background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient( 90deg, #0f3058 0%, #006adc 33.333%, #11181c 50%, #11181c 100% ); */
+@keyframes gradient-wave {
+  0% {
+    background-position: 200% 50%;
+  }
+  100% {
+    background-position: -200% 50%;
+  }
+}
+
 .home-hero-heading {
-  /* background: linear-gradient(0deg, #11181c 20%, rgba(17, 24, 28, 0) 45%), linear-gradient( 90deg, #0f3058 0%, #006adc 33.333%, #11181c 50%, #11181c 100% ); */
-  background: linear-gradient(0deg, #dcf2ff 20%, rgba(83, 161, 206, 0) 45%), linear-gradient( 90deg, #2b91ea 0%, #a0bfe0 33.333%, #afcbdb 50%, #ffffff 100% );
-  background-repeat: repeat, repeat;
-  background-size: auto, auto;
-  background-clip: border-box, border-box;
-  background-size: 300% 100%;
-  background-repeat: no-repeat;
-  -webkit-background-clip: text;
+  background: linear-gradient(114deg,  
+              rgba(175,203,219,1) 0%, 
+              #2b91ea 25%, 
+              #a0bfe0 50%, 
+              #afcbdb 75%, 
+              rgba(175,203,219,1) 100%);
+  background-size: 300% 100%; /* Extend gradient width to create a softer loop */
   background-clip: text;
-  -moz-background-clip: text;
-  -webkit-animation: intro-gradient 1.8s ease backwards;
-  animation: intro-gradient 1.8s ease backwards;
-  animation-delay: 0s;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-wave 8s linear infinite;
   font-size: 100px;
   text-align: center;
   line-height: 1;
   font-weight: 400;
-  letter-spacing: -.03em;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
   margin-top: 27.3vh;
 }
+
+
 
 .hero .title {
   display: flex;
@@ -508,12 +513,11 @@ h4 {
 /* End New About Section */
 
 /* About */
-.about-content {
+/* .about-content {
   color: var(--white);
   min-height: 50vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-rows: repeat(4, 1fr); */
   overflow: hidden;
   line-height: 1.6;
   background: linear-gradient(137deg, rgb(12, 10, 21) 30%, rgb(0, 9, 50) 75%);
@@ -525,22 +529,33 @@ h4 {
   grid-column: 1 / span 1;
   align-items: center;
   color: var(--bright-blue);
-}
+} */
 
-.about-content > h1, 
+.about-content > h2, 
 .about-content > p {
   opacity: 0;
-  transition: opacity 2.5s ease;
+  transition: opacity 1.5s ease;
   z-index: 4;
 }
 
-.about-content > h1.show, 
+.about-content > h2.show, 
 .about-content > p.show {
   opacity: 1;
   z-index: 4;
 }
 
-.about-content > p {
+.secondary-skills-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.4s ease-out;
+}
+
+.secondary-skills-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* .about-content > p {
   font-size: 1.15rem;
 }
 
@@ -583,7 +598,7 @@ h4 {
   margin-bottom: -7rem;
   justify-self: center;
   margin-right: -8vw;
-}
+} */
 
 /* Projects */
 #projects {
@@ -687,7 +702,6 @@ h4 {
 
 #projects .dating-website .iframe-technologies h4:hover {
   background-color: var(--secondary);
-  cursor: pointer;
 }
 
 #projects .dating-website .iframe-container {
@@ -756,7 +770,6 @@ h4 {
 
 #projects .highlight-2-website .highlight-2-technologies h4:hover {
   background-color: var(--secondary);
-  cursor: pointer;
 }
 
 #projects .highlight-2-img-container {

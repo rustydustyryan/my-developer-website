@@ -1,21 +1,41 @@
 // Scroll 'About' Animation
-const about = document.querySelector('.about-content');
+const sections = [document.querySelector('.about-content'), document.querySelector('.other-skills-container')];
 
 window.addEventListener('scroll', fadeIn);
 
 function fadeIn() {
   const triggerBottom = window.innerHeight / 5 * 4;
 
-  Array.from(about.children).forEach((el) => {
-    const elTop = el.getBoundingClientRect().top;
+  sections.forEach(section => {
+    if (!section) return; // Ensure section exists
 
-    if (elTop < triggerBottom) {
-      el.classList.add('show');
-    } else {
-      el.classList.remove('show');
-    }
+    const containers = Array.from(section.children);
+
+    containers.forEach((el, index) => {
+      const elTop = el.getBoundingClientRect().top;
+
+      if (elTop < triggerBottom) {
+        setTimeout(() => {
+          el.classList.add('show');
+        }, index * 170); // Adjust delay timing (150ms between elements)
+      } else {
+        el.classList.remove('show');
+      }
+    });
   });
 }
+
+// const skills = document.querySelector('.secondary-skills');
+// Array.from(skills.children).forEach((skill) => {
+//   const skillTop = skill.getBoundingClientRect().top;
+  
+//   if (skillTop < triggerBottom) {
+//     skill.classList.add('show');
+//   } else {
+//     skill.classList.remove('show');
+//   }
+//   console.log(skill);
+// });
 
 // 'Project' Title Animation
 const title = document.querySelector('.main-title');
@@ -75,9 +95,6 @@ function filterResults() {
   } else {
     results.innerHTML = `displaying results for: ${inputs[1].checked ? 'HTML' : ''} ${inputs[2].checked ? 'CSS/SASS' : ''} ${inputs[3].checked ? 'JavaScript' : ''} ${inputs[4].checked ? 'TypeScript' : ''} ${inputs[5].checked ? 'React' : ''} ${inputs[6].checked ? 'WordPress' : ''} ${inputs[7].checked ? 'API' : ''}`;
   }
-
-  // Add to end of results.innerHTML when I have more projects
-  // ${inputs[8].checked ? 'Node.js' : ''} ${inputs[9].checked ? 'Shell' : ''} ${inputs[10].checked ? 'Bootstrap' : ''}
 
   if (inputs[0].checked) {
     websites.forEach((el) => {
