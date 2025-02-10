@@ -176,11 +176,11 @@ h4 {
 
 .home-hero-heading {
   background: linear-gradient(114deg,  
-              rgba(175,203,219,1) 0%, 
-              #2b91ea 25%, 
-              #a0bfe0 50%, 
-              #afcbdb 75%, 
-              rgba(175,203,219,1) 100%);
+              rgb(189, 219, 236) 0%, 
+              #3a9ff7 25%, 
+              #adcef2 50%, 
+              #ccecff 75%, 
+              rgb(189, 219, 236) 100%);
   background-size: 300% 100%; /* Extend gradient width to create a softer loop */
   background-clip: text;
   -webkit-background-clip: text;
