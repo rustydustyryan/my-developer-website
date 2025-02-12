@@ -1466,6 +1466,13 @@ form button:active {
   #projects .dating-website .iframe-technologies, #projects .dating-website .iframe-title, #projects .dating-website .iframe-container {
     background: #151718c7;
   }
+
+  #projects .project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* padding: 0; */
+  }
 }
 
 @media (max-width: 812px) {
@@ -1529,6 +1536,16 @@ form button:active {
     max-width: 390px;
     margin: auto;
   }
+
+  #projects .project-container {
+    padding: 90px 0;
+  }
+
+  #projects .website {
+    width: calc(100% - 2rem);
+    height: auto;
+    padding: 0;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1557,6 +1574,14 @@ form button:active {
     background: linear-gradient(180deg, rgb(231, 230, 230) 70%, rgb(255, 255, 255) 100%);
   }
 
+  #projects .highlight-container {
+    padding: 0 0 5px;
+  }
+
+  #projects .iframe-container {
+    padding: 1rem 0;
+  }
+
   #projects .dating-website iframe {
     width: 330px;
     height: 740px;
@@ -1576,6 +1601,18 @@ form button:active {
 
   #projects .client-icons {
     align-self: center;
+  }
+
+  #projects .website {
+    width: calc(100% - 1rem);
+    height: auto;
+    padding: 0;
+  }
+
+  .project-container .website > div {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 3.4/2;
   }
 }
 
