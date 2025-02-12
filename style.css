@@ -1546,6 +1546,12 @@ form button:active {
     height: auto;
     padding: 0;
   }
+
+  .project-container .website > div {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 3.4/2;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1559,7 +1565,11 @@ form button:active {
 
   .home-hero-heading {
     font-size: 3rem;
-    margin-top: 12vh;
+    margin-top: 7vh;
+  }
+
+  .title h1 {
+    font-size: 52px;
   }
 
   .about-info-container {
@@ -1574,11 +1584,15 @@ form button:active {
     background: linear-gradient(180deg, rgb(231, 230, 230) 70%, rgb(255, 255, 255) 100%);
   }
 
+  #projects .main-title {
+    font-size: 52px;
+  }
+
   #projects .highlight-container {
     padding: 0 0 5px;
   }
 
-  #projects .iframe-container {
+  #projects .dating-website .iframe-container {
     padding: 1rem 0;
   }
 
@@ -1603,16 +1617,14 @@ form button:active {
     align-self: center;
   }
 
+  #projects .project-container .project-container-title {
+    font-size: 52px;
+  }
+
   #projects .website {
     width: calc(100% - 1rem);
     height: auto;
     padding: 0;
-  }
-
-  .project-container .website > div {
-    height: auto;
-    width: 100%;
-    aspect-ratio: 3.4/2;
   }
 }
 
