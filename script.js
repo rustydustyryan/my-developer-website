@@ -15,7 +15,7 @@ document.addEventListener("mousemove", (e) => {
   const hero = document.querySelector(".hero");
   const { width, left } = hero.getBoundingClientRect();
   
-  const hue = ((e.clientX - left) / width) * 28 - 25; // Adjust hue shift range
+  const hue = ((e.clientX - left) / width) * 30 - 25; // Adjust hue shift range
   hero.style.setProperty('--hue-shift', hue + "deg");
 });
 
