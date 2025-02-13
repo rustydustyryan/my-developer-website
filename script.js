@@ -6,7 +6,7 @@ document.addEventListener("mousemove", (e) => {
   const xPercent = ((e.clientX - left) / width) * 100;
   const yPercent = ((e.clientY - top) / height) * 100;
 
-  hero.style.setProperty('--brightness', 0.9 + (xPercent / 450));
+  hero.style.setProperty('--brightness', 0.9 + (xPercent / 430));
 });
 
 
