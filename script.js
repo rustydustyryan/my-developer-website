@@ -1,23 +1,23 @@
 // 'Hero' Brightness Cursor Animation
-// document.addEventListener("mousemove", (e) => {
-//   const hero = document.querySelector(".hero");
-//   const { width, height, left, top } = hero.getBoundingClientRect();
+document.addEventListener("mousemove", (e) => {
+  const hero = document.querySelector(".hero");
+  const { width, height, left, top } = hero.getBoundingClientRect();
   
-//   const xPercent = ((e.clientX - left) / width) * 100;
-//   const yPercent = ((e.clientY - top) / height) * 100;
+  const xPercent = ((e.clientX - left) / width) * 100;
+  const yPercent = ((e.clientY - top) / height) * 100;
 
-//   hero.style.setProperty('--brightness', 0.8 + (xPercent / 500));
-// });
+  hero.style.setProperty('--brightness', 0.9 + (xPercent / 450));
+});
 
 
 // 'Hero' Hue Cursor Animation
-document.addEventListener("mousemove", (e) => {
-  const hero = document.querySelector(".hero");
-  const { width, left } = hero.getBoundingClientRect();
+// document.addEventListener("mousemove", (e) => {
+//   const hero = document.querySelector(".hero");
+//   const { width, left } = hero.getBoundingClientRect();
   
-  const hue = ((e.clientX - left) / width) * 30 - 25; // Adjust hue shift range
-  hero.style.setProperty('--hue-shift', hue + "deg");
-});
+//   const hue = ((e.clientX - left) / width) * 30 - 25;
+//   hero.style.setProperty('--hue-shift', hue + "deg");
+// });
 
 
 // Scroll 'About' Animation
@@ -171,7 +171,7 @@ highlightContainers.forEach((container) => {
     // Update gradient position dynamically
     container.style.background = container.classList.contains('highlight-container-2')
       ? `radial-gradient(circle at ${posX}% ${posY}%, rgb(149, 83, 225) 0%, var(--slate) 70%)`
-      : `radial-gradient(circle at ${posX}% ${posY}%, rgba(13,131,231,1) 0%, var(--slate) 37%)`;
+      : `radial-gradient(circle at ${posX}% ${posY}%, rgba(13,131,231,1) 0%, var(--slate) 40%)`;
   });
 
   container.addEventListener('mouseleave', () => {
