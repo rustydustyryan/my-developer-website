@@ -945,9 +945,7 @@ h4 {
 }
 
 .project-container div > div:hover {
-  /* box-shadow: 0 0 0 400px #151718c1 inset; */
-  /* box-shadow: 0 0 0 400px #9553e1c6 inset; */
-  box-shadow: 0 0 0 400px #258be4de inset;
+  box-shadow: 0 0 0 400px rgba(37, 139, 228, 0.93) inset;
   transform: scale(1.032);
   transition: 0.2s ease-out;
 }
@@ -964,6 +962,7 @@ h4 {
   padding: .5rem 2rem;
   border-radius: 10px;
   position: relative;
+  color: #000;
 }
 
 .project-container div > div:hover p {
