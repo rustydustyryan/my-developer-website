@@ -199,7 +199,7 @@ websiteDiv.forEach((div) => {
     const offsetY = (mouseY / height) * 2 - 1;
 
     // Apply transform to create the 3D effect
-    div.style.transform = `perspective(600px) rotateX(${offsetY * 2}deg) rotateY(${offsetX * 2}deg)`;
+    div.style.transform = `perspective(600px) rotateX(${offsetY * -2.3}deg) rotateY(${offsetX * 2.3}deg)`;
 
     // Dynamically adjust box-shadow to match the tilt direction
     const shadowX = -offsetX * 20; // Shadow moves opposite to the cursor
