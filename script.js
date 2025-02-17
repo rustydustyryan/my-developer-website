@@ -1,12 +1,13 @@
 // 'Hero' Brightness Cursor Animation
 document.addEventListener("mousemove", (e) => {
   const hero = document.querySelector(".hero");
+
   const { width, height, left, top } = hero.getBoundingClientRect();
   
   const xPercent = ((e.clientX - left) / width) * 100;
   const yPercent = ((e.clientY - top) / height) * 100;
 
-  hero.style.setProperty('--brightness', 0.9 + (xPercent / 430));
+  hero.style.setProperty('--brightness', 0.9 + (xPercent / 200));
 });
 
 
@@ -146,40 +147,101 @@ function wave() {
 // }
 
 // 'Projects' background gradient follow cursor
-const highlightContainers = document.querySelectorAll('.highlight-container, .highlight-container-2');
+const highlightContainers = document.querySelectorAll('.highlight-container');
 
 highlightContainers.forEach((container) => {
   container.addEventListener('mousemove', (e) => {
     const { left, top, width, height } = container.getBoundingClientRect();
 
-    // Get mouse position relative to the container
     const mouseX = e.clientX - left;
     const mouseY = e.clientY - top;
 
-    // Normalize to percentages (0% to 100%)
     let posX = (mouseX / width) * 100;
     let posY = (mouseY / height) * 100;
 
-    // **Limit movement** by blending with a fixed center position
-    const centerX = 50; // Default center
+    const centerX = 50;
     const centerY = 50;
-    const maxShift = 10; // Max movement range in percentage
+    const maxShift = 10;
 
-    posX = centerX + (posX - centerX) * (maxShift / 50); // Adjust to stay close to center
-    posY = centerY + (posY - centerY) * (maxShift / 50);
+    posX = centerX + (posX - centerX) * (maxShift / 60);
+    posY = centerY + (posY - centerY) * (maxShift / 60);
 
-    // Update gradient position dynamically
     container.style.background = container.classList.contains('highlight-container-2')
-      ? `radial-gradient(circle at ${posX}% ${posY}%, rgb(149, 83, 225) 0%, var(--slate) 70%)`
-      : `radial-gradient(circle at ${posX}% ${posY}%, rgba(13,131,231,1) 0%, var(--slate) 40%)`;
+      ? `radial-gradient(circle at ${posX}% ${posY}%, #fff 0%, var(--light) 70%)`
+      : `radial-gradient(circle at ${posX}% ${posY}%, rgba(13,131,231,1) 0%, var(--slate) 48%)`;
   });
 
   container.addEventListener('mouseleave', () => {
-    // Reset gradient to its center when the mouse leaves
     container.style.background = container.classList.contains('highlight-container-2')
-      ? `radial-gradient(circle at 50% 50%, rgb(149, 83, 225) 0%, var(--slate) 70%)`
-      : `radial-gradient(circle at 50% 50%, rgba(13,131,231,1) 0%, var(--slate) 37%)`;
+      ? `radial-gradient(circle at 50% 50%, #fff 0%, var(--light) 70%)`
+      : `radial-gradient(circle at 50% 50%, rgba(13,131,231,1) 0%, var(--slate) 48%)`;
   });
+});
+
+
+// Scroll Gradient
+// Linear interpolation function
+function lerp(start, end, t) {
+  return start + (end - start) * t;
+}
+
+window.addEventListener("scroll", () => {
+  const container = document.querySelector(".highlight-container-2");
+  if (!container) return;
+  
+  // Get container position and dimensions
+  const rect = container.getBoundingClientRect();
+  const containerTop = rect.top + window.scrollY;
+  const containerHeight = container.offsetHeight;
+  
+  // Calculate the scroll fraction relative to the container
+  let scrollFraction = (window.scrollY - containerTop) / containerHeight;
+  scrollFraction = Math.max(0, Math.min(1, scrollFraction));
+  
+  // We'll make the dark blue fully appear by 50% scroll within the container.
+  const t = Math.min(1, scrollFraction / 0.5);
+  
+  // --- Stop 0 (top) and Stop 100 (bottom) --- 
+  // Initial (bright blue) for both stops: #258be493 = rgba(37,139,228,0.576)
+  // Final for stop 0: #0a1933 = rgba(10,25,51,1)
+  // Final for stop 100: #0a1933af = rgba(10,25,51,0.686)
+  const stop0Initial = { r: 37, g: 139, b: 228, a: 0.576 };
+  const stop0Final   = { r: 10, g: 25,  b: 51,  a: 1 };
+  
+  const stop100Initial = { r: 37, g: 139, b: 228, a: 0.450 };
+  const stop100Final   = { r: 10, g: 25,  b: 51,  a: 1 };
+  
+  const r0 = Math.round(lerp(stop0Initial.r, stop0Final.r, t));
+  const g0 = Math.round(lerp(stop0Initial.g, stop0Final.g, t));
+  const b0 = Math.round(lerp(stop0Initial.b, stop0Final.b, t));
+  const a0 = lerp(stop0Initial.a, stop0Final.a, t).toFixed(3);
+  
+  const r100 = Math.round(lerp(stop100Initial.r, stop100Final.r, t));
+  const g100 = Math.round(lerp(stop100Initial.g, stop100Final.g, t));
+  const b100 = Math.round(lerp(stop100Initial.b, stop100Final.b, t));
+  const a100 = lerp(stop100Initial.a, stop100Final.a, t).toFixed(3);
+  
+  const stop0Color = `rgba(${r0}, ${g0}, ${b0}, ${a0})`;
+  const stop100Color = `rgba(${r100}, ${g100}, ${b100}, ${a100})`;
+  
+  // --- Middle stop ---
+  // Initially fully transparent (using dark blue’s RGB: 10,25,51), then transitions to #0a1933a2.
+  // #0a1933a2 = rgba(10,25,51,0.635)
+  const midInitial = { r: 10, g: 25, b: 51, a: 0.2 };
+  const midFinal   = { r: 10, g: 25, b: 51, a: .98 };
+  
+  const rMid = midInitial.r; // remains constant
+  const gMid = midInitial.g;
+  const bMid = midInitial.b;
+  const aMid = lerp(midInitial.a, midFinal.a, t).toFixed(3);
+  
+  const midColor = `rgba(${rMid}, ${gMid}, ${bMid}, ${aMid})`;
+  
+  // Build the new background gradient
+  // Using the same percentages as your original: 0%, 35% to 70%, 100%
+  const newGradient = `linear-gradient(180deg, ${stop0Color} 0%, ${midColor} 30% 70%, ${stop100Color} 100%), url(/media/slc.jpeg)`;
+  
+  container.style.background = newGradient;
 });
 
 
@@ -199,7 +261,7 @@ websiteDiv.forEach((div) => {
     const offsetY = (mouseY / height) * 2 - 1;
 
     // Apply transform to create the 3D effect
-    div.style.transform = `perspective(600px) rotateX(${offsetY * -2.3}deg) rotateY(${offsetX * 2.3}deg)`;
+    div.style.transform = `perspective(600px) rotateX(${offsetY * -2.5}deg) rotateY(${offsetX * 2.5}deg)`;
 
     // Dynamically adjust box-shadow to match the tilt direction
     const shadowX = -offsetX * 20; // Shadow moves opposite to the cursor
