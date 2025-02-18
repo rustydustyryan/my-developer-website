@@ -198,6 +198,7 @@ h4 {
   line-height: 1;
   font-weight: 400;
   letter-spacing: -0.03em;
+  padding: 1rem;
 }
 
 .hero .title {
@@ -1150,10 +1151,10 @@ form h3 {
   background-size: 280% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-wave 4s reverse infinite;
+  animation: gradient-wave 3s reverse infinite;
   background-clip: text;
   background-size: 79% 80%;
-  padding-right: 7px;
+  padding: 1rem;
   font-weight: 800;
 }
 
@@ -1453,10 +1454,6 @@ form button:active {
     font-size: 12px;
   }
 
-  .cool-gradient {
-    background-size: 100% 95%;  
-  }
-
   .question {
     font-size: 2.5rem;
   }
@@ -1579,8 +1576,12 @@ form button:active {
     flex-direction: column;
   }
 
+  .nav-menu {
+    gap: 50vw;
+  }
+
   .nav-link {
-    padding: 8px 8vw;
+    padding: 8px 0;
   }
 
   .home-hero-heading {
@@ -1588,7 +1589,7 @@ form button:active {
   }
 
   .title h1 {
-    font-size: 52px;
+    font-size: 60px;
   }
 
   .new-about-container {
