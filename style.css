@@ -1028,7 +1028,7 @@ h4 {
   cursor: pointer;
   width: fit-content;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 1rem;
   margin-top: 2rem;
   transition: scale 0.15s;
 }
