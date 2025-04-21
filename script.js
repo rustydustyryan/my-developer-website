@@ -1,14 +1,14 @@
 // 'Hero' Brightness Cursor Animation
-document.addEventListener("mousemove", (e) => {
-  const hero = document.querySelector(".hero");
+// document.addEventListener("mousemove", (e) => {
+//   const hero = document.querySelector(".hero");
 
-  const { width, height, left, top } = hero.getBoundingClientRect();
+//   const { width, height, left, top } = hero.getBoundingClientRect();
   
-  const xPercent = ((e.clientX - left) / width) * 100;
-  const yPercent = ((e.clientY - top) / height) * 100;
+//   const xPercent = ((e.clientX - left) / width) * 100;
+//   const yPercent = ((e.clientY - top) / height) * 100;
 
-  hero.style.setProperty('--brightness', 0.9 + (xPercent / 200));
-});
+//   hero.style.setProperty('--brightness', 0.9 + (xPercent / 200));
+// });
 
 
 // 'Hero' Hue Cursor Animation
@@ -161,7 +161,7 @@ highlightContainers.forEach((container) => {
 
     const centerX = 50;
     const centerY = 50;
-    const maxShift = 10;
+    const maxShift = 15;
 
     posX = centerX + (posX - centerX) * (maxShift / 60);
     posY = centerY + (posY - centerY) * (maxShift / 60);
