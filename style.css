@@ -99,7 +99,7 @@ h4 {
   justify-content: space-between;
   align-items: center;
   /* border-bottom: 1px solid #000; */
-  background: var(--light);
+  background: #fff;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 24px 1rem 10px;
