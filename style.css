@@ -180,13 +180,13 @@ h4 {
   background: linear-gradient(114deg,  
               var(--light) 25%, 
               #36a1ff 36%, 
-              #999ca6 42%,
-              var(--light) 47%,
+              #919398 42%,
+              var(--light) 48%,
               var(--light) 100%);
               /* rgb(189, 219, 236) 100%); */
   background-size: 280% 100%;
   background-clip: text;
-  animation: gradient-wave 9.5s linear infinite;
+  animation: gradient-wave 9.55s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 100px;
@@ -1139,15 +1139,19 @@ form h3 {
 }
 
 .cool-gradient {
-  background: linear-gradient(90deg, rgba(149,83,225,1) 0%, rgba(3,96,195,1) 40%, rgba(37,139,228,1) 70%, rgba(149,83,225,1) 80%);
-  background-position-x: 0%;
-  background-position-y: 0%;
+  background: linear-gradient(114deg, 
+            rgba(149,83,225,1) 25%, 
+            rgba(3,96,195,1) 36%, 
+            rgba(37,139,228,1) 45%, 
+            rgba(149,83,225,1) 55% 100%);
+  /* background-position-x: 0%; */
+  /* background-position-y: 0%; */
   background-size: 280% 100%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-wave 3s reverse infinite;
+  animation: gradient-wave 9.42s linear infinite;
   background-clip: text;
-  background-size: 79% 80%;
+  /* background-size: 79% 80%; */
   padding: 1rem;
   font-weight: 800;
 }
