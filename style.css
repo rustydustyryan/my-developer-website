@@ -100,6 +100,7 @@ h4 {
   align-items: center;
   /* border-bottom: 1px solid #000; */
   background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 24px 1rem 10px;
