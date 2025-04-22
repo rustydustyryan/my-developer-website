@@ -178,15 +178,15 @@ h4 {
 
 .home-hero-heading {
   background: linear-gradient(114deg,  
-              var(--light) 20%, 
+              var(--light) 25%, 
               #36a1ff 36%, 
-              #999ca6 45%,
-              var(--light) 50%,
+              #999ca6 42%,
+              var(--light) 47%,
               var(--light) 100%);
               /* rgb(189, 219, 236) 100%); */
   background-size: 280% 100%;
   background-clip: text;
-  animation: gradient-wave 9.5s linear normal;
+  animation: gradient-wave 9.5s linear infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 100px;
