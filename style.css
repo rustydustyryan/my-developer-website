@@ -290,7 +290,7 @@ h4 {
   align-self: center;
   /* margin: auto; */
   justify-self: end;
-  filter: blur(50px);
+  filter: blur(35px);
   background: conic-gradient( from 180deg at 50% 50%, #b056e7 -69.37deg, #0f83ff 31.88deg, #258be4 120deg, #258be4 204.37deg, #b056e7 290.63deg, #0f83ff 391.87deg );
   grid-column: 2 / span 1;
   border-radius: 50%;
