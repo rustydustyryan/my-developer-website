@@ -32,7 +32,7 @@ body {
   background-color: var(--white);
   font-family: 'Inter Display',sans-serif;
   color: #11181c;
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 1.2;
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%2396a1ae" fill-opacity="0.6" stroke="%2396a1ae" stroke-opacity="0" width="23px" height="23px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
 }
@@ -138,10 +138,6 @@ h4 {
 .nav-link {
   position: relative;
   padding: 8px 14px;
-}
-
-.cta-nav {
-  /* color: #fff !important; */
 }
 
 .cta-chevron {
@@ -270,7 +266,7 @@ h4 {
 }
 
 .about-info-container p {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .about-img-container {
@@ -599,7 +595,7 @@ h4 {
 #projects .dating-website .iframe-title {
   /* border: var(--light) solid 1px; */
   border-radius: 10px;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   padding: 2rem;
   justify-self: center;
@@ -625,7 +621,7 @@ h4 {
 
 #projects .dating-website .iframe-technologies h4,
 #projects .highlight-2-website .highlight-2-technologies h4 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border: var(--light) solid 1px;
   border-radius: 6px;
   padding: .5rem;
@@ -730,7 +726,7 @@ h4 {
 #projects .highlight-2-website .highlight-2-description,
 #projects .highlight-2-website .highlight-2-technologies {
   padding: 2rem;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   border-radius: 10px;
   /* border: 2px solid var(--slate-lighter); */
@@ -963,7 +959,7 @@ h4 {
   align-items: center;
   opacity: 0;
   transform: scale(0);
-  font-size: 17px;
+  font-size: 1.2rem;
   padding: .5rem 2rem;
   border-radius: 10px;
   position: relative;
@@ -1017,7 +1013,7 @@ h4 {
   background: transparent;
   color: #1981dd;
   grid-column: 1 / span 2;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   border: none;
   cursor: pointer;
   width: fit-content;
@@ -1175,7 +1171,7 @@ form button {
   background-color: var(--darker);
   color: var(--light);
   box-shadow: var(--bright-blue) 1px 2px 10px;
-  font-size: 17px;
+  font-size: 1.2rem;
   font-weight: bolder;
   cursor: pointer;
   padding: 15px;
@@ -1202,7 +1198,6 @@ form button:active {
   display: flex;
   justify-content: center;
   background: var(--black);
-  height: 60px;
   text-align: center;
   align-items: center;
   padding-top: 1rem;
@@ -1449,7 +1444,7 @@ form button:active {
   }
 
   .resume p {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 
   .question {
@@ -1570,16 +1565,30 @@ form button:active {
 }
 
 @media (max-width: 600px) {
+  body {
+    font-size: 1.2rem;
+  }
+
   .nav-inner {
     flex-direction: column;
+    gap: .5rem;
+    font-size: 1.2rem;
   }
 
   .nav-menu {
     gap: 50vw;
   }
 
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+
   .nav-link {
     padding: 8px 0;
+  }
+
+  .projects-link, .about-link {
+    display: none;
   }
 
   .home-hero-heading {
