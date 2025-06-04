@@ -242,6 +242,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Highlight Container 2 -->
         <div class="highlight-container-2">
           <div class="client-highlight container">
             <div class="highlight-list">
@@ -269,17 +271,20 @@
             </div>
             <div class="highlight-2-description">
               <h2 class="highlight-2-title">Latest Project: <br /><strong>Maryna Storrs Consulting</strong></h2>
-              <p>Leadership consulting services website built with Wordpress, HTML, CSS, and JavaScript, incorporating third party plugins, Klaviyo CRM, and Calendly for appointment scheduling.</p>
+              <p>This project was for Maryna Storrs, a leadership coach looking to attract high-level executives. The goal was to build a website to drive bookings through Calendly and capture leads with Klaviyo, completed within 1 month. Get an in-depth look at my process below.</p>
             </div>
           </div>
+
           <div class="highlight-2-website container">
             <div class="highlight-2-img-container">
-              <a href="https://marynastorrsconsulting.com/" target="_blank" rel=”noopener noreferrer”><img src="/media/maryna.jpg" width="100%" height="100%" loading="lazy"></img></a>
+              <a href="https://marynastorrsconsulting.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/media/maryna.jpg" width="100%" height="100%" loading="lazy" />
+              </a>
             </div>
             <div class="highlight-2-title-container">
               <div class="highlight-2-technologies">
                 <h3>Technologies Used</h3>
-                <h4>Wordpress</h4>
+                <h4>WordPress</h4>
                 <h4>JavaScript</h4>
                 <h4>HTML</h4>
                 <h4>CSS</h4>
@@ -287,9 +292,157 @@
                 <h4>Klaviyo CRM</h4>
               </div>
             </div>
-              <!-- <a href="" target="_blank" rel=”noopener noreferrer”><span class="dating-link"></span></a> -->
           </div>
         </div>
+
+        <!-- 🔄 UI/UX Process Slider -->
+        <section class="case-study-slider">
+          <div class="slider">
+            <div class="slide active">
+              <div class="grid-2">
+                <h3>1. User Research</h3>
+                <div>
+                  <p>In the beginning stages of this project I asked Maryna to choose three websites she liked, then reviewed them with her in real time to understand her style preferences and goals. Maryna's marketing strategist was often involved and contributed to our discussions. Maryna was drawn toward transitions that broke up the flow of different sections, bold colors, and content-rich websites that conveyed a sense of authority–I kept this in mind when I built the first prototype. Below are some examples of things that she liked from the websites she provided for me.</p>
+                  <img src="media/colorful-transition.jpg" alt="Colorful Transition" class="colorful-transition-image" loading="lazy">
+                  <p class="maryna-bold-colors"><b>BOLD COLORS</b></p>
+                </div>
+                <div>
+                  <p class="maryna-flow-charts">Creative <span class="maryna-f">f</span><span class="maryna-l">l</span><span class="maryna-o">o</span><span class="maryna-w">w</span> Charts</p>
+                  <img src="media/flow-chart.jpg" alt="Flow Chart" class="flow-chart-image" loading="lazy">
+                  <img src="media/black-transition.jpg" alt="Black Transition" class="black-transition-image" loading="lazy">
+                  <p class="maryna-interesting-colors"><i>Interesting Transitions</i></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="grid-2">
+                <h3>2. Design & Wireframe</h3>
+                <div>
+                  <p>I was given Brand Guidelines which helped me further refine the stylistic vision that Maryna had. Although I have built many wireframes in the past, I was provided a wireframe from the marketing lead that was made using <a href="https://www.scene.io/" rel="noopener noreferrer" target="_blank">scene.io</a>. I assessed which elements would be most important for the user experience as they navigated the site, prioritizing signing up with Maryna, which was the ultimate goal.</p>
+                  <div class="image-stack">
+                    <img src="media/MSC7.jpg" alt="Maryna Podcast" loading="lazy">
+                    <img src="media/MSC5.jpg" alt="Maryna Photo Treatment" loading="lazy">
+                    <img src="media/MSC6.jpg" alt="Maryna Social Media" loading="lazy">
+                    <img src="media/MSC2.jpg" alt="Maryna Color Variations" loading="lazy">
+                    <img src="media/MSC1.jpg" alt="Maryna Logos" loading="lazy">
+                    <img src="media/MSC.jpg" alt="Maryna Brand Guidelines" loading="lazy">
+                  </div>
+                </div>
+                <img src="media/wireframe.png" alt="Wireframe showing homepage layout" class="wireframe-image" loading="lazy">
+              </div>
+            </div>
+
+            <div class="slide">
+              <h3>3. Prototyping</h3>
+              <p>Guided by her brand and feedback, I created a light, minimal mockup with a focus on contrast, whitespace, and hierarchy. She described wanting the site to feel energetic and uplifting, avoiding darker tones that might feel too heavy. The mockup was created with React, using HTML, CSS, and JavaScript. After review, we pivoted from a technical build to WordPress so she could make edits herself without touching code.</p>
+              <div class="grid-2">
+                <img src="media/prototype.jpg" alt="Maryna Prototype" class="prototype-image" loading="lazy">
+                <img src="media/prototype1.jpg" alt="Maryna Prototype" class="prototype1-image" loading="lazy">
+              </div>
+            </div>
+
+            <div class="slide">
+              <h3>4. Development</h3>
+              <p>The site was rebuilt in WordPress using the Flatsome theme. I integrated Calendly, Klaviyo, and ensured responsive, accessible layout. SVG wave transitions were removed due to cross-device bugs and replaced with built-in WordPress transitions. Maryna requested a way to make comments directly on the site to express her opinions in real time, so I installed a third-party collaboration plugin from <a href="https://atarim.io/" rel="noopener noreferrer" target="_blank">atarim.io.</a></p>
+              <div class="grid-2">
+                <div>
+                  <svg class="arrow arrowhead-loop" viewBox="0 -100 340 340" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <marker id="arrowhead-loop" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#fecb56" />
+                      </marker>
+                    </defs>
+                    <path 
+                      d="
+                        M10 180
+                        C 10 100, 120 100, 100 160
+                        C 80 210, 40 180, 70 120
+                        C 100 60, 160 60, 160 0"
+                      fill="none"
+                      stroke="#fecb56"
+                      stroke-width="8"
+                      marker-end="url(#arrowhead-loop)"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <img src="media/wave-transition.jpg" alt="Wave Transition" class="wave-image" loading="lazy">
+                  <img src="media/wordpress transition.jpg" alt="WordPress Transition" class="wordpress-image" loading="lazy">
+                </div>
+                <div>
+                  <img src="media/atarim.jpeg" alt="Atarim Sample" class="atarim-image" loading="lazy">
+                  <p class="atarim-text">Powerful Collaboration</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <h3>5. Testing & Iteration</h3>
+              <p>We worked in a roughly Agile methodology, with weekly Sprints, task tracking, followed by video conferences to discuss changes. Based on feedback from Maryna and her marketing coordinator, I iterated on transitions, shape dividers, and user flow to reflect her preferred aesthetic and site goals. I used empathy and informal user testing with friends and colleagues to refine the layout.</p>
+              <div class="grid-3">
+                <div class="flex-col">
+                  <i class="fa-solid fa-person-running"></i>
+                  <i class="fa-solid fa-list-check"></i>
+                  <i class="fa-solid fa-video"></i>
+                </div>
+                <img src="media/task-manager.jpg" alt="Atarim Task Manager" class="task-manager-image" loading="lazy">
+              </div>
+            </div>
+
+            <div class="slide">
+              <h3>6. Outcome & Takeaways</h3>
+              <p>The site launched successfully with increased client engagement. The WordPress pivot was key to client autonomy. I learned the value of clarity, user-led iteration, and tech flexibility in UX.</p>
+
+              <div class="timeline-horizontal">
+                <div class="timeline-segment">
+                  <div class="timeline-step">
+                    <div class="dot dot-1"></div>
+                    <h4>1. User Research</h4>
+                    <p>Interviewed the client, gathered user insights, and defined style preferences through collaborative discovery.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-segment">
+                  <div class="timeline-step">
+                    <div class="dot dot-2"></div>
+                    <h4>2. Design & Wireframe</h4>
+                    <p>Created visual wireframes informed by brand guidelines and prioritized clear CTA placement.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-segment">
+                  <div class="timeline-step">
+                    <div class="dot dot-3"></div>
+                    <h4>3. Prototyping</h4>
+                    <p>Built initial mockups in Figma and React; pivoted to WordPress after user needs changed.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-segment">
+                  <div class="timeline-step">
+                    <div class="dot dot-4"></div>
+                    <h4>4. Development</h4>
+                    <p>Integrated Calendly, Klaviyo, responsive layout, and design system updates using WordPress + custom CSS.</p>
+                  </div>
+                </div>
+
+                <div class="timeline-segment">
+                  <div class="timeline-step">
+                    <div class="dot dot-5"></div>
+                    <h4>5. Testing & Launch</h4>
+                    <p>Refined UI through weekly feedback loops. Site launched successfully with strong user engagement.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-nav">
+              <i id="prevBtn" class="fa-solid fa-chevron-left" tabindex="0" role="button" aria-label="Previous Slide"></i>
+              <i id="nextBtn" class="fa-solid fa-chevron-right" tabindex="0" role="button" aria-label="Next Slide"></i>
+            </div>
+          </div>
+        </section>
+
         <!-- <h3 class="filter-results">Filter Results</h3>
         <div class="filter">
           <input type="radio" name="radio" id="all" checked>

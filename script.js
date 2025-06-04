@@ -245,6 +245,32 @@ window.addEventListener("scroll", () => {
 });
 
 
+// 'Projects' UX/UI Slider
+const slides = document.querySelectorAll('.slide');
+  let current = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  showSlide(current);
+
+
 // 'Projects' 3D Hover Animation
 const websiteDiv = document.querySelectorAll('.website');
 
