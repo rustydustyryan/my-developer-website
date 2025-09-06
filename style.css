@@ -123,6 +123,15 @@ h4 {
 .nav-inner .cta-nav {
   display: flex;
   align-items: center;
+  background: transparent;
+  border: none;
+  transition: scale .15s;
+  font-size: 1.2rem;
+}
+
+.nav-inner .cta-nav:hover {
+  scale: 1.07;
+  cursor: pointer;
 }
 
 .nav-logo {
@@ -220,10 +229,13 @@ h4 {
   font-weight: 500;
   text-decoration: none;
   transition: scale .15s;
+  background: transparent;
+  border: none;
 }
 
 .hero .cta:hover {
   scale: 1.05;
+  cursor: pointer;
 }
 
 .reg-letter-spacing {
@@ -343,9 +355,7 @@ h4 {
   display: flex;
   justify-content: center;
   gap: 5px;
-  /* background: #f5c936; */
-  background: var(--bright-blue);
-  /* background: #160071; */
+  background: var(--black);
   color: var(--white);
   padding: 10px 16px;
   padding-top: 12px;
@@ -354,7 +364,7 @@ h4 {
 }
 
 .skills-container .top-skills:hover {
-  background: var(--secondary);
+  background: var(--bright-blue);
   scale: 1.035;
 }
 
@@ -1359,7 +1369,8 @@ h4 {
 
 #show-more-btn {
   background: transparent;
-  color: #1981dd;
+  /* color: #1981dd; */
+  color: var(--black);
   grid-column: 1 / span 2;
   font-size: 1.2rem;
   border: none;
