@@ -1,26 +1,3 @@
-// 'Hero' Brightness Cursor Animation
-// document.addEventListener("mousemove", (e) => {
-//   const hero = document.querySelector(".hero");
-
-//   const { width, height, left, top } = hero.getBoundingClientRect();
-  
-//   const xPercent = ((e.clientX - left) / width) * 100;
-//   const yPercent = ((e.clientY - top) / height) * 100;
-
-//   hero.style.setProperty('--brightness', 0.9 + (xPercent / 200));
-// });
-
-
-// 'Hero' Hue Cursor Animation
-// document.addEventListener("mousemove", (e) => {
-//   const hero = document.querySelector(".hero");
-//   const { width, left } = hero.getBoundingClientRect();
-  
-//   const hue = ((e.clientX - left) / width) * 30 - 25;
-//   hero.style.setProperty('--hue-shift', hue + "deg");
-// });
-
-
 // Scroll 'About' Animation
 const sections = [document.querySelector('.about-content'), document.querySelector('.other-skills-container')];
 
@@ -70,81 +47,6 @@ function wave() {
     }
   });
 }
-
-// 'Projects' Slide In Animation
-// const websites = document.querySelectorAll('.website')
-
-// window.addEventListener('scroll', slideIn);
-
-// function slideIn() {
-//   triggerBottom = window.innerHeight / 5 * 4.8;
-
-//   websites.forEach((el, idx) => {
-//     const elTop = el.getBoundingClientRect().top;
-
-//     el.style.transitionDelay = `${idx * 60}ms`;
-
-//     if (elTop < triggerBottom) {
-//       el.classList.add('show');
-//     } else {
-//       el.classList.remove('show');
-//     }
-//   });
-// }
-
-// 'Projects' filter results
-// const inputs = document.querySelectorAll('input');
-
-// inputs.forEach((input) => {
-//   input.addEventListener('change', filterResults);
-// });
-
-// function filterResults() {
-//   const results = document.querySelector('.results');
-//   if (inputs[0].checked) {
-//     results.innerHTML = '';
-//   } else {
-//     results.innerHTML = `displaying results for: ${inputs[1].checked ? 'HTML' : ''} ${inputs[2].checked ? 'CSS/SASS' : ''} ${inputs[3].checked ? 'JavaScript' : ''} ${inputs[4].checked ? 'TypeScript' : ''} ${inputs[5].checked ? 'React' : ''} ${inputs[6].checked ? 'WordPress' : ''} ${inputs[7].checked ? 'API' : ''}`;
-//   }
-
-//   if (inputs[0].checked) {
-//     websites.forEach((el) => {
-//       el.classList.remove('hide');
-//     });
-//   } else if (inputs[1].checked) {
-//     websites.forEach((el) => {
-//       el.classList.contains('html') ? el.classList.remove('hide') : el.classList.add('hide');
-//     });
-//   } else if (inputs[2].checked) {
-//     websites.forEach((el) => {
-//       el.classList.contains('css') ? el.classList.remove('hide') : el.classList.add('hide');
-//     });
-//   } else if (inputs[3].checked) {
-//     websites.forEach((el) => {
-//       el.classList.contains('javascript') ? el.classList.remove('hide') : el.classList.add('hide');
-//     });
-//   } else if (inputs[4].checked) {
-//     websites.forEach((el) => {
-//       el.classList.contains('typescript') ? el.classList.remove('hide') : el.classList.add('hide');
-//     });
-//   } else if (inputs[5].checked) {
-//     websites.forEach((el) => {
-//       el.classList.contains('react') ? el.classList.remove('hide') : el.classList.add('hide');
-//     });
-//   } else if (inputs[6].checked) {
-//     websites.forEach((el) => {
-//       el.classList.contains('wordpress') ? el.classList.remove('hide') : el.classList.add('hide');
-//     });
-//   } else if (inputs[7].checked) {
-//     websites.forEach((el) => {
-//       el.classList.contains('api') ? el.classList.remove('hide') : el.classList.add('hide');
-//     });
-//   } else {
-//     websites.forEach((el) => {
-//       el.classList.add('hide');
-//     });
-//   }
-// }
 
 // 'Projects' background gradient follow cursor
 const highlightContainers = document.querySelectorAll('.highlight-container');
@@ -238,7 +140,7 @@ window.addEventListener("scroll", () => {
   const midColor = `rgba(${rMid}, ${gMid}, ${bMid}, ${aMid})`;
   
   // Build the new background gradient
-  // Using the same percentages as your original: 0%, 35% to 70%, 100%
+  // Using the same percentages as the original: 0%, 35% to 70%, 100%
   const newGradient = `linear-gradient(180deg, ${stop0Color} 0%, ${midColor} 30% 70%, ${stop100Color} 100%), url(/media/slc.jpeg)`;
   
   container.style.background = newGradient;
