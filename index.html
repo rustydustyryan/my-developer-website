@@ -5,115 +5,163 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ryan Andersen - Creative Frontend Developer specializing in React, JavaScript, and UX/UI design. View my portfolio of responsive websites and web applications built from scratch.">
-  <script src="https://kit.fontawesome.com/5a3539eb0b.js" crossorigin="anonymous"></script>
-
+  
+  <!-- Open Graph tags for social sharing -->
+  <meta property="og:title" content="Ryan Andersen - Creative Frontend Developer">
+  <meta property="og:description" content="Art-inspired web development and creative solutions to accelerate growth.">
+  <meta property="og:url" content="https://ryandesign.co">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ryandesign.co/media/RyanSuit.jpg">
+  
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ryan Andersen - Creative Frontend Developer">
+  <meta name="twitter:description" content="Art-inspired web development and creative solutions to accelerate growth.">
+  <meta name="twitter:image" content="https://ryandesign.co/media/RyanSuit.jpg">
+  
+  <!-- Font loading optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
+  
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://kit.fontawesome.com/5a3539eb0b.js" crossorigin="anonymous"></script>
+  
+  <!-- Page Title -->
+  <title>Ryan Andersen - Creative Frontend Developer & UX/UI Designer</title>
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ryan Andersen",
+    "jobTitle": "Creative Frontend Developer",
+    "description": "Creative Frontend Developer specializing in interactive UX/UI design and multimedia integration",
+    "url": "https://ryandesign.co",
+    "image": "https://ryandesign.co/media/RyanSuit.jpg",
+    "sameAs": [
+      "https://github.com/rustydustyryan",
+      "https://www.linkedin.com/in/ryan-lee-andersen/"
+    ],
+    "knowsAbout": [
+      "React.js", 
+      "JavaScript", 
+      "HTML5", 
+      "CSS3", 
+      "UX/UI Design", 
+      "Web Development", 
+      "WordPress", 
+      "Node.js"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Utah Tech University"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aurora",
+      "addressRegion": "Colorado",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+  
+  <!-- Analytics -->
   <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=TNn4TT'></script>
-
-  <title>Ryan Andersen</title>
 </head>
 <body>
   <div class="page-container">
     <div class="content-wrapper">
-      <header class="hero"  id="home">
-        <div class="container">
-          <div class="nav-inner">
-            <a href="/" class="nav-logo" style="transform: translate(0px) scale(1);">
-              <div>Ryan Andersen</div>
-            </a>
-            <div class="nav-menu">
-              <a href="/#about" class="nav-link about-link">About</a>
-              <a href="/#projects" class="nav-link projects-link">Projects</a>
-              <a href="/#maryna-case-study" class="nav-link projects-link">UX/UI</a>
-            </div>
-            <button type="button" class="cta-nav klaviyo_form_trigger_1" style="transform: translate(0px) scale(1);">
-              <div>Work With Me</div>
-              <div class="cta-chevron">
-                <i class="fa-solid fa-chevron-right" style="font-size: .9rem;"></i>
-              </div>
-            </a>
-            <script type="text/javascript">
-              document.querySelector('.klaviyo_form_trigger_1').addEventListener('click', function (){
-                window._klOnsite = window._klOnsite || []; 
-                window._klOnsite.push(['openForm', 'WUYMW8']);
-              });
-            </script>
-          </div>
-        </div>
 
-        <div class="title">
-          <h1 class="home-hero-heading"><span class="reg-letter-spacing">Artful</span> Technology,<br />Elegant Design</h1>
+      <header class="hero"  id="home">
+        <nav id="nav" role="navigation" aria-label="Main Navigation">
+          <div class="container">
+            <div class="nav-inner">
+              <a href="/" class="nav-logo" style="transform: translate(0px) scale(1);">
+                <h1 id="ryan-logo">Ryan Andersen</h1>
+              </a>
+              <div class="nav-menu">
+                <a href="/#about" class="nav-link about-link">About</a>
+                <a href="/#projects" class="nav-link projects-link">Projects</a>
+                <a href="/#maryna-case-study" class="nav-link projects-link">UX/UI</a>
+              </div>
+              <button type="button" class="cta-nav klaviyo_form_trigger_1" style="transform: translate(0px) scale(1);">
+                <div>Work With Me</div>
+                <div class="cta-chevron">
+                  <i class="fa-solid fa-chevron-right" style="font-size: .9rem;"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="title" aria-labelledby="hero-heading">
+          <h1 class="home-hero-heading" id="hero-heading"><span class="reg-letter-spacing">Artful</span> Technology,<br />Elegant Design</h1>
           <div class="home-hero-subheading">
             <p>Art-inspired web development.<br />Creative solutions to accelerate growth.</p>
           </div>
-          <button type="button" class="cta klaviyo_form_trigger_2">Let's Create Something Exceptional <i class="fa-solid fa-chevron-right" style="font-size: 1rem;"></i></button>
-          <script type="text/javascript">
-            document.querySelector('.klaviyo_form_trigger_2').addEventListener('click', function (){
-              window._klOnsite = window._klOnsite || []; 
-              window._klOnsite.push(['openForm', 'WUYMW8']);
-            });
-          </script>
+          <button type="button" class="cta klaviyo_form_trigger_2" aria-label="Start a project with Ryan">Let's Create Something Exceptional <i class="fa-solid fa-chevron-right" style="font-size: 1rem;"></i></button>
         </div>
       </header>
-        <div class="about" id="about">
-          <div class="container new-about-container">
-            <div class="about-info-container about-content">
-              <h2 class="about-title">About Me</h2>
-              <p class="about-text">Creative Frontend Developer specializing in interactive UX/UI design and multimedia integration.
-                I'm an artist turned coder who loves the outdoors and staying active. Graduating magna cum laude from Utah Tech University, I earned a Bachelor of Science in Animation and Entertainment Arts. My background spans graphic design, web development, animation, 3D rendering, and video/audio editing.
-                <br />
-                <br />
-                I bring dreams to screens—combining over five years of web development experience with a lifelong passion for art to craft elegant, accessible, and visually striking digital experiences.
-                <br />
-                <br />
-                This site was designed and coded from scratch using HTML, CSS, and JavaScript.
-              </p>
-            </div>
-            <div class="about-img-container"></div>
-            <img src="media/RyanSuit.jpg" alt="Ryan Profile" class="about-img" loading="lazy">
-          </div>
-          <div class="container skills-section">
-            <h3 class="skills-title">Top Skills</h3>
-            <div class="skills-container">
-              <div class="skills top-skills">
-                <i class="fa-brands fa-html5"></i><p>HTML5</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-brands fa-css3"></i><p>CSS3</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-brands fa-js"></i><p>JavaScript</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-brands fa-react"></i><p>React.js</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-brands fa-node-js"></i><p>Node.js</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-solid fa-diagram-project"></i><p>API</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-brands fa-github"></i><p>Git/GitHub</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-solid fa-magnifying-glass"></i><p>SEO</p>
-              </div>
-              <div class="skills top-skills">
-                <i class="fa-brands fa-wordpress-simple"></i><p>WordPress</p>
-              </div>
-            </div>
 
-            <h3 class="skills-title" style="text-align: center; margin-bottom: .8rem;">Other Skills</h3>
+      <section class="about" id="about" aria-labelledby="about-me">
+        <div class="container new-about-container">
+          <div class="about-info-container about-content">
+            <h2 class="about-title" id="about-me">About Me</h2>
+            <p class="about-text">Creative Frontend Developer specializing in interactive UX/UI design and multimedia integration.
+              I'm an artist turned coder who loves the outdoors and staying active. Graduating magna cum laude from Utah Tech University, I earned a Bachelor of Science in Animation and Entertainment Arts. My background spans graphic design, web development, animation, 3D rendering, and video/audio editing.
+              <br />
+              <br />
+              I bring dreams to screens—combining over five years of web development experience with a lifelong passion for art to craft elegant, accessible, and visually striking digital experiences.
+              <br />
+              <br />
+              This site was designed and coded from scratch using HTML, CSS, and JavaScript.
+            </p>
+          </div>
+          <div class="about-img-container"></div>
+          <img src="media/RyanSuit.jpg" alt="Ryan Profile" class="about-img" loading="lazy">
+        </div>
+        <div class="container skills-section">
+          <h3 class="skills-title">Top Skills</h3>
+          <div class="skills-container">
+            <div class="skills top-skills">
+              <i class="fa-brands fa-html5"></i><p>HTML5</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-brands fa-css3"></i><p>CSS3</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-brands fa-js"></i><p>JavaScript</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-brands fa-react"></i><p>React.js</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-brands fa-node-js"></i><p>Node.js</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-solid fa-diagram-project"></i><p>API</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-brands fa-github"></i><p>Git/GitHub</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-solid fa-magnifying-glass"></i><p>SEO</p>
+            </div>
+            <div class="skills top-skills">
+              <i class="fa-brands fa-wordpress-simple"></i><p>WordPress</p>
+            </div>
+          </div>
+
+          <h3 class="skills-title" style="text-align: center; margin-bottom: .8rem;">Other Skills</h3>
           <div class="container other-skills-container">
             <div class="styling secondary-skills-container">
               <h4>Styling</h4>
@@ -176,15 +224,13 @@
               </div>
             </div>
           </div>
-          </div>
         </div>
-      </div>
+      </section>
 
-      <div id="projects">
+      <section id="projects" aria-labelledby="projects-section">
         <div class="highlight-container">
           <div class="projects-title">
-            <h2 class="main-title">Projects</h2>
-            <!-- <p><small></small></p> -->
+            <h2 class="main-title" id="projects-section">Projects</h2>
           </div>
           <div class="dating-website container">
             <div class="width-100">
@@ -269,11 +315,11 @@
         </div>
 
         <!-- UI/UX Process Slider -->
-        <section class="case-study-slider" id="maryna-case-study">
+        <section class="case-study-slider" id="maryna-case-study" aria-labelledby="case-study-heading">
           <div class="slider">
             <div class="slide active">
               <div class="grid-2">
-                <h3>1. User Research</h3>
+                <h3 id="case-study-heading">1. User Research</h3>
                 <div>
                   <p>In the beginning stages of this project I asked Maryna to choose three websites she liked, then reviewed them with her in real time to understand her style preferences and goals. Maryna's marketing strategist was often involved and contributed to our discussions. Maryna was drawn toward transitions that broke up the flow of different sections, bold colors, and content-rich websites that conveyed a sense of authority–I kept this in mind when I built the first prototype. Below are some examples of things that she liked from the websites she provided for me.</p>
                   <img src="media/colorful-transition.jpg" alt="Colorful Transition" class="colorful-transition-image" loading="lazy">
@@ -410,12 +456,13 @@
             </div>
 
             <div class="slider-nav">
-              <i id="prevBtn" class="fa-solid fa-chevron-left" tabindex="0" role="button" aria-label="Previous Slide" aria-hidden="false"></i>
-              <i id="nextBtn" class="fa-solid fa-chevron-right" tabindex="0" role="button" aria-label="Next Slide" aria-hidden="false"></i>
+              <button id="prevBtn" class="fa-solid fa-chevron-left" aria-label="Previous Slide"></button>
+              <button id="nextBtn" class="fa-solid fa-chevron-right" aria-label="Next Slide"></button>
             </div>
           </div>
         </section>
 
+        <!-- Projects container -->
         <div class="project-container container">
           <h2 class="project-container-title">A Glimpse Into My Portfolio</h2>
           <div class="website singer-website html css wordpress">
@@ -523,9 +570,9 @@
               <a href="https://kaleidoscopic-kitten-3988a4.netlify.app/" target="_blank" rel=”noopener noreferrer” class="number-link" aria-label="Number Guessing Game Website Link"></a>
             </div>
           </div>
-          <button id="show-more-btn">Show More Projects<i class="fa-solid fa-plus"></i></button>
+          <button id="show-more-btn" aria-label="Show More Projects">Show More Projects<i class="fa-solid fa-plus"></i></button>
         </div>
-      </div>
+      </section>
 
       <!-- Resume -->
       <div class="resume">
@@ -537,25 +584,32 @@
       </div>
 
       <!-- Contact form -->
-      <div class="form-container">
-          <form name="contact" method="POST" data-netlify="true">
-            <h3 class="question" style="color: rgb(233, 233, 233); font-size: 3rem;">Have a Question?</h3>
-            <h3 class="cool-gradient">Get In Touch</h3>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" rows="4" placeholder="Message"></textarea>
-            <button type="submit">Send</button>
-          </form>
-      </div>
+      <section class="form-container" id="contact" aria-labelledby="contact-heading">
+        <header class="section-header">
+          <h2 id="contact-heading" class="cool-gradient">Get In Touch</h2>
+          <h3 class="question" style="color: rgb(233, 233, 233); font-size: 3rem;">Have a Question?</h3>
+        </header>
+        <form name="contact" method="POST" data-netlify="true">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" required aria-required="true">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required aria-required="true">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
 
-      <div id="links">
+      <!-- Footer links -->
+      <footer id="links" role="contentinfo">
         <div class="links">
           <a href="https://github.com/rustydustyryan" target="_blank" rel=”noopener noreferrer”><i class="fa-brands fa-github fa-2x" aria-label="Ryan's Github Website Link"></i></a>
         </div>
         <div class="links">
           <a href="https://www.linkedin.com/in/ryan-lee-andersen/" target="_blank" rel=”noopener noreferrer” aria-label="Ryan's LinkedIn Website Link"><i class="fa-brands fa-linkedin fa-2x"></i></a>
         </div>
-      </div>
+      </footer>
+
     </div>
   </div>
   <script src="script.js"></script>

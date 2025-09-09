@@ -1,3 +1,14 @@
+// Klaviyo scripts
+document.querySelector('.klaviyo_form_trigger_1').addEventListener('click', function (){
+  window._klOnsite = window._klOnsite || []; 
+  window._klOnsite.push(['openForm', 'WUYMW8']);
+});
+
+document.querySelector('.klaviyo_form_trigger_2').addEventListener('click', function (){
+  window._klOnsite = window._klOnsite || []; 
+  window._klOnsite.push(['openForm', 'WUYMW8']);
+});
+
 // Scroll 'About' Animation
 const sections = [document.querySelector('.about-content'), document.querySelector('.other-skills-container')];
 
@@ -100,8 +111,8 @@ window.addEventListener("scroll", () => {
   let scrollFraction = (window.scrollY - containerTop) / containerHeight;
   scrollFraction = Math.max(0, Math.min(1, scrollFraction));
   
-  // We'll make the dark blue fully appear by 50% scroll within the container.
-  const t = Math.min(1, scrollFraction / 0.5);
+  // Make dark blue fully appear by 75% scroll within the container.
+  const t = Math.min(1, scrollFraction / 0.75);
   
   // --- Stop 0 (top) and Stop 100 (bottom) --- 
   // Initial (bright blue) for both stops: #258be493 = rgba(37,139,228,0.576)

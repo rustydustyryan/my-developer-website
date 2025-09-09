@@ -6,7 +6,7 @@
   --dark-grey: #333;
   --slate: #151718;
   --slate-lighter: #313337;
-  --primary: #0360c3 ;
+  --primary: #0360c3;
   --secondary: #9553e1;
   --secondary-dark: #060122;
   --bright-blue: #258be4;
@@ -116,6 +116,7 @@ h4 {
 
 .nav-inner a:hover {
   scale: 1.07;
+  color: var(--bright-blue);
 }
 
 .nav-inner .cta-nav {
@@ -130,9 +131,10 @@ h4 {
 .nav-inner .cta-nav:hover {
   scale: 1.07;
   cursor: pointer;
+  color: var(--bright-blue);
 }
 
-.nav-logo {
+.nav-logo h1 {
   font-size: 20px;
   font-weight: 500;
 }
@@ -207,7 +209,7 @@ h4 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #afb3bd;
+  color: #2e9eff;
   margin-top: -2.8rem;
 }
 
@@ -221,18 +223,25 @@ h4 {
 }
 
 .hero .cta {
-  color: var(--bright-blue);
   font-size: 20px;
   font-weight: 500;
   text-decoration: none;
-  transition: scale .15s;
-  background: transparent;
+  padding: 14px 1.3rem;
   border: none;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(114deg, var(--secondary), var(--bright-blue));
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .hero .cta:hover {
-  scale: 1.05;
-  cursor: pointer;
+  background-position: 0% 0;
+  scale: 1.04;
 }
 
 .reg-letter-spacing {
@@ -340,8 +349,8 @@ h4 {
   background: var(--black);
   color: var(--white);
   padding: 10px 16px;
-  padding-top: 12px;
-  border-radius: 6px;
+  padding-top: 13px;
+  border-radius: 30px;
   transition: all 0.15s;
 }
 
@@ -960,7 +969,7 @@ h4 {
   padding: 0 1rem;
   transform: translateY(-50%);
   z-index: 10;
-  pointer-events: none; /* Let clicks pass through except on icons */
+  /* pointer-events: none; */
 }
 
 .slider-nav i {
@@ -969,7 +978,18 @@ h4 {
   margin: 0 0.5rem;
   cursor: pointer;
   font-size: 1.7rem;
-  pointer-events: auto; /* Allow clicking */
+  pointer-events: auto;
+}
+
+.slider-nav button {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 0.6rem .6rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  pointer-events: auto;
 }
 
 .slider-nav {
@@ -1234,7 +1254,7 @@ h4 {
 }
 
 #show-more-btn:hover {
-  color: var(--primary);
+  color: #227fd1;
   scale: 1.05;
 }
 
@@ -1313,6 +1333,7 @@ h4 {
   width: 100%;
   background-color: var(--black);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -1338,6 +1359,10 @@ form h3 {
   text-align: center;
 }
 
+form label {
+  color: var(--light);
+}
+
 .cool-gradient {
   background: linear-gradient(114deg, 
             rgba(149,83,225,1) 25%, 
@@ -1358,7 +1383,7 @@ form h3 {
 }
 
 form input, form textarea {
-  padding: 18px;
+  padding: 12px 0;
   margin: 10px 0;
   border: 0;
   border-bottom: 1px solid var(--white);
@@ -1375,7 +1400,7 @@ form button {
   font-size: 1.2rem;
   font-weight: bolder;
   cursor: pointer;
-  padding: 15px;
+  padding: 14px;
   margin: 20px auto 0;
   border: 0;
   border-radius: 30px;
