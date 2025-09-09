@@ -30,10 +30,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/5a3539eb0b.js" crossorigin="anonymous"></script>
-  
   <!-- Page Title -->
   <title>Ryan Andersen - Creative Frontend Developer & UX/UI Designer</title>
   
@@ -73,9 +69,114 @@
     }
   }
   </script>
-  
-  <!-- Analytics -->
-  <script async type='text/javascript' src='https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=TNn4TT'></script>
+
+  <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: 'Inter Display',sans-serif;
+    color: #11181c;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%2396a1ae" fill-opacity="0.6" stroke="%2396a1ae" stroke-opacity="0" width="23px" height="23px" viewBox="0 0 10.04 10.04"><circle cx="5.02" cy="5.02" r="4.52"/></svg>') 10 10, auto;
+  }
+
+  .page-container {
+    position: relative;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Hero */
+  .nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 100;
+    background-color: hsla(0,0%,100%,.7);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    transition: background-color .2s,color .2s;
+  }
+
+  .nav-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.89);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 24px 1rem 10px;
+    transition: border-color .2s;
+    margin-top: -.8rem;
+    z-index: 102;
+  }
+
+  .hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .home-hero-heading {
+    background: linear-gradient(114deg,  
+                #e7e6e6 25%,
+                #36a1ff 39%, 
+                #919398 42%,
+                #e7e6e6 48%,
+                #e7e6e6 100%);
+                /* rgb(189, 219, 236) 100%); */
+    background-size: 280% 100%;
+    background-clip: text;
+    animation: gradient-wave 9.5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    text-align: center;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    padding: 1rem;
+  }
+
+  .hero .title {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #2e9eff;
+    margin-top: -2.8rem;
+  }
+  </style>
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
   <div class="page-container">
@@ -613,5 +714,28 @@
     </div>
   </div>
   <script src="script.js"></script>
+
+  <script>
+    // Load FontAwesome after page loads
+    window.addEventListener('load', function() {
+      const fontAwesome = document.createElement('script');
+      fontAwesome.src = 'https://kit.fontawesome.com/5a3539eb0b.js';
+      fontAwesome.crossOrigin = 'anonymous';
+      document.head.appendChild(fontAwesome);
+    });
+
+    // Load Klaviyo after user interaction or 2 seconds
+    let klaviyoLoaded = false;
+    function loadKlaviyo() {
+      if (klaviyoLoaded) return;
+      klaviyoLoaded = true;
+      const klaviyo = document.createElement('script');
+      klaviyo.src = 'https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=TNn4TT';
+      document.head.appendChild(klaviyo);
+    }
+
+    document.addEventListener('click', loadKlaviyo, { once: true });
+    setTimeout(loadKlaviyo, 2000);
+  </script>
 </body>
 </html>
