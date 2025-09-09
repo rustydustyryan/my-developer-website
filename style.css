@@ -55,6 +55,11 @@ h4 {
   color: #258be4;
 }
 
+.nav-logo h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
 .nav-inner .cta-nav {
   display: flex;
   align-items: center;
@@ -68,11 +73,6 @@ h4 {
   scale: 1.07;
   cursor: pointer;
   color: #258be4;
-}
-
-.nav-logo h1 {
-  font-size: 20px;
-  font-weight: 500;
 }
 
 .nav-menu {
@@ -613,7 +613,6 @@ h4 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem;
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -1250,7 +1249,7 @@ form {
   background: transparent;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   border-radius: 10px;
 }
@@ -1272,6 +1271,7 @@ form label {
   background-clip: text;
   padding: 1rem;
   font-weight: 800;
+  text-align: center;
 }
 
 .cool-gradient:hover {
@@ -1410,6 +1410,7 @@ form button:active {
 
   .form-container {
     margin: 0;
+    padding: 1rem;
   }
 }
 
@@ -1748,7 +1749,7 @@ form button:active {
   }
 
   #projects .website {
-    width: calc(100% - 1rem);
+    width: 100%;
     height: auto;
     padding: 0;
   }
@@ -1758,6 +1759,6 @@ form button:active {
   }
 
   .form-container {
-    padding: 60px 0;
+    padding: 60px 1rem;
   }
 }

@@ -149,7 +149,6 @@
                 #919398 42%,
                 #e7e6e6 48%,
                 #e7e6e6 100%);
-                /* rgb(189, 219, 236) 100%); */
     background-size: 280% 100%;
     background-clip: text;
     animation: gradient-wave 9.5s linear infinite;
@@ -160,7 +159,7 @@
     line-height: 1;
     font-weight: 400;
     letter-spacing: -0.03em;
-    padding: 1rem;
+    padding: 1rem 0;
   }
 
   .hero .title {
@@ -183,6 +182,7 @@
     <div class="content-wrapper">
 
       <header class="hero"  id="home">
+        <!-- Nav -->
         <nav id="nav" role="navigation" aria-label="Main Navigation">
           <div class="container">
             <div class="nav-inner">
@@ -204,7 +204,8 @@
           </div>
         </nav>
 
-        <div class="title" aria-labelledby="hero-heading">
+        <!-- Hero -->
+        <div class="title container" aria-labelledby="hero-heading">
           <h1 class="home-hero-heading" id="hero-heading"><span class="reg-letter-spacing">Artful</span> Technology,<br />Elegant Design</h1>
           <div class="home-hero-subheading">
             <p>Art-inspired web development.<br />Creative solutions to accelerate growth.</p>
@@ -213,12 +214,12 @@
         </div>
       </header>
 
+      <!-- About -->
       <section class="about" id="about" aria-labelledby="about-me">
         <div class="container new-about-container">
           <div class="about-info-container about-content">
             <h2 class="about-title" id="about-me">About Me</h2>
-            <p class="about-text">Creative Frontend Developer specializing in interactive UX/UI design and multimedia integration.
-              I'm an artist turned coder who loves the outdoors and staying active. Graduating magna cum laude from Utah Tech University, I earned a Bachelor of Science in Animation and Entertainment Arts. My background spans graphic design, web development, animation, 3D rendering, and video/audio editing.
+            <p class="about-text">Creative Front-End Developer based in Denver, CO, specializing in interactive UX/UI design and multimedia integration. I'm an artist turned coder who loves the outdoors and staying active. Graduating magna cum laude from Utah Tech University, I earned a Bachelor of Science in Animation and Entertainment Arts. My background spans graphic design, web development, animation, 3D rendering, and video/audio production and editing.
               <br />
               <br />
               I bring dreams to screens—combining over five years of web development experience with a lifelong passion for art to craft elegant, accessible, and visually striking digital experiences.
@@ -291,9 +292,6 @@
                 <p>TypeScript</p>
               </div>
               <div class="skills secondary-skills">
-                <p>Python</p>
-              </div>
-              <div class="skills secondary-skills">
                 <p>PHP</p>
               </div>
               <div class="skills secondary-skills">
@@ -328,6 +326,7 @@
         </div>
       </section>
 
+      <!-- Projects -->
       <section id="projects" aria-labelledby="projects-section">
         <div class="highlight-container">
           <div class="projects-title">
@@ -676,7 +675,7 @@
       </section>
 
       <!-- Resume -->
-      <div class="resume">
+      <div class="resume" aria-label="Ryan's Resume">
         <img src="media/RyanSuit.jpg" alt="Ryan Suit" id="ryan-circle" loading="lazy">
         <i class="fa-solid fa-x" style="display: none; padding-bottom: 1rem;"></i>
         <embed src="media/Ryan Andersen Resume.pdf" alt="Ryan's Resume" type="application/pdf" frameBorder="0" id="resume">
