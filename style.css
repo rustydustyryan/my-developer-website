@@ -1340,16 +1340,7 @@ h4 {
   padding: 130px 0;
 }
 
-form {
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
-}
-
-form h3 {
+.form-container h3 {
   color: var(--light);
   font-size: 4rem;
   font-weight: 500;
@@ -1357,6 +1348,15 @@ form h3 {
   letter-spacing: 2px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+form {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
 }
 
 form label {
