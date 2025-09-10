@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Block access to sensitive areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /media/
+Allow: /css/
+Allow: /js/
+
+# Sitemap location
+Sitemap: https://ryandesign.co/sitemap.xml
+
+# Crawl delay (optional - helps with server load)
+Crawl-delay: 1
