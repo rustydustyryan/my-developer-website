@@ -657,12 +657,14 @@
     }
 
     @media (max-width: 968px) {
+      .container {
+        margin: 40px auto 0px;
+      }
+
       .two-column {
         grid-template-columns: 1fr;
       }
-    }
 
-    @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5rem;
       }
@@ -675,18 +677,51 @@
         font-size: 2rem;
       }
 
+      .section {
+        margin-bottom: 20px;
+      }
+
       .container,
       .hero-content {
         padding: 0 20px;
       }
 
       .hero {
-        padding: 100px 20px 60px;
+        padding: 40px 0px 60px;
+        background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
       }
 
       .hero-image {
         padding: 0 20px;
         margin-top: -4rem;
+      }
+
+      .phone-mockup {
+        margin-bottom: 1.5rem;
+      }
+
+      .overview {
+        margin-bottom: 40px;
+      }
+
+      .two-column,
+      .feature-grid,
+      .section-header,
+      .learnings,
+      .image-showcase {
+        margin: 20px 0;
+      }
+
+      .results {
+        margin: 40px 0;
+      }
+
+      .results-grid {
+        gap: 30px;
+      }
+
+      .result-value {
+        margin-bottom: 0;
       }
 
       .results,
@@ -707,6 +742,7 @@
       .project-nav {
         flex-direction: column;
         text-align: center;
+        margin-top: 0;
       }
 
       .persona-header {
@@ -925,7 +961,7 @@
 
       <div class="image-showcase">
         <div class="image-full">
-          <img src="media/praxis-user-flow.jpg" alt="FigJam file showing Praxis Counseling user flow">
+          <img src="media/praxis-user-flow.webp" alt="FigJam file showing Praxis Counseling user flow">
         </div>
         <p class="image-caption">FigJam file showing Praxis Counseling user flow</p>
       </div>
