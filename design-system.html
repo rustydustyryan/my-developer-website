@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Font Awesome -->
+ <script src="https://kit.fontawesome.com/5a3539eb0b.js" crossorigin="anonymous"></script>
+
+ <title>Design System - Ryan Andersen</title>
+ <style>
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+  body {
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+   line-height: 1.6;
+   color: #1a1a1a;
+   background: #ffffff;
+  }
+
+  html {
+   scroll-behavior: smooth;
+  }
+
+  nav {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   background: rgba(255, 255, 255, 0.95);
+   backdrop-filter: blur(10px);
+   z-index: 1000;
+   border-bottom: 1px solid #e5e5e5;
+   padding: 20px 0;
+  }
+
+  .nav-content {
+   max-width: 1400px;
+   margin: 0 auto;
+   padding: 0 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+
+  .back-link {
+   text-decoration: none;
+   color: rgb(29, 130, 113);
+   font-weight: 600;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   transition: all 0.3s ease;
+  }
+
+  .back-link:hover {
+   color: #4f46e5;
+   transform: translateX(-5px);
+  }
+
+  .nav-links {
+   display: flex;
+   gap: 30px;
+  }
+
+  .nav-links a {
+   text-decoration: none;
+   color: #666;
+   font-weight: 500;
+   transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+   color: rgb(29, 130, 113);
+  }
+
+  .hero {
+   margin-top: 60px;
+   background: linear-gradient(135deg, #042940 -50%, #165a47 40%, #1a7259d9 66%, #f6c501e4 66%), url(media/curves-5.jpg);
+   background-size: cover;
+   background-position: 50% 74%;
+   padding: 120px 40px 80px;
+   position: relative;
+   overflow: hidden;
+  }
+
+  .hero-content {
+   max-width: 1400px;
+   margin: 0 auto 2rem;
+   position: relative;
+   z-index: 1;
+  }
+
+  .project-tag {
+   display: inline-block;
+   background: rgba(255, 255, 255, 0.2);
+   padding: 8px 20px;
+   border-radius: 50px;
+   color: white;
+   font-size: 0.9rem;
+   font-weight: 600;
+   margin-bottom: 20px;
+   backdrop-filter: blur(10px);
+  }
+
+  .hero h1 {
+   font-size: 4rem;
+   color: white;
+   margin-bottom: 20px;
+   font-weight: 800;
+   line-height: 1.1;
+  }
+
+  .hero-subtitle {
+   font-size: 1.5rem;
+   color: rgba(255, 255, 255, 0.95);
+   margin-bottom: 40px;
+   max-width: 800px;
+  }
+
+  .project-meta {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 30px;
+   max-width: 800px;
+  }
+
+  .meta-item {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+  }
+
+  .meta-label {
+   font-size: 0.85rem;
+   color: rgba(255, 255, 255, 0.8);
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   font-weight: 600;
+  }
+
+  .meta-value {
+   font-size: 1.1rem;
+   color: white;
+   font-weight: 600;
+  }
+
+  /* .hero-image {
+   max-width: 1400px;
+   margin: -4rem auto 0;
+   padding: 0 40px;
+   position: relative;
+   z-index: 100;
+  }
+
+  .hero-image img {
+   width: 100%;
+   border-radius: 20px;
+   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.4);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .container {
+   max-width: 1400px;
+   margin: 120px auto 80px;
+   padding: 0 40px;
+  }
+
+  .overview {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+   gap: 40px;
+   margin-bottom: 120px;
+  }
+
+  .overview-card {
+   background: linear-gradient(135deg, #f1f6f8 0%, #eef5f9 100%);
+   padding: 40px;
+   border-radius: 20px;
+   border-left: 4px solid rgb(29, 130, 113);
+   transition: all 0.3s ease;
+  }
+
+  .overview-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 20px 40px #0429401d;
+  }
+
+  .overview-card h3 {
+   font-size: 1.3rem;
+   color: rgb(29, 130, 113);
+   margin-bottom: 15px;
+   font-weight: 700;
+  }
+
+  .overview-card p {
+   color: #4a5568;
+   line-height: 1.8;
+  }
+
+  .section {
+   margin-bottom: 120px;
+  }
+
+  .section-header {
+   margin-bottom: 50px;
+  }
+
+  .section-number {
+   font-size: 0.9rem;
+   color: rgb(29, 130, 113);
+   font-weight: 700;
+   letter-spacing: 2px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+  }
+
+  .section-title {
+   font-size: 2.5rem;
+   color: #1a1a1a;
+   font-weight: 800;
+   margin-bottom: 20px;
+  }
+
+  .section-description {
+   font-size: 1.2rem;
+   color: #666;
+   line-height: 1.8;
+   max-width: 800px;
+  }
+
+  .component-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 30px;
+   margin: 60px 0;
+  }
+
+  .component-card {
+   background: white;
+   border: 2px solid #e5e5e5;
+   border-radius: 16px;
+   padding: 30px;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+  }
+
+  .component-card::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 4px;
+   background: linear-gradient(90deg, rgb(32, 143, 125), #145341);
+   transform: scaleX(0);
+   transition: transform 0.3s ease;
+  }
+
+  .component-card:hover {
+   border-color: rgb(29, 130, 113);
+   box-shadow: 0 10px 40px #04294025;
+   transform: translateY(-5px);
+  }
+
+  .component-card:hover::before {
+   transform: scaleX(1);
+  }
+
+  .component-icon {
+   width: 50px;
+   height: 50px;
+   background: linear-gradient(135deg, rgb(32, 143, 125) 10%, #145341 100%);
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+   font-size: 1.5rem;
+   color: #ffffff;
+  }
+
+  .component-card h4 {
+   font-size: 1.2rem;
+   margin-bottom: 10px;
+   color: #1a1a1a;
+  }
+
+  .component-card p {
+   color: #666;
+   font-size: 0.95rem;
+   line-height: 1.6;
+  }
+
+  .tokens-display {
+   background: #eff5f8;
+   border-radius: 20px;
+   padding: 60px;
+   margin: 60px 0;
+  }
+
+  .color-palette {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+   gap: 30px;
+   margin-bottom: 60px;
+  }
+
+  .color-swatch {
+   text-align: center;
+  }
+
+  .color-circle {
+   width: 100%;
+   aspect-ratio: 1;
+   border-radius: 50%;
+   margin-bottom: 15px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+   transition: all 0.3s ease;
+   cursor: pointer;
+  }
+
+  .color-circle:hover {
+   transform: scale(1.1);
+   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  .color-name {
+   font-weight: 600;
+   color: #1a1a1a;
+   margin-bottom: 5px;
+   font-size: 0.9rem;
+  }
+
+  .color-value {
+   color: #666;
+   font-size: 0.85rem;
+   font-family: 'Courier New', monospace;
+  }
+
+  .typography-scale {
+   display: grid;
+   gap: 30px;
+  }
+
+  .type-sample {
+   border-bottom: 1px solid #e5e5e5;
+   padding-bottom: 20px;
+  }
+
+  .type-sample:last-child {
+   border-bottom: none;
+  }
+
+  .type-label {
+   color: rgb(29, 130, 113);
+   font-size: 0.85rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-bottom: 10px;
+  }
+
+  .type-display {
+   color: #1a1a1a;
+  }
+
+  .image-showcase {
+   margin: 60px 0;
+  }
+
+  .image-full {
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+   margin-bottom: 20px;
+  }
+
+  .image-full img {
+   width: 100%;
+   display: block;
+  }
+
+  .image-caption {
+   text-align: center;
+   color: #666;
+   font-style: italic;
+   font-size: 0.95rem;
+  }
+
+  .image-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+   gap: 30px;
+   margin: 60px 0;
+  }
+
+  .image-grid-item {
+   border-radius: 16px;
+   overflow: hidden;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease;
+  }
+
+  .image-grid-item:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-grid-item img {
+   width: 100%;
+   display: block;
+  }
+
+  .results {
+   background: linear-gradient(135deg, #042940 0%, #1f6652 100%);
+   padding: 80px 60px;
+   border-radius: 30px;
+   margin: 80px 0;
+   color: white;
+   position: relative;
+   overflow: hidden;
+  }
+
+  .results::before {
+   content: '';
+   position: absolute;
+   top: -50%;
+   right: -10%;
+   width: 500px;
+   height: 500px;
+   background: radial-gradient(circle, #ffe5852a 0%, transparent 70%);
+   border-radius: 50%;
+  }
+
+  .results-content {
+   position: relative;
+   z-index: 1;
+  }
+
+  .results h2 {
+   font-size: 2.5rem;
+   margin-bottom: 20px;
+   font-weight: 800;
+  }
+
+  .results-description {
+   font-size: 1.2rem;
+   opacity: 0.9;
+   margin-bottom: 50px;
+   max-width: 700px;
+  }
+
+  .results-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 50px;
+  }
+
+  .result-item {
+   text-align: center;
+  }
+
+  .result-value {
+   font-size: 3.5rem;
+   font-weight: 800;
+   background: linear-gradient(135deg, #fff 30%, #ffe065e1 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   margin-bottom: 10px;
+  }
+
+  .result-label {
+   font-size: 1.1rem;
+   opacity: 0.9;
+  }
+
+  .learnings {
+   background: #f1f6f9;
+   padding: 60px;
+   border-radius: 20px;
+   margin: 80px 0;
+  }
+
+  .learnings h3 {
+   font-size: 2rem;
+   color: #1a1a1a;
+   margin-bottom: 30px;
+   font-weight: 800;
+  }
+
+  .learning-list {
+   display: grid;
+   gap: 25px;
+  }
+
+  .learning-item {
+   display: flex;
+   gap: 20px;
+   align-items: flex-start;
+  }
+
+  .learning-icon {
+   width: 50px;
+   height: 50px;
+   background: linear-gradient(135deg, rgb(32, 143, 125) 10%, #145341 100%);
+   border-radius: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   color: white;
+   font-weight: bold;
+   font-size: 1.5rem;
+  }
+
+  .learning-text {
+   flex: 1;
+   color: #4a5568;
+   line-height: 1.8;
+   font-size: 1.05rem;
+   margin-top: -5px;
+  }
+
+  .project-nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 60px 0;
+   border-top: 2px solid #e5e5e5;
+   margin-top: 80px;
+   gap: 20px;
+   flex-wrap: wrap;
+  }
+
+  .nav-button {
+   padding: 18px 40px;
+   background: linear-gradient(135deg, rgb(32, 143, 125) 0%, #145341 100%);
+   color: white;
+   text-decoration: none;
+   border-radius: 30px;
+   font-weight: 700;
+   transition: all 0.3s ease;
+   display: inline-block;
+   box-shadow: 0 10px 30px #04294047;
+  }
+
+  .nav-button:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 15px 40px #0429405c;
+  }
+
+  .back-to-projects {
+   text-decoration: none;
+   color: rgb(29, 130, 113);
+   font-weight: 700;
+   font-size: 1.1rem;
+  }
+
+  @media (max-width: 768px) {
+   .hero h1 {
+    font-size: 2.5rem;
+   }
+
+   .hero-subtitle {
+    font-size: 1.2rem;
+   }
+
+   .section-title {
+    font-size: 2rem;
+   }
+
+   .container,
+   .hero-content {
+    padding: 0 20px;
+   }
+
+   .hero {
+    padding: 100px 20px 60px;
+   }
+
+   .hero-image {
+    padding: 0 20px;
+    margin-top: -50px;
+   }
+
+   .tokens-display,
+   .results,
+   .learnings {
+    padding: 40px 30px;
+   }
+
+   .component-grid,
+   .image-grid {
+    grid-template-columns: 1fr;
+   }
+
+   .nav-links {
+    display: none;
+   }
+
+   .project-nav {
+    flex-direction: column;
+    text-align: center;
+   }
+  } */
+ </style>
+</head>
+<body>
+ <nav>
+  <div class="nav-content">
+   <a href="index.html" class="back-link">
+    ← Back
+   </a>
+   <div class="nav-links">
+    <a href="#overview">Overview</a>
+    <a href="#system">The System</a>
+    <a href="#results">Results</a>
+   </div>
+  </div>
+ </nav>
+
+ <section class="hero">
+  <div class="hero-content">
+   <span class="project-tag">UX/UI Design · Design Systems</span>
+   <h1>Modern Design System</h1>
+   <p class="hero-subtitle">Building a scalable, accessible component library that unified brand identity and offerings, while accelerating development by 40%</p>
+   <div class="project-meta">
+    <div class="meta-item">
+     <span class="meta-label">Role</span>
+     <span class="meta-value">Lead Designer & Developer</span>
+    </div>
+    <div class="meta-item">
+     <span class="meta-label">Timeline</span>
+     <span class="meta-value">12 weeks</span>
+    </div>
+    <div class="meta-item">
+     <span class="meta-label">Tools</span>
+     <span class="meta-value">Figma, React, HTML, CSS, JavaScript</span>
+    </div>
+    <div class="meta-item">
+     <span class="meta-label">Team</span>
+     <span class="meta-value">Solo Designer + 1 Senior Dev</span>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <div class="coming-soon">
+    <div class="hero-image-wrapper">
+      <p>Coming soon...</p>
+    </div>
+  </div>
+
+ <!-- <div class="hero-image">
+  <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=1400&h=800&fit=crop&q=80" alt="Design System Overview">
+ </div>
+
+ <div class="container">
+  <section id="overview">
+   <div class="overview">
+    <div class="overview-card">
+     <h3>The Challenge</h3>
+     <p>The company had inconsistent UI patterns, resulting in loss of capital and wasted time recreating existing patterns. We estimated this loss of time to be 60% of the designer's time, and senior dev was frustrated by lack of documentation.</p>
+    </div>
+    <div class="overview-card">
+     <h3>The Solution</h3>
+     <p>Created a comprehensive design system with 20+ reusable components, complete design tokens, and clear documentation. Built in Figma with React implementation, ensuring design-developer handoff was seamless.</p>
+    </div>
+    <div class="overview-card">
+     <h3>The Impact</h3>
+     <p>Reduced design time by 40%, achieved 100% WCAG 2.1 AA compliance, and unified the user experience across all products. New features now ship 2x faster with consistent quality.</p>
+    </div>
+   </div>
+  </section>
+
+  <section class="section">
+   <div class="section-header">
+    <div class="section-number">01 — Discovery</div>
+    <h2 class="section-title">Research & Audit</h2>
+    <p class="section-description">I began by conducting a comprehensive UI audit across all three products, cataloging every component variation and identifying pain points through interviews with 5 designers and 8 developers.</p>
+   </div>
+
+   <div class="image-showcase">
+    <div class="image-full">
+     <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1400&h=700&fit=crop&q=80" alt="Component Audit">
+    </div>
+    <p class="image-caption">Initial component audit revealing 12 different button styles across products</p>
+   </div>
+
+   <div class="learnings">
+    <h3>Key Findings</h3>
+    <div class="learning-list">
+     <div class="learning-item">
+      <div class="learning-icon">1</div>
+      <div class="learning-text"><strong>Inconsistency everywhere:</strong> Found 85+ variations of common components like buttons, inputs, and cards with no documentation on when to use each.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon">2</div>
+      <div class="learning-text"><strong>Accessibility gaps:</strong> Only 50% of components met WCAG standards, with common issues like poor color contrast and missing ARIA labels.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon">3</div>
+      <div class="learning-text"><strong>Developer frustration:</strong> No single source of truth for component specs, leading to frequent back-and-forth and implementation delays.</div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="section" id="system">
+   <div class="section-header">
+    <div class="section-number">02 — Foundation</div>
+    <h2 class="section-title">Design Tokens</h2>
+    <p class="section-description">Established core design tokens for colors, typography, spacing, and elevation to ensure consistency and enable easy theming across site and brand assets.</p>
+   </div>
+
+   <div class="tokens-display">
+    <h3 style="margin-bottom: 40px; color: #1a1a1a; font-size: 1.8rem; font-weight: 700;">Color Palette</h3>
+    <div class="color-palette">
+     <div class="color-swatch">
+      <div class="color-circle" style="background: var(--green);"></div>
+      <div class="color-name">Primary</div>
+      <div class="color-value">#759382</div>
+     </div>
+     <div class="color-swatch">
+      <div class="color-circle" style="background: var(--pink);"></div>
+      <div class="color-name">Secondary</div>
+      <div class="color-value">#BA9783</div>
+     </div>
+     <div class="color-swatch">
+      <div class="color-circle" style="background: #68c28f;"></div>
+      <div class="color-name">Success</div>
+      <div class="color-value">#68c28f</div>
+     </div>
+     <div class="color-swatch">
+      <div class="color-circle" style="background: #e26464;"></div>
+      <div class="color-name">Error</div>
+      <div class="color-value">#e26464</div>
+     </div>
+     <div class="color-swatch">
+      <div class="color-circle" style="background: #edad3e;"></div>
+      <div class="color-name">Warning</div>
+      <div class="color-value">#edad3e</div>
+     </div>
+     <div class="color-swatch">
+      <div class="color-circle" style="background: #1a1a1a;"></div>
+      <div class="color-name">Text</div>
+      <div class="color-value">#1a1a1a</div>
+     </div>
+    </div>
+
+    <h3 style="margin: 60px 0 40px; color: #1a1a1a; font-size: 1.8rem; font-weight: 700;">Typography Scale</h3>
+    <div class="typography-scale">
+     <div class="type-sample">
+      <div class="type-label">Display Large</div>
+      <div class="type-display" style="font-size: 4rem; font-weight: 800; line-height: 1.1;">Aa</div>
+     </div>
+     <div class="type-sample">
+      <div class="type-label">Heading 1</div>
+      <div class="type-display" style="font-size: 3rem; font-weight: 700; line-height: 1.2;">Aa</div>
+     </div>
+     <div class="type-sample">
+      <div class="type-label">Heading 2</div>
+      <div class="type-display" style="font-size: 2rem; font-weight: 700; line-height: 1.3;">Aa</div>
+     </div>
+     <div class="type-sample">
+      <div class="type-label">Body</div>
+      <div class="type-display" style="font-size: 1rem; line-height: 1.6;">The quick brown fox jumps over the lazy dog</div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="section">
+   <div class="section-header">
+    <div class="section-number">03 — Components</div>
+    <h2 class="section-title">Component Library</h2>
+    <p class="section-description">Built 20+ production-ready components with variants, states, and comprehensive documentation. Each component was designed for accessibility and tested across devices.</p>
+   </div>
+
+   <div class="component-grid">
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-regular fa-circle-dot"></i></div>
+     <h4>Buttons</h4>
+     <p>Primary, secondary, ghost, and icon variants with hover, active, disabled, and loading states</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-regular fa-pen-to-square"></i></div>
+     <h4>Form Inputs</h4>
+     <p>Text fields, textareas, selects, checkboxes, and radio buttons with validation states</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-diamond"></i></div>
+     <h4>Cards</h4>
+     <p>Flexible card layouts for content display with optional headers, footers, and actions</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-regular fa-compass"></i></div>
+     <h4>Navigation</h4>
+     <p>Header, sidebar, breadcrumbs, and tabs with responsive behavior</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-bell"></i></div>
+     <h4>Alerts & Toasts</h4>
+     <p>System feedback with success, error, warning, and info variants</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-chart-simple"></i></div>
+     <h4>Data Tables</h4>
+     <p>Sortable, filterable tables with pagination and bulk actions</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-gear"></i></div>
+     <h4>Modals</h4>
+     <p>Dialogs and drawers for focused tasks and information</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+     <h4>Loading States</h4>
+     <p>Spinners, skeletons, and progress indicators for async operations</p>
+    </div>
+   </div>
+
+   <div class="image-grid">
+    <div class="image-grid-item">
+     <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop&q=80" alt="Component variants">
+    </div>
+    <div class="image-grid-item">
+     <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop&q=80" alt="Component states">
+    </div>
+   </div>
+  </section>
+
+  <section class="section">
+   <div class="section-header">
+    <div class="section-number">04 — Development</div>
+    <h2 class="section-title">Implementation & Documentation</h2>
+    <p class="section-description">Built the component library in React, using HTML, CSS, and JavaScript. Created comprehensive documentation with usage guidelines and accessibility notes.</p>
+   </div>
+
+   <div class="image-showcase">
+    <div class="image-full">
+     <img src="media/figma-4.jpg" alt="Storybook Documentation">
+    </div>
+    <p class="image-caption">User flows showing link destinations</p>
+   </div>
+
+   <div class="learnings">
+    <h3>Technical Approach</h3>
+    <div class="learning-list">
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-brands fa-react"></i></div>
+      <div class="learning-text"><strong>React + TypeScript:</strong> Built type-safe components with clear prop interfaces, reducing runtime errors by 90% and improving developer experience.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-solid fa-palette"></i></div>
+      <div class="learning-text"><strong>Tailwind CSS Integration:</strong> Leveraged utility classes while maintaining custom design tokens, enabling rapid prototyping without sacrificing brand consistency.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-regular fa-folder-open"></i></div>
+      <div class="learning-text"><strong>Comprehensive Documentation:</strong> Every component includes usage guidelines, accessibility requirements, do's/don'ts, and interactive examples in Storybook.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-brands fa-accessible-icon"></i></div>
+      <div class="learning-text"><strong>Accessibility First:</strong> All components tested with screen readers, keyboard navigation, and automated accessibility testing to ensure WCAG 2.1 AA compliance.</div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="results" id="results">
+   <div class="results-content">
+    <h2>Results & Impact</h2>
+    <p class="results-description">The design system transformed how the team works, reducing design debt, accelerating development, and creating a unified user experience across all products.</p>
+    <div class="results-grid">
+     <div class="result-item">
+      <div class="result-value">40%</div>
+      <div class="result-label">Faster Development</div>
+     </div>
+     <div class="result-item">
+      <div class="result-value">100%</div>
+      <div class="result-label">WCAG Compliance</div>
+     </div>
+     <div class="result-item">
+      <div class="result-value">3</div>
+      <div class="result-label">Products Unified</div>
+     </div>
+     <div class="result-item">
+      <div class="result-value">20+</div>
+      <div class="result-label">Components Built</div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section class="section">
+   <div class="section-header">
+    <div class="section-number">05 — Reflection</div>
+    <h2 class="section-title">Key Learnings</h2>
+    <p class="section-description">Building a design system taught me valuable lessons about scalability, collaboration, and the importance of documentation.</p>
+   </div>
+
+   <div class="learnings">
+    <h3>What I Learned</h3>
+    <div class="learning-list">
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-solid fa-lightbulb"></i></div>
+      <div class="learning-text"><strong>Start small, iterate often:</strong> Initially tried to document everything at once. Learned to launch with core components and expand based on actual team needs.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-solid fa-handshake"></i></div>
+      <div class="learning-text"><strong>Collaboration is key:</strong> Regular design reviews and developer feedback sessions ensured the system worked for everyone, not just designers.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-solid fa-book"></i></div>
+      <div class="learning-text"><strong>Documentation makes or breaks adoption:</strong> Components without clear usage guidelines were rarely used correctly. Good docs are as important as good design.</div>
+     </div>
+     <div class="learning-item">
+      <div class="learning-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+      <div class="learning-text"><strong>Governance matters:</strong> Established a component review process and regular maintenance schedule to prevent the system from becoming stale.</div>
+     </div>
+    </div>
+   </div>
+
+   <div class="image-showcase" style="margin-top: 60px;">
+    <div class="image-full">
+     <img src="media/standup.jpg" alt="Team Collaboration">
+    </div>
+    <p class="image-caption">Regular team standups ensured we stayed synced and on task to reach our deadline</p>
+   </div>
+  </section>
+
+  <section class="section">
+   <div class="section-header">
+    <div class="section-number">06 — Future</div>
+    <h2 class="section-title">Next Steps</h2>
+    <p class="section-description">The design system is a living product that continues to evolve based on team needs and product requirements.</p>
+   </div>
+
+   <div class="component-grid">
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-moon"></i></div>
+     <h4>Dark Mode Support</h4>
+     <p>Implement theme tokens and component variants to support light and dark modes across all products</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-masks-theater"></i></div>
+     <h4>Animation Library</h4>
+     <p>Create standardized motion principles and reusable animation tokens for consistent micro-interactions</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-mobile"></i></div>
+     <h4>Mobile Components</h4>
+     <p>Expand library with mobile-specific patterns like bottom sheets, swipe gestures, and native controls</p>
+    </div>
+    <div class="component-card">
+     <div class="component-icon"><i class="fa-solid fa-earth-americas"></i></div>
+     <h4>Internationalization</h4>
+     <p>Add RTL support and locale-specific formatting for global product expansion</p>
+    </div>
+   </div>
+  </section>
+
+  <div class="project-nav">
+   <a href="index.html#projects" class="back-to-projects">← Back to All Projects</a>
+   <a href="web-app-ui.html" class="nav-button">View Next Project →</a>
+  </div>
+ </div> -->
+
+</body>
+</html>

@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5a3539eb0b.js" crossorigin="anonymous"></script>
+ 
+  <title>Mobile-First Therapist Website - Ryan Andersen</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 20px 0;
+    }
+
+    .nav-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: #8b5cf6;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #7c3aed;
+      transform: translateX(-5px);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #666;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #8b5cf6;
+    }
+
+    .hero {
+      margin-top: 60px;
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 61%, transparent 61%), url(media/adriane.jpg);
+      padding: 120px 40px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(167, 139, 250, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      max-width: 1400px;
+      margin: 0 auto 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 8px 20px;
+      border-radius: 50px;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 40px;
+      max-width: 800px;
+    }
+
+    .project-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 30px;
+      max-width: 800px;
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .meta-label {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .meta-value {
+      font-size: 1.1rem;
+      color: white;
+      font-weight: 600;
+    }
+
+    .meta-value a {
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .meta-value a:hover {
+      opacity: 0.8;
+    }
+
+    .hero-image {
+      max-width: 1400px;
+      margin: -100px auto 0;
+      padding: 0 40px;
+      position: relative;
+      z-index: 100;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 120px auto 80px;
+      padding: 0 40px;
+    }
+
+    .overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      margin-bottom: 120px;
+    }
+
+    .overview-card {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      padding: 40px;
+      border-radius: 20px;
+      border-left: 4px solid #8b5cf6;
+      transition: all 0.3s ease;
+    }
+
+    .overview-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+    }
+
+    .overview-card h3 {
+      font-size: 1.3rem;
+      color: #7c3aed;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .overview-card p {
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    .section {
+      margin-bottom: 120px;
+    }
+
+    .section-header {
+      margin-bottom: 50px;
+    }
+
+    .section-number {
+      font-size: 0.9rem;
+      color: #8b5cf6;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #1a1a1a;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .section-description {
+      font-size: 1.2rem;
+      color: #666;
+      line-height: 1.8;
+      max-width: 800px;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+      margin: 60px 0;
+    }
+
+    .content-block h3 {
+      font-size: 1.5rem;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .content-block p {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .content-block ul {
+      list-style: none;
+      margin: 20px 0;
+    }
+
+    .content-block li {
+      color: #666;
+      line-height: 1.8;
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .content-block li::before {
+      content: '→';
+      color: #8b5cf6;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .image-showcase {
+      margin: 60px 0;
+    }
+
+    .image-full {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .image-full img {
+      width: 100%;
+      display: block;
+    }
+
+    .image-caption {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+
+    .mobile-frames {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin: 60px 0;
+      justify-items: center;
+    }
+
+    .phone-mockup {
+      max-width: 325px;
+      background: #1a1a1a;
+      border-radius: 40px;
+      padding: 11px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .phone-mockup:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .phone-screen {
+      background: white;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+    }
+
+    .phone-screen img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top;
+      margin-bottom: -2.5rem;
+    }
+
+    .screen-label {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      font-size: 0.95rem;
+    }
+
+    .persona-card {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      padding: 50px;
+      border-radius: 30px;
+      margin: 60px 0;
+      border: 2px solid #e9d5ff;
+    }
+
+    .persona-header {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .persona-avatar {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      flex-shrink: 0;
+    }
+
+    .persona-info h3 {
+      font-size: 1.8rem;
+      color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+
+    .persona-subtitle {
+      color: #7c3aed;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .persona-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .persona-section h4 {
+      color: #7c3aed;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .persona-section p,
+    .persona-section li {
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    .persona-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .persona-section li::before {
+      content: '•';
+      color: #8b5cf6;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+      padding-right: 0.5em;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin: 60px 0;
+    }
+
+    .feature-card {
+      background: white;
+      border: 2px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 35px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      border-color: #8b5cf6;
+      box-shadow: 0 10px 40px rgba(139, 92, 246, 0.15);
+      transform: translateY(-5px);
+    }
+
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .feature-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    .feature-card p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .results {
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      padding: 80px 60px;
+      border-radius: 30px;
+      margin: 80px 0;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .results::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .results-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .results h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .results-description {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 50px;
+      max-width: 700px;
+    }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 50px;
+    }
+
+    .result-item {
+      text-align: center;
+    }
+
+    .result-value {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a78bfa 0%, #ddd6fe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+
+    .result-label {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    .learnings {
+      background: #faf5ff;
+      padding: 60px;
+      border-radius: 20px;
+      margin: 80px 0;
+    }
+
+    .learnings h3 {
+      font-size: 2rem;
+      color: #1a1a1a;
+      margin-bottom: 30px;
+      font-weight: 800;
+    }
+
+    .learning-list {
+      display: grid;
+      gap: 25px;
+    }
+
+    .learning-item {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .learning-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: white;
+      font-weight: bold;
+    }
+
+    .learning-text {
+      flex: 1;
+      color: #4a5568;
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 0;
+      border-top: 2px solid #e5e5e5;
+      margin-top: 80px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-button {
+      padding: 18px 40px;
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+      display: inline-block;
+      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+    }
+
+    .nav-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+    }
+
+    .back-to-projects {
+      text-decoration: none;
+      color: #8b5cf6;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 968px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .container,
+      .hero-content {
+        padding: 0 20px;
+      }
+
+      .hero {
+        padding: 100px 20px 60px;
+      }
+
+      .hero-image {
+        padding: 0 20px;
+        margin-top: -4rem;
+      }
+
+      .results,
+      .learnings,
+      .persona-card {
+        padding: 40px 30px;
+      }
+
+      .feature-grid,
+      .mobile-frames {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .project-nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .persona-header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="index.html" class="back-link">
+        ← Back
+      </a>
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#process">Process</a>
+        <a href="#results">Results</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="project-tag">UX/UI Design · Mobile-First</span>
+      <h1>Mobile-First Design</h1>
+      <p class="hero-subtitle">Redesigning Praxis Counseling website with a mobile-first approach to help clients easily connect and access resources on-the-go</p>
+      <div class="project-meta">
+        <div class="meta-item">
+          <span class="meta-label">Role</span>
+          <span class="meta-value">UX/UI Designer & Developer</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Timeline</span>
+          <span class="meta-value">6 weeks</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Tools</span>
+          <span class="meta-value">Figma, React, Tailwind CSS</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Platform</span>
+          <span class="meta-value">Mobile & Desktop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="hero-image">
+    <img src="media/praxis-mobile-mockup.webp" alt="Mobile Prototype Mockup">
+  </div>
+
+  <div class="container">
+    <section id="overview">
+      <div class="overview">
+        <div class="overview-card">
+          <h3>The Challenge</h3>
+          <p>The existing website wasn't optimized for mobile users, who made up 68% of traffic. Potential clients struggled to find contact information and understand services, leading to high bounce rates.</p>
+        </div>
+        <div class="overview-card">
+          <h3>The Solution</h3>
+          <p>Created a mobile-first redesign that prioritizes ease of access to key actions: contacting the therapist, viewing services, and finding mental health resources. Implemented a calming, accessible design that builds trust and reduces friction.</p>
+        </div>
+        <div class="overview-card">
+          <h3>The Impact</h3>
+          <p>Mobile bounce rate decreased by 42%, appointment bookings increased by 58%, and mobile session duration increased by 3.5 minutes. Client feedback praised the "easy to navigate" and "calming" mobile experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-header">
+        <div class="section-number">01 — Research</div>
+        <h2 class="section-title">Understanding User Needs</h2>
+        <p class="section-description">I worked with Praxis Counseling to determine what the user needs and pain points might be, as I couldn't interview any of their clients for confidentiality reasons. While navigating the site together, and through analytics data, we developed a list of goals and pain points of prospective clients when seeking therapy.</p>
+      </div>
+
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-avatar"><i class="fa-solid fa-user"></i></div>
+          <div class="persona-info">
+            <h3>Client, 32</h3>
+            <p class="persona-subtitle">Working Professional Seeking Therapy</p>
+          </div>
+        </div>
+        <div class="persona-details">
+          <div class="persona-section">
+            <h4>Goals</h4>
+            <ul>
+              <li>Find a therapist who specializes in relationship issues</li>
+              <li>Contact to make an appointment quickly during lunch break</li>
+              <li>Understand costs and insurance before committing</li>
+              <li>Feel confident the therapist is qualified and trustworthy</li>
+            </ul>
+          </div>
+          <div class="persona-section">
+            <h4>Pain Points</h4>
+            <ul>
+              <li>Current website is hard to navigate on phone</li>
+              <li>Contact info is buried and hard to find</li>
+              <li>Overwhelming text with no clear hierarchy</li>
+            </ul>
+          </div>
+          <div class="persona-section">
+            <h4>Context</h4>
+            <p>Potential Client is searching for a therapist during their work breaks, primarily on their phone. They need quick access to key information and are feeling stressed.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="two-column">
+        <div class="content-block">
+          <h3>Key Insights</h3>
+          <ul>
+            <li>68% of users accessed the site from mobile devices</li>
+            <li>Average mobile session was only 42 seconds</li>
+            <li>Most users left without finding contact information</li>
+            <li>Users wanted to see therapist credentials immediately</li>
+            <li>UI design wasn't engaging users</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h3>Design Goals</h3>
+          <ul>
+            <li>Make contact info accessible within 2 taps</li>
+            <li>Create a calming, trustworthy visual design</li>
+            <li>Clearly communicate specializations upfront</li>
+            <li>Ensure WCAG AA accessibility compliance</li>
+            <li>Optimize for one-handed mobile use</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-number">02 — Design</div>
+        <h2 class="section-title">Mobile-First Approach</h2>
+        <p class="section-description">I designed for mobile first, ensuring the core experience worked beautifully on small screens before enhancing for larger displays.</p>
+      </div>
+
+      <div class="mobile-frames">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="media/praxis-consultation.webp" alt="Adriane Andersen Portrait, Free 15 Min. Consultation">
+          </div>
+          <p class="screen-label">Free Consultation</p>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="media/praxis-mobile-background.webp" alt="Background and Credentials Overview Screen">
+          </div>
+          <p class="screen-label">Background Overview</p>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="media/praxis-mobile-resources.webp" alt="Crisis Resources Screen">
+          </div>
+          <p class="screen-label">Crisis Resources</p>
+        </div>
+      </div>
+
+      <div class="learnings">
+        <h3>Mobile-First Design Principles</h3>
+        <div class="learning-list">
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-mobile"></i></div>
+            <div class="learning-text"><strong>Thumb-Friendly Navigation:</strong> Placed primary CTAs (About, Fees, Contact) at the top of the screen for one-handed operation.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-check"></i></div>
+            <div class="learning-text"><strong>Progressive Disclosure:</strong> Showed essential information first (specializations, contact) with detailed content accessible through automatic scrolling links to reduce scroll fatigue.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-palette"></i></div>
+            <div class="learning-text"><strong>Calming Visual Design:</strong> Used soft greens and tans, with ample whitespace to create a peaceful, welcoming atmosphere that reduces anxiety for users seeking help.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="learning-text"><strong>Fast Loading:</strong> Optimized images and minimized JavaScript to ensure the site loads in under 2 seconds.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-number">03 — Features</div>
+        <h2 class="section-title">Key Features</h2>
+        <p class="section-description">Every feature was designed to reduce friction and help users take action quickly and confidently.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <h4>Clear Specializations</h4>
+          <p>Prominent display of therapy specializations helps users immediately know if the therapist can help their specific needs</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-dollar-sign"></i></div>
+          <h4>Transparent Pricing</h4>
+          <p>Clear information about costs, insurance acceptance, and payment options upfront to reduce anxiety and uncertainty</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h4>Credentials Display</h4>
+          <p>Professional qualifications and experience prominently featured to build trust and credibility</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-brands fa-accessible-icon"></i></div>
+          <h4>Accessibility First</h4>
+          <p>WCAG AA compliant with screen reader support, high contrast mode, and keyboard navigation</p>
+        </div>
+      </div>
+
+      <div class="image-showcase">
+        <div class="image-full">
+          <img src="media/praxis-user-flow.jpg" alt="FigJam file showing Praxis Counseling user flow">
+        </div>
+        <p class="image-caption">FigJam file showing Praxis Counseling user flow</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-number">04 — Implementation</div>
+        <h2 class="section-title">Technical Approach</h2>
+        <p class="section-description">Built with modern web technologies for optimal performance and user experience across all devices.</p>
+      </div>
+
+      <div class="two-column">
+        <div class="content-block">
+          <h3>Development Stack</h3>
+          <p>Used Figma for component-based architecture and CSS for variables and responsive styling. This combination allowed for rapid development while maintaining consistent design.</p>
+          <ul>
+            <li>Figma for interactive components and UI mockup</li>
+            <li>CSS3 for responsive, mobile-first styling</li>
+            <li>JavaScript for smooth, calming animations</li>
+            <li>Google Analytics for key user metrics</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h3>Performance Optimization</h3>
+          <p>Achieved excellent performance scores through careful optimization of assets and code splitting for faster initial load times.</p>
+          <ul>
+            <li>95+ Google PageSpeed score on mobile</li>
+            <li>Lazy loading for images below the fold</li>
+            <li>WebP image format for lean file sizes</li>
+            <li>Minimal JavaScript bundle size (< 50KB)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="learnings">
+        <h3>Accessibility Features</h3>
+        <div class="learning-list">
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-brands fa-accessible-icon"></i></div>
+            <div class="learning-text"><strong>Screen Reader Support:</strong> Semantic HTML and ARIA labels ensure all content is accessible to users with visual impairments.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-keyboard"></i></div>
+            <div class="learning-text"><strong>Keyboard Navigation:</strong> Full keyboard support with visible focus indicators for users who can't use a mouse or touchscreen.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-palette"></i></div>
+            <div class="learning-text"><strong>Color Contrast:</strong> All text meets WCAG AA standards with 4.5:1 contrast ratio minimum, ensuring readability for users with low vision.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-ruler-vertical"></i></div>
+            <div class="learning-text"><strong>Touch Targets:</strong> All interactive elements are at least 44x44px to accommodate users with motor impairments and ensure easy tapping.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-showcase">
+        <div class="image-full">
+          <img src="media/praxis-breakpoints.webp" alt="Responsive screen sizes mockup in Figma">
+        </div>
+        <p class="image-caption">Responsive screen sizes mockup in Figma</p>
+      </div>
+    </section>
+
+    <section class="results" id="results">
+      <div class="results-content">
+        <h2>Results & Impact</h2>
+        <p class="results-description">The mobile-first redesign dramatically improved user engagement and conversion rates, making it easier for people to get the help they need.</p>
+        <div class="results-grid">
+          <div class="result-item">
+            <div class="result-value">42%</div>
+            <div class="result-label">Lower Bounce Rate</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value">58%</div>
+            <div class="result-label">More Bookings</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value">3.5min</div>
+            <div class="result-label">Longer Sessions</div>
+          </div>
+          <div class="result-item">
+            <div class="result-value">95+</div>
+            <div class="result-label">PageSpeed Score</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-number">05 — Reflection</div>
+        <h2 class="section-title">Key Learnings</h2>
+        <p class="section-description">This project reinforced the importance of designing for real user needs and contexts, not just aesthetic preferences.</p>
+      </div>
+
+      <div class="learnings">
+        <h3>What I Learned</h3>
+        <div class="learning-list">
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="learning-text"><strong>Mobile-first is essential:</strong> Designing for mobile constraints first resulted in a cleaner, more focused experience that also worked beautifully on desktop.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-check"></i></div>
+            <div class="learning-text"><strong>Context matters:</strong> Understanding that users were often stressed and searching during work breaks helped inform design decisions around quick access and calming aesthetics.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div class="learning-text"><strong>Trust is critical:</strong> For therapy websites, building trust through clear credentials, professional design, and easy communication is just as important as functionality.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-solid fa-chart-simple"></i></div>
+            <div class="learning-text"><strong>Measure what matters:</strong> Following up with Praxis Counseling after the improvements went live provided clear evidence of success beyond just traffic metrics.</div>
+          </div>
+          <div class="learning-item">
+            <div class="learning-icon"><i class="fa-brands fa-accessible-icon"></i></div>
+            <div class="learning-text"><strong>Accessibility benefits everyone:</strong> Features designed for accessibility (like large touch targets and clear contrast) improved the experience for all users.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-showcase" style="margin-top: 60px;">
+        <div class="image-full">
+          <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1400&h=700&fit=crop&q=80" alt="User Testing">
+        </div>
+        <p class="image-caption">User testing sessions with coworkers and friends helped validate design decisions and identify areas for improvement</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-number">06 — Next Steps</div>
+        <h2 class="section-title">Future Enhancements</h2>
+        <p class="section-description">Based on initial success and user feedback, there are several opportunities to further improve the experience.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-comment"></i></div>
+          <h4>Live Chat Support</h4>
+          <p>Add real-time chat for immediate questions and concerns, reducing friction in the decision-making process</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-mobile"></i></div>
+          <h4>Client Portal App</h4>
+          <p>Develop a dedicated mobile app for existing clients to manage appointments, complete intake forms, and access resources</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-book"></i></div>
+          <h4>Resource Library</h4>
+          <p>Build a searchable library of mental health articles, worksheets, and self-help tools for clients between sessions</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-bell"></i></div>
+          <h4>Appointment Reminders</h4>
+          <p>Implement automated SMS and email reminders to reduce no-shows and help clients stay on track</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-nav">
+      <a href="index.html#projects" class="back-to-projects">← Back to All Projects</a>
+      <a href="design-system.html" class="nav-button">View Next Project →</a>
+    </div>
+  </div>
+
+</body>
+</html>
