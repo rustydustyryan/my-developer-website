@@ -39,18 +39,21 @@ function fadeIn() {
 // 'Project' Title Animation
 const title = document.querySelector('.main-title');
 
-title.innerHTML = title.innerText.split('').map((letter, idx) => `<span style="transition-delay:${idx * 60}ms; text-align: center;">${letter}</span>`).join('');
+title.innerHTML = title.innerText.split('').map((letter, idx) =>
+  `<span style="transition-delay:${idx * 60}ms; text-align: center;">${letter}</span>`
+).join('');
 
 window.addEventListener('scroll', wave);
+
+// Wait for the initial (un-animated) letters to actually paint before
+// checking if the title is already in view. A synchronous call here
+// applies .show before the first paint, so the browser has nothing to
+// transition from — it just jumps straight to the end state.
+requestAnimationFrame(() => requestAnimationFrame(wave));
 
 function wave() {
   const triggerBottom = window.innerHeight / 5 * 4;
   const elTop = title.getBoundingClientRect().top;
-  const rect = title.getBoundingClientRect();
-  const isInViewport = rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 
   Array.from(title.children).forEach((el) => {
     if (elTop < triggerBottom) {
@@ -79,13 +82,13 @@ highlightContainers.forEach((container) => {
     posX = centerX + (posX - centerX) * (maxShift / 60);
     posY = centerY + (posY - centerY) * (maxShift / 60);
 
-    container.style.background = container.classList.contains('highlight-container-2')
+    container.style.background = container.classList.contains('maryna-stanbrough-container')
       ? `radial-gradient(circle at ${posX}% ${posY}%, #fff 0%, var(--light) 70%)`
       : `radial-gradient(circle at ${posX}% ${posY}%, rgba(13,131,231,1) 0%, var(--slate) 48%)`;
   });
 
   container.addEventListener('mouseleave', () => {
-    container.style.background = container.classList.contains('highlight-container-2')
+    container.style.background = container.classList.contains('maryna-stanbrough-container')
       ? `radial-gradient(circle at 50% 50%, #fff 0%, var(--light) 70%)`
       : `radial-gradient(circle at 50% 50%, rgba(13,131,231,1) 0%, var(--slate) 48%)`;
   });
@@ -99,7 +102,7 @@ function lerp(start, end, t) {
 }
 
 window.addEventListener("scroll", () => {
-  const container = document.querySelector(".highlight-container-2");
+  const container = document.querySelector(".maryna-stanbrough-container");
   if (!container) return;
   
   // Get container position and dimensions
@@ -156,7 +159,6 @@ window.addEventListener("scroll", () => {
   
   container.style.background = newGradient;
 });
-
 
 // 'Projects' UX/UI Slider
 const slides = document.querySelectorAll('.slide');
